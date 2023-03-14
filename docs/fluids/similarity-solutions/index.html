@@ -1,0 +1,792 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../css/long.css'>
+
+
+<title>diffusion, similarity solutions, intermediate asymptotics</title>
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../fluids/">fluids</a>&nbsp;> <a href="">diffusion, similarity solutions, intermediate asymptotics</a>
+
+</div>
+
+<h1 class="title">diffusion, similarity solutions, intermediate asymptotics</h1>
+
+<nav id="TableOfContents">
+  <ol>
+    <li><a href="#recap-anomalous-dimensions">RECAP: ANOMALOUS DIMENSIONS</a></li>
+    <li><a href="#the-diffusion-equation">THE DIFFUSION EQUATION</a></li>
+    <li><a href="#lt-behaviour-of-the-diffusion-equation">LT BEHAVIOUR OF THE DIFFUSION EQUATION</a></li>
+    <li><a href="#dimensional-analysis-of-the-diffusion-equation">DIMENSIONAL ANALYSIS OF THE DIFFUSION EQUATION</a></li>
+    <li><a href="#intermediate-asymptotics-of-the-first-kind">INTERMEDIATE ASYMPTOTICS OF THE FIRST KIND</a></li>
+    <li><a href="#where-anomalous-dimensions-come-in">WHERE ANOMALOUS DIMENSIONS COME IN</a></li>
+  </ol>
+</nav>
+
+
+
+<h1 id="recap-anomalous-dimensions">RECAP: ANOMALOUS DIMENSIONS</h1>
+<hr>
+<p>¶ when anomalous dimensions arise, it means there&rsquo;s a microscopic length at
+work.</p>
+<ul>
+<li>this microscopic length scale affects the thermo functions and the
+correlation function <em>asymptotically</em> near the critical point</li>
+<li>mmly this means you can&rsquo;t approximate a function ˝f(x)˝ with ˝f(x = 0)˝ when
+˝x → 0˝. that kind of limit approximation is not valid.</li>
+</ul>
+<p>¶ so basically, whenever there&rsquo;s a function ˝f(x)˝ that you <em>can&rsquo;t</em> replace with
+˝f(0)˝ when ˝x˝ is small, it means there&rsquo;s an anomalous dimension. that&rsquo;s all
+an anomalous dimension is, really.</p>
+<ul>
+<li>when you look at ADs this way (as a general mml object/form/statement),
+obviously, you can start applying them to other things too</li>
+<li>
+<blockquote>
+<blockquote>
+<p>did anomalous dimensions arise in physics, when studying phase
+transitions? &laquo;</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<p>¶ you can calculate ADs via RG methods for certain nonlinear diffusion problems
+from fluid dynamics.</p>
+<ul>
+<li>main difference between this and the study of phase transitions:
+<ul>
+<li>these are far from equilibrium (FFE) systems</li>
+<li>they are formulated as PDEs rather than in terms of a partition function</li>
+</ul>
+</li>
+<li>but they still give rise to anomalous diffusion laws</li>
+</ul>
+<p>¶ in &ldquo;conventional&rdquo; 1d diffusion, the mean square displacement of a particle
+from the starting point, as a fn of time, is ˝⟨x⁽2⁾⟩ ∼ t˝. BUT the actual
+problems give laws of form ˝⟨x⁽2⁾⟩ ∼ t⁽1-α⁾˝, where ˝α˝ is an AD.</p>
+<ul>
+<li>in all these problems, the long term behaviour is governed by a <strong>similarity
+solution</strong>, but you can&rsquo;t actually deduce the similarity variables from
+dimensional analysis</li>
+</ul>
+<p>¶ the general form of these problems (true for both FFE fluids and critical
+phenomena):</p>
+<ul>
+<li>you encounter a divergent perturbation series</li>
+<li>you resolve this with renormalisation</li>
+<li>renormalisation solves the divergences, but by itself doesn&rsquo;t give ADs</li>
+<li>the renormalisation process introduces an arbitrary length scale ˝μ˝ that is
+<em>not</em> present in the original problem, and thus it also can&rsquo;t appear in the
+solution</li>
+<li>ie the solution has an <em>invariance</em> wrt variations of ˝μ˝</li>
+<li>this invariance is what renormalisation expresses.</li>
+<li>you can exploit renormalisation, along with an approximation scheme (there
+are many), to calculate the ADs</li>
+</ul>
+<h1 id="the-diffusion-equation">THE DIFFUSION EQUATION</h1>
+<hr>
+<p>¶ the 1d diffusion equation starting from a localised initial condition:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏{t}{u(x,t)} = ÷12·κ·𝝏n{2}{x}{u(x,t)}       for: -∞ &lt; x &lt; ∞ 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>where ˝κ˝ is the diffusion coefficient</li>
+<li>the initial condition is</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  u(x,t=0) = ÷{A₍0₎}{√{2πl⁽2⁾}}·exp(-x⁽2⁾/2l⁽2⁾) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>˝l˝ is the width of the initial distribution</li>
+<li>˝A₍0₎˝ is the area under the initial distribution, aka the mass ˝m˝ of the
+distribution</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  m = ∫{-∞}{∞} ɗx u(x,t)
+  = A₍0₎    for: t ≥ 0 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>?? is ˝u(x,t)˝ the density of the material at position ˝x˝ and time ˝t˝</li>
+</ul>
+<p>¶ we&rsquo;re assuming the area under the initial distribution is fixed.</p>
+<p>¶ in 3d:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏{t}{u(↗r,t)} = ∇⦁(D(u,↗r)·∇u(↗r,t)) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>˝D(u,↗r)˝ is the collective diffusion coefficient for density ˝u˝ at
+position ˝↗r˝</li>
+<li>if ˝D˝ is constant, you get the linear differential equation</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏{t}{u(↗r,t)} = D·∇⁽2⁾u(↗r,t) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>this form is the same as the heat equation</li>
+</ul>
+<h1 id="lt-behaviour-of-the-diffusion-equation">LT BEHAVIOUR OF THE DIFFUSION EQUATION</h1>
+<hr>
+<p>¶ for the solution to be physically relevant/plausible, the solution should
+vanish &ldquo;sufficiently&rdquo; fast at spatial infinity so that ˝m˝ is well defined,
+and it should also have continuous spatial derivatives up to 2nd order so</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  u(x,t) → 0    as    |x| → ∞ 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>all we&rsquo;re really saying here is the diffusion should be over some finite
+range, we&rsquo;re not considering diffusion over the entirety of space. at a
+certain point, when you go far enough away, you can assume the density is
+just zero.</li>
+</ul>
+<p>¶ the mass ˝m˝ is conserved. the diffusion eqation comes from a conservation
+law.</p>
+<p>¶ after time ˝t˝ the solution is</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  u(x,t) = ÷{A₍0₎}{√{2π(κt&#43;l⁽2⁾)}}·exp(-x⁽2⁾ / 2(κt&#43;l⁽2⁾)) \tag{1} 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>after a long time, when ˝t » l⁽2⁾/κ˝, this reduces to</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  u(x,t) ∼ ÷{A₍0₎}{√{2πκt}}·exp(-x⁽2⁾/2κt)    as    t → ∞   \tag{2} 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>note, you can also get this by keeping ˝t˝ fixed but making ˝l˝ small, ie
+˝l⁽2⁾ « κt˝</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  u(x,t) ∼ ÷{A₍0₎}{√{2πκt}}·exp(-x⁽2⁾/2κt)    as    l → ∞   \tag{3} 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>wtf? ok ok, look, we&rsquo;re just looking at the form of 𝓮𝓻{1}. to make it look
+like 𝓮𝓻{2}, just take ˝l → 0˝. that&rsquo;s all.</li>
+</ul>
+<p>¶ now look at the initial condition. in the limit ˝l → 0˝ the initial condition
+becomes</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  u(x,t=0) = A₍0₎·δ(x) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>all this is saying is, if the initial width ˝l˝ is infinitesimally small,
+then the density at time ˝t = 0˝ is just a delta function equal to the mass
+of the distribution</li>
+</ul>
+<p>¶ the long time behaviour of the initial value problem with ˝l ≠ 0˝ is given by
+the degenerate limit of the initial value problem with ˝l → 0˝.</p>
+<ul>
+<li>the solution in this limit is the <strong>green function</strong> for the diffusion
+equation.</li>
+<li>?? wtf? surely not though? taking ˝l → 0˝ surely doesn&rsquo;t actually reveal
+anything about the behaviour though? we&rsquo;re just playing around with
+mathematical forms
+<ul>
+<li>oh oh  oh oh ho. got it.</li>
+<li>firsty, read about fucking <a href="https://en.wikipedia.org/wiki/Degenerate_distribution">degenerate distributions</a></li>
+<li>basically, it&rsquo;s a deterministic distribution that takes only a single
+value, and it only has support at a single point (although that&rsquo;s kinda
+weird af tho)</li>
+<li>basically, look at the initial condition. the long term form of this
+distribution (long term means for large ˝t˝) is the same as the
+<ul>
+<li>ok, no. fuck.</li>
+<li>arrgh</li>
+</ul>
+</li>
+<li>ok. look at the initial condition. good. now look at the time dependent
+form of the initial condition (fuck me, ie, the fucking solution, ie,
+𝓮𝓻{1}). the long term form of 𝓮𝓻{1} (long term means large ˝t˝) is the
+same as the small ˝l˝ form of 𝓮𝓻{1} (ie take ˝l˝ to zero)</li>
+</ul>
+</li>
+</ul>
+<p>¶ the solution in the limit ˝l → 0˝ is the <strong>green function for the diffusion
+equation</strong></p>
+<ul>
+<li>read <a href="https://en.wikipedia.org/wiki/Degenerate_distribution">wikipedia</a></li>
+<li>also read &ldquo;green&rsquo;s function in physics&rdquo;, around p154</li>
+</ul>
+<p>¶ the ˝l → 0˝ solution is a similarity solution, is it?</p>
+<h1 id="dimensional-analysis-of-the-diffusion-equation">DIMENSIONAL ANALYSIS OF THE DIFFUSION EQUATION</h1>
+<hr>
+<p>¶ the main thing about the similarity solution (the ˝l → 0˝ limit, yes?) is
+that it&rsquo;s dimensionally deficient.</p>
+<ul>
+<li>?? going to assume the similarity solution is 𝓮𝓻{3}</li>
+<li>the original problem is specified by variables ˝x,t,l,A₍0₎˝</li>
+<li>the &ldquo;degenerate problem&rdquo; is specified by ˝x,t,A₍0₎˝</li>
+</ul>
+<p>¶ the fact that ˝l˝ is no longer a parameter (in the degenerate problem) is very
+powerful. this is what allows us to construct a similarity solution using
+dimensional analysis.</p>
+<ul>
+<li>hmph</li>
+</ul>
+<p>¶ dimensions of quantities, in the system of units ˝ULT˝, where ˝U = [u]˝, and
+˝U˝ is independent of ˝LT˝</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  [u] = U
+  [x] = L
+  [l] = L
+  [t] = T
+  [A₍0₎] = UL
+  [κ] = L⁽2⁾T⁽-1⁾ 
+	\end{equation}
+	££
+	</div>
+
+
+<p>¶ dimensionless groups:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Π = ÷{u}{A₍0₎}·√{κt} 
+  Π₍1₎ = ÷{x}{√{κt}}
+  Π₍2₎ = ÷{l}{√{κt}} 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>all other dimless groups of parameter can be constructed from these</li>
+</ul>
+<p>¶ since the ˝Π˝s are dimless, then</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Π = f(Π₍1₎, Π₍2₎) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>˝f˝ is an unknown function, tbd. ˝f˝ &ldquo;represents&rdquo; the solution to the
+problem</li>
+<li>˝f˝ is a scaling function. it&rsquo;s the scaling function for the original
+problem.
+<ul>
+<li>related to the static scaling hypothesis.</li>
+</ul>
+</li>
+</ul>
+<p>¶ for the similarity solution, ˝l˝ doesn&rsquo;t appear in the parameters (for the
+degenerate problem), so</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Π = f₍s₎(Π₍1₎) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>˝f₍s₎˝ is the scaling function for the similarity solution.</li>
+</ul>
+<p>¶ to determine ˝f₍s₎˝:</p>
+<ul>
+<li>let ˝ξ = x / √{κt}˝</li>
+<li>from DA, the solution has to be of form</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  u(x,t) = ÷{A₍0₎}{√{κt}}·f₍s₎(ξ) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>the LHS dims are ˝U˝, the RHS dims are ˝U˝ times a dimless function</li>
+</ul>
+<p>¶ now sub this assumed form into the diffusion equation. you get an ODE for the
+unknown function ˝f₍s₎˝:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  f₍s₎&#39;&#39; &#43; ξf₍s₎&#39; &#43; f₍s₎ = 0    \tag{4} 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>although, more specifically,</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Ɗn{2}{ξ}{f₍s₎(ξ)} &#43; ξ·Ɗ{ξ}{f₍s₎(ξ)} &#43; f₍s₎(ξ) = 0 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>or</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ÷{d⁽2⁾ f₍s₎(ξ)}{dξ⁽2⁾} &#43; ξ·÷{df₍s₎(ξ)}{dξ} &#43; f₍s₎(ξ) = 0 
+	\end{equation}
+	££
+	</div>
+
+
+
+  
+  
+  <div class="fig">
+  <img src="../figs/ssoldiffusion.jpg" width="420">
+  </div>
+
+<p>¶ the ODE must satisfy:</p>
+<ol>
+<li>since ˝u(x,t) → 0˝ as ˝|x| → ∞˝,</li>
+</ol>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  f₍s₎(x) → 0   as    |x| → ∞ 
+	\end{equation}
+	££
+	</div>
+
+
+<ol start="2">
+<li>from the conservation law,</li>
+</ol>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∫{-∞}{∞} ɗξ f₍s₎(ξ) = 1 
+	\end{equation}
+	££
+	</div>
+
+
+<ol start="3">
+<li>˝f₍s₎˝ must be an even function of ˝ξ˝ (this is because of the form of
+𝓮𝓻{4}, and the fact that the IC is an even function), so</li>
+</ol>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  f₍s₎&#39;(ξ = 0) = 0 
+	\end{equation}
+	££
+	</div>
+
+
+<p>¶ solve the ODE:</p>
+<ul>
+<li>note that 𝓮𝓻{4} is an exact differential equation. ∴ you can integrate it,
+to give</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  f₍s₎&#39; &#43; ξf₍s₎ = C   \tag{5} 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>?? I bet if you actually put an integration sign in front of all the terms
+in 𝓮𝓻{4} and do the integration by parts for the middle term, there&rsquo;ll be
+some term that cancels with the third term, and presto, etc</li>
+<li>the constant of integration ˝C˝ must be zero, because when ˝ξ = 0˝, ˝f₍s₎&lsquo;˝
+must be zero (since ˝f₍s₎˝ is even)</li>
+<li>integrate 𝓮𝓻{5}, you get</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  f₍s₎(ξ) = B·exp{-ξ⁽2⁾/2} 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>the normalisation condition (ODE condition 2) gives ˝B˝</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  B = 1 / √{2π} 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>∴ the (similarity) scaling function (is that what it&rsquo;s called? wtf is
+˝f₍s₎˝?) is</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  f₍s₎(ξ) = ÷{1}{√{2π}}·exp{-ξ⁽2⁾/2} 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>so the similarity solution is</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  u(x,t) = ÷{A₍0₎}{√{κt}}·÷{1}{√{2π}}·exp{-x⁽2⁾/2κt}   
+	\end{equation}
+	££
+	</div>
+
+
+<h1 id="intermediate-asymptotics-of-the-first-kind">INTERMEDIATE ASYMPTOTICS OF THE FIRST KIND</h1>
+<hr>
+<p>¶ for the similarity solution,</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Π = f₍s₎(Π₍1₎) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>˝f₍s₎˝ is the scaling function for the similarity solution.</li>
+</ul>
+<p>¶ for any version of the problem where the IC is ˝l ≠ 0˝, the solution must be
+of form</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Π = f(Π₍1₎, Π₍2₎) 
+	\end{equation}
+	££
+	</div>
+
+
+<p>¶ for long times, ˝Π₍2₎ → 0˝. ∴ according to common sense, at long times you can
+assume ˝Π₍2₎˝ is small enough to be able to ignore (set to zero), ie</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  f₍s₎(Π₍1₎) = f(Π₍1₎, [Π₍2₎ = 0])    \tag{6} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>¶ basically, this common sense intuition is just the statement that a diffusion
+process <strong>loses memory of the initial distribution</strong> once ˝⟨x⁽2⁾⟩ » l⁽2⁾˝</p>
+<ul>
+<li>turns out this assumption is NOT right for some problems</li>
+<li>we verified this assumption when the IC is a gaussian. should try the
+equivalent calcuation for an arbitrary IC.</li>
+</ul>
+<p>¶ the assumption that you can take the limit to get 𝓮𝓻{6} allows you to
+determine the long time behaviour of the diffusion equation from the
+similarity solution, starting from the IC with ˝l ≠ 0˝.</p>
+<p>¶ <strong>intermediate asymptotics</strong>: the asymptotics of the long time limit</p>
+<ul>
+<li>&ldquo;intermediate&rdquo;, because the ultimate behaviour is ˝u = 0˝</li>
+<li>the region where the &lsquo;common sense&rsquo; assumption is correct is called
+<strong>intermediate asymptotics of the first kind</strong> (IA1)</li>
+</ul>
+<p>¶ when you make the IA1K assumption, you can express the asymptotic behaviour of
+the diffusion equation for long times by</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  u(x,t) ∼ t⁽-1/2⁾·g(x / √{κt}) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>˝g(x)˝ is a function that satisfies ˝g(x) → const˝ as ˝x → 0˝</li>
+</ul>
+<p>¶ the most common, unconscious assumption, is that asymptotics are of the first
+kind.</p>
+<ul>
+<li>given a physical problem expressed in dimless variables ˝Π, Π₍1₎, Π₍2₎&hellip;˝,
+the solution has the form</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Π = f(Π₍1₎, Π₍2₎,...) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>where ˝f˝ is a function that can ONLY be determined from a detailed analysis
+of the problem.</li>
+<li>if the limiting behaviour as ˝Π₍2₎ → 0˝ has form</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Π ∼ f(Π₍1₎, 0, ...) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>then asymptotics are of the first kind.</li>
+</ul>
+<p>¶ the importance of similarity solutions:</p>
+<ul>
+<li>they are easy to construct.</li>
+<li>they satisfy an equation with one fewer independent variable than the
+original PDE</li>
+<li>the intermediate asymptotics of solutions that are themselves NOT similarity
+solutions are still often given by similarity solutions</li>
+</ul>
+<h1 id="where-anomalous-dimensions-come-in">WHERE ANOMALOUS DIMENSIONS COME IN</h1>
+<hr>
+<p>¶ you can&rsquo;t always get similarity solutions using dimensional analysis, because
+ADs can occur.</p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>examples on fluids</title>
+    <link>/fluids/examples/</link>
+    <description>Recent content in examples on fluids</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/fluids/examples/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bucket</title>
+      <link>/fluids/examples/bucket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/examples/bucket/</guid>
+      <description>BUCKET PROBLEM continuity equation:
+££ \begin{equation} A₍1₎ v₍1₎ = A₍2₎ v₍2₎ \end{equation} ££ flux out:
+££ \begin{equation} A₍2₎ √{2gh} \end{equation} ££ volumetric flux:
+££ \begin{equation} V = A₍2₎v₍2₎t \end{equation} ££ so time taken:
+££ \begin{equation} t = V / A₍2₎√{2gh} \end{equation} ££ </description>
+    </item>
+    
+    <item>
+      <title>deriving the vorticity equation from navier-stokes in 2d</title>
+      <link>/fluids/examples/asmp61a-vorticity-equation-from-ns-2d/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/examples/asmp61a-vorticity-equation-from-ns-2d/</guid>
+      <description>Start with the incompressible Navier-Stokes equation
+££ \begin{equation} 𝝏₍t₎↗v &amp;#43; (↗v⦁∇)↗v = ν∇⁽2⁾↗v - ÷1ρ·∇p 𝓮𝓺{611} \end{equation} ££ where
+˝↗v = ↗v(↗r,t)˝ is the flow velocity (vector field) ˝p = p(↗r,t)˝ is the pressure (scalar field) ˝ρ˝ is the density ˝ν˝ is the kinematic viscosity, ˝ν = μ/ρ˝ Some context: the NSE is an equation for the time evolution of the fluid&amp;rsquo;s velocity field. The specific form of the equation derives from momentum conservation (and whatever assumptions you deign to make about the fluid, e.</description>
+    </item>
+    
+    <item>
+      <title>the vorticity equation in a rotating frame</title>
+      <link>/fluids/examples/asmp62-vorticity-with-coriolis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/examples/asmp62-vorticity-with-coriolis/</guid>
+      <description>The NSE:
+££ \begin{equation} Ɗ₍t₎↗v = ν∇⁽2⁾↗v - ÷1ρ∇p 𝓮𝓺{621} \end{equation} ££ where ˝Ɗ₍t₎˝ is the advective derivative, ˝Ɗ₍t₎ = 𝝏₍t₎ + (↗v⦁∇)˝. Suppose we&amp;rsquo;re now in a rotating reference frame RF that&amp;rsquo;s rotating at angular velocity ˝↗Ω˝ w.r.t. the inertial frame IF. Since all the vector quantities are now fixed in the rotating frame, you have to transform them to a form that&amp;rsquo;s valid in the inertial frame. Let ˝↗r˝ be the position vector, ˝↗r = ∑₍i₎r₍i₎↑e₍i₎˝.</description>
+    </item>
+    
+  </channel>
+</rss>

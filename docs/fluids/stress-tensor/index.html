@@ -1,0 +1,166 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../css/long.css'>
+
+
+<title>stress tensor</title>
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../fluids/">fluids</a>&nbsp;> <a href="">stress tensor</a>
+
+</div>
+
+<h1 class="title">stress tensor</h1>
+
+<nav id="TableOfContents">
+  <ol>
+    <li><a href="#stresses--internal-forces">STRESSES &amp; INTERNAL FORCES</a></li>
+    <li><a href="#constructing-the-stress-tensor">CONSTRUCTING THE STRESS TENSOR</a></li>
+    <li><a href="#tenets">TENETS</a></li>
+  </ol>
+</nav>
+
+
+
+<p>GOAL: describe the internal forces in a material/body in terms of a tensor.</p>
+<h1 id="stresses--internal-forces">STRESSES &amp; INTERNAL FORCES</h1>
+<hr>
+<p>¶ the STRESSES in a material are the various internal forces that maintain its
+form.</p>
+<p>suppose you dissect a 3d object with a plane. take a small area element of the
+plane. the material on the left of the area element will exert a force ΔF to
+the right, and v.v.</p>
+<p>¶ PRESSURE in a static liquid is one kind of stress. in this case, F = P × A.
+the force is perpendicular to the surface element.</p>
+<p>¶ the force doesn&rsquo;t need to be normal to the surface. a SHEAR force is the
+tangential component of a force across a surface. in solids and viscous
+liquids in motion there are shear forces in addition to pressures.</p>
+<h1 id="constructing-the-stress-tensor">CONSTRUCTING THE STRESS TENSOR</h1>
+<hr>
+<p>¶ feynman 31-6. make a cut perpendicular to the x axis. resolve the force across
+the cut ΔF into three components, ΔF₍x₎, ΔF₍y₎, ΔF₍z₎. take the ratio of each
+of these force components to the area element ΔyΔz. call these ratios S₍xx₎,
+S₍xy₎, S₍xz₎.</p>
+<p>e.g. S₍yx₎ = ΔF₍y₎ / ΔyΔz</p>
+<p>then do the same for the y axis and the z axis. you end up with a 9-component
+stress tensor.</p>
+<h1 id="tenets">TENETS</h1>
+<hr>
+<p>¶ the stress tensor is symmetric. it can be described by an ellipsoid with three
+principal axes.</p>
+<p>stresses are simple for surfaces normal to these axes &ndash; just pushes or pulls
+perpendicular to surfaces. no shear forces.</p>
+<p>¶ for any stress, you can choose the axes so that the shear components are zero.</p>
+<p>¶ if the ellipsoid is a sphere, there are ONLY normal forces in ANY direction.
+corresponds to a hydrostatic pressure (the tensor is diagonal, all three
+components are equal).</p>
+<p>¶ the stress tensor will vary from point to point in a material. to describe the
+whole block you need to give each component of S₍ij₎ as a function of
+position. ∴ the stress tensor is a field. specifically, a tensor field. it
+gives nine numbers for each point in space (six for the symmetric tensor).</p>
+<p>∴ to describe completely the internal forces in an arbitrarily distorted solid
+requires six functions of x, y, z.</p>
+
+
+</body>
+
+</html>

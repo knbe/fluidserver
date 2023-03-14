@@ -1,0 +1,180 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../css/note.css'>
+
+
+<title>physics</title>
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../fluids/">fluids</a>&nbsp;> <a href="">incompressible flows</a>
+
+</div>
+
+<h1 class="title">incompressible flows</h1>
+
+<nav id="TableOfContents"></nav>
+
+
+
+<p>¶ <em>define</em> 
+
+
+
+
+
+
+[<a class="lex" href="lexicon/incompressible-flow/">INCOMPRESSIBLE FLOW</a>]
+ : a flow where the density is constant
+in a parcel of fluid. incompressible flows obey:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∇⦁↗v = 0 
+	\end{equation}
+	££
+	</div>
+
+
+<p>˝↗v˝ is the flow velocity (a vector field since it&rsquo;s a flow).</p>
+<p>note this equation has the same form as the equation for a solenoidal field.
+indeed, for incompressible flows the velocity field is solenoidal.</p>
+<p>¶ when can you assume the fluid density is constant? well, if the flow velocity
+is much smaller than the speed of sound (&ldquo;highly subsonic flow&rdquo;) &amp;&amp; gravity
+isn&rsquo;t strong enough to compress the fluid significantly, then changes in fluid
+density are negligible. the incompressible flow equation is an assumption
+only. [TB p676]
+</p>
+<p>consider a flow, with variables ˝P, v, ρ, &hellip;˝.</p>
+<ul>
+<li>let ˝L˝ be the characteristic length over which these variables vary. (just
+a pretentious way of saying, the kind of lengths where you can measure and
+observe differences in these variables. e.g. macroscopic&hellip; the &ldquo;human&rdquo;
+scale? is one example)</li>
+<li>let ˝T˝ be the characteristic timescale over which the variables vary.</li>
+<li>consider a flow for which ˝L « vT˝.</li>
+</ul>
+<p>¶ <em>define</em> 
+
+
+
+
+
+
+[<a class="lex" href="lexicon/flow-speed/">FLOW SPEED</a>]
+ : the magnitude of the flow velocity vector.</p>
+<p>¶ <em>define</em> 
+
+
+
+
+
+
+[<a class="lex" href="lexicon/velocity-profile/">VELOCITY PROFILE</a>]
+ : the flow velocity evaluated along a
+line.</p>
+
+
+</body>
+
+</html>

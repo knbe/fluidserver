@@ -1,0 +1,144 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../../css/long.css'>
+
+
+<title>reynolds number</title>
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../../fluids/">fluids</a>
+	> <a href="../../../fluids/notes/">notes</a>&nbsp;> <a href="">reynolds number</a>
+</div>
+
+<h1 class="title">reynolds number</h1>
+
+<nav id="TableOfContents"></nav>
+
+
+
+<p>¶ kinematic viscosity ˝ν˝ has dimensions ˝length⁽2⁾/time˝. to quantiy viscosity
+in fluid flow, you compare ˝ν˝ with the product of the flow&rsquo;s characteristic
+velocity ˝V˝ and its characteristic length scale ˝L˝.</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Re = ÷{LV}{ν} 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>this is the <strong>reynolds number</strong></li>
+<li>it&rsquo;s dimensionless</li>
+<li>flows with ˝Re &lt; 1˝ are dominated by viscosity</li>
+<li>flows with ˝Re &gt; 1˝ can be <em>influenced</em> by viscosity, especially when it
+acts near boundaries, BUT the viscous stresses are negligible over most of
+the flow&rsquo;s volume</li>
+</ul>
+
+
+</body>
+
+</html>

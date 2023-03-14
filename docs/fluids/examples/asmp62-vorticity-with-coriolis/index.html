@@ -1,0 +1,433 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../../css/example.css'>
+
+
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../../fluids/">fluids</a>
+	> <a href="../../../fluids/examples/">examples</a>&nbsp;> <a href="">the vorticity equation in a rotating frame</a>
+</div>
+
+<h1 class="title">the vorticity equation in a rotating frame.</h1>
+
+
+
+<p>The NSE:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Ɗ₍t₎↗v = ν∇⁽2⁾↗v - ÷1ρ∇p        𝓮𝓺{621} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>where ˝Ɗ₍t₎˝ is the advective derivative, ˝Ɗ₍t₎ = 𝝏₍t₎ + (↗v⦁∇)˝. Suppose we&rsquo;re
+now in a rotating reference frame RF that&rsquo;s rotating at angular velocity ˝↗Ω˝
+w.r.t. the inertial frame IF. Since all the vector quantities are now fixed in
+the rotating frame, you have to transform them to a form that&rsquo;s valid in the
+inertial frame. Let ˝↗r˝ be the position vector, ˝↗r = ∑₍i₎r₍i₎↑e₍i₎˝. The basis
+˝↑e₍i₎˝ is fixed in RF but rotating with angular velocity ˝↗Ω˝ in IF. Thus the
+time derivative of ˝↗r˝, as seen from IF, is</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  (Ɗ₍t₎↗r)₍IF₎
+  = Ɗ₍t₎(∑₍i₎r₍i₎↑e₍i₎)
+  = ∑₍i₎(Ɗ₍t₎r₍i₎)↑e₍i₎ &#43; ∑₍i₎r₍i₎ \underbrace{(Ɗ₍t₎↑e₍i₎)}_{=↗Ω×↑e₍i₎}
+  = (Ɗ₍t₎↗r &#43; ↗Ω×↗r)₍RF₎ 
+	\end{equation}
+	££
+	</div>
+
+
+<p>where in the last line ˝↗r˝ is measured from the RF. Since ˝↗v = Ɗ₍t₎↗r˝, the
+transformation for velocity in rotating coordinates is</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  (↗v)₍IF₎ → (↗v &#43; ↗Ω×↗r)₍RF₎ 
+	\end{equation}
+	££
+	</div>
+
+
+<p>(a) You also have to include fictitious forces to the RHS of \eqref{621}. Normally
+these are the Coriolis force ˝-2m↗Ω×↗v˝ and the centrifugal force
+˝-m↗Ω×(↗Ω×↗r)˝. In this problem we consider only the Coriolis force. The NSE in
+rotating coordinates becomes</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  (Ɗ₍t₎↗v)₍IF₎ = (ν∇⁽2⁾(↗v&#43;↗Ω×↗r) - ÷1ρ∇p - 2↗Ω×↗v)₍RF₎ 
+	\end{equation}
+	££
+	</div>
+
+
+<p>However, it turns out when you expand out the viscosity term, the contribution
+from the ˝↗Ω×↗r˝ term cancels out:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∇⁽2⁾(↗Ω×↗r)
+  = 𝝏₍l₎⁽2⁾(Ω₍j₎r₍k₎ - Ω₍k₎r₍j₎)
+  = (𝝏₍l₎⁽2⁾Ω₍j₎)r₍k₎ &#43; Ω₍j₎(𝝏₍l₎⁽2⁾r₍k₎) - (𝝏₍l₎⁽2⁾Ω₍k₎)r₍j₎ - Ω₍k₎(𝝏₍l₎⁽2⁾r₍j₎)
+  = 0 
+	\end{equation}
+	££
+	</div>
+
+
+<p>so the viscosity term actually stays the same, ˝ν∇⁽2⁾↗v˝, and the equation is</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  (Ɗ₍t₎↗v)₍IF₎ = (ν∇⁽2⁾↗v - ÷1ρ∇p - 2↗Ω×↗v)₍RF₎ 
+	\end{equation}
+	££
+	</div>
+
+
+<p>(b) Now, take the curl ˝↑z⦁∇×˝ of both sides:
+
+
+<div class="eq">
+££
+\bgnmaths
+
+  ↑z⦁(∇×Ɗ₍t₎↗v) = ↑z⦁(∇×ν∇⁽2⁾↗v) - ↑z⦁(∇×÷1ρp) - ↑z⦁(∇×(2↗Ω×↗v))
+
+
+\endmaths
+££
+</div>
+
+As demonstrated in the previous problem, the LHS is ˝𝝏₍t₎ω + J(ψ,ω)˝, the
+viscosity term is ˝ν∇⁽2⁾ω˝, and the pressure term is zero. For the Coriolis
+term, substitute ˝2↗Ω = ↑zf(y)˝, where ˝f(y) = f₍0₎ + βy˝, and you get</p>
+<p>
+
+<div class="eq">
+££
+\bgnmaths
+
+  2↗Ω×↗v 
+&= 
+
+ ↑zf×↗v 
+\n
+&=
+
+ \begin{vmatrix}
+    ↑x &amp; ↑y &amp; ↑z \\
+    0 &amp; 0 &amp; f \\
+    v₍x₎ &amp; v₍y₎ &amp; 0
+  \end{vmatrix}
+  
+\n
+&=
+
+ (-fv₍y₎)↑x &#43; (fv₍x₎)↑y
+
+\endmaths
+££
+</div>
+
+and, taking the curl ˝↑z⦁∇×˝ gives</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ↑z⦁∇×(↑zf×↗v) 
+	\end{equation}
+	££
+	</div>
+
+
+<p>
+
+<div class="eq">
+££
+\bgnmaths
+
+  
+&= 
+
+ ↑z⦁
+  \begin{vmatrix}
+    ↑x &amp; ↑y &amp; ↑z \\
+    𝝏₍x₎ &amp; 𝝏₍y₎ &amp; 𝝏₍z₎ \\
+    -fv₍y₎ &amp; fv₍x₎ &amp; 0
+  \end{vmatrix}
+  
+\n
+&=
+
+ 𝝏₍x₎fv₍x₎ &#43; 𝝏₍y₎fv₍y₎
+
+\endmaths
+££
+</div>
+
+Putting this all together,</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏₍t₎ω &#43; J(ψ,ω) = ν∇⁽2⁾↗v - (𝝏₍x₎fv₍x₎ &#43; 𝝏₍y₎fv₍y₎) 
+	\end{equation}
+	££
+	</div>
+
+
+<p>From the previous problem we know that ˝v₍x₎ = -𝝏₍y₎ψ˝ and ˝v₍y₎ = 𝝏₍x₎ψ˝.<br>
+Substituting these in, the ˝f˝ term on the RHS becomes ˝-𝝏₍x₎f𝝏₍y₎ψ +
+𝝏₍y₎f𝝏₍x₎ψ˝. You can then combine this term with the Jacobian on the LHS</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏₍t₎ω &#43; (𝝏₍x₎ψ(𝝏₍y₎ω &#43; 𝝏₍y₎f)- (𝝏₍x₎ω &#43; 𝝏₍x₎f)𝝏₍y₎ψ) = ν∇⁽2⁾↗v 
+	\end{equation}
+	££
+	</div>
+
+
+<p>∴</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏₍t₎ω &#43; J(ψ,ω&#43;f) = ν∇⁽2⁾↗v 
+	\end{equation}
+	££
+	</div>
+
+
+<p>And, I only just realised, the problem says we may ignore viscosity by setting
+˝ν = 0˝. In that case,</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏₍t₎ω &#43; J(ψ,ω&#43;f) = 0 
+	\end{equation}
+	££
+	</div>
+
+
+<p>(c) Now we assume vorticity is small, ˝|ω| « |f(y)|˝, where ˝f(y) = f₍0₎ + βy˝
+gives how the local vertical component of the planet&rsquo;s angular velocity depends
+on the latitude ˝y˝ (the planetary vorticity as a function of latitude). The
+˝|ω| « |f|˝ approximation means we&rsquo;re now thinking of the flow components ˝v₍x₎,
+v₍y₎˝ as perturbations. If you let ˝V˝ be the total flow field, then</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  V₍x₎ = V₍m₎ &#43; v₍x₎(t)
+  V₍y₎ = v₍y₎(t) 
+	\end{equation}
+	££
+	</div>
+
+
+<p>where ˝V₍m₎˝ is the &ldquo;zonal mean flow&rdquo;, aka the &ldquo;average westerly&rdquo;, which acts in
+the ˝x˝ direction and is something that you assume to be constant. The
+approximation ˝|ω| « |f(y)|˝ means the perturbation flow doesn&rsquo;t advect the
+vorticity, so you can linearise the equation</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  d₍t₎(ω &#43; f) = 𝝏₍t₎ω &#43; V₍m₎𝝏₍x₎ω &#43;  β v₍x₎ 
+	\end{equation}
+	££
+	</div>
+
+
+<p>where ˝β = 𝝏₍y₎f˝.</p>
+<p>Substituting in ˝ω = ∇⁽2⁾ψ˝,</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏₍t₎∇⁽2⁾ψ &#43; V𝝏₍x₎∇⁽2⁾ψ &#43; β𝝏₍x₎ψ       𝓮𝓺{6214} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>(d)  Look for plane wave solutions ˝ψ(x,y,t) = A·exp(i(↗k⦁↗x - σt))˝, where
+˝↗k⦁↗x = kx + ly˝. Plugging this into \eqref{6214}, you get</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ω(x,y,t) = -(k⁽2⁾&#43;l⁽2⁾) ψ(x,y,t) 
+	\end{equation}
+	££
+	</div>
+
+
+<p>This gives the dispersion relation</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  σ(k,l) = Vk - βk / (k⁽2⁾&#43;l⁽2⁾) 
+	\end{equation}
+	££
+	</div>
+
+
+<p>These Rossby waves have phase speed</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ÷ωk = V₍m₎ - β / (k⁽2⁾ &#43; l⁽2⁾) 
+	\end{equation}
+	££
+	</div>
+
+
+<p>As ˝β → 0˝, the phase speed ˝÷ωk → V₍m₎˝ (the zonal mean flow, the average flow
+before perturbations due to the Coriolis force are introduced). Since ˝β = 𝝏₍y₎f =
+𝝏₍y₎(2↗Ω)˝, ˝β˝ is proportional to the rate of change of Coriolis acceleration
+in the vertical &ldquo;meridional&rdquo; direction. Hence as you approach the poles, ˝β →
+0˝, and at the poles there are no Rossby waves.</p>
+<p>REFERENCES</p>
+<p>K. Thorne, R. Blandford, Modern Classical Physics. Chapter 14.2 <em>Vorticity</em>,
+chapter 14.5 <em>Nearly Rigidly Rotating Flows</em>, chapter 16.4 <em>Rossby Waves in a
+Rotating Fluid</em>.</p>
+<p>Wikipedia, <em>Rossby wave, Mathematical definitions</em>. <a href="https://en.wikipedia.org/wiki/Rossby_wave#Mathematical_definitions">https://en.wikipedia.org/wiki/Rossby_wave#Mathematical_definitions</a></p>
+
+
+</body>
+
+</html>

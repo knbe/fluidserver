@@ -1,0 +1,349 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../css/long.css'>
+
+
+<title>conservation laws</title>
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../fluids/">fluids</a>&nbsp;> <a href="">conservation laws</a>
+
+</div>
+
+<h1 class="title">conservation laws</h1>
+
+<nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#conservation-of-mass-eulerian">conservation of mass, eulerian</a></li>
+        <li><a href="#conservation-of-mass-lagrangian">conservation of mass, lagrangian</a></li>
+        <li><a href="#conservation-of-momentum">conservation of momentum</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+
+
+
+<h2 id="conservation-of-mass-eulerian">conservation of mass, eulerian</h2>
+<hr>
+<p>¶ in the eulerian approach to mass conservation, you monitor the change in
+density at a given point in space, rather than moving with the flow [thorne
+p692].</p>
+<p>¶ when dealing with continua, all conservation of mass laws tend to have the
+form ˝𝝏₍t₎˝(density of something) = ˝∇⦁˝(flux of that thing). ie, rate of
+change of density wrt time = rate of change of flux wrt space</p>
+<p>¶ conservation of mass, differential form:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏₍t₎ρ &#43; ∇⦁(ρ↗v) = 0     𝓮𝓺{221} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>¶ any &ldquo;newtonian&rdquo; conservation law in differential form has a corresponding
+<em>integral</em> form [thorne p692]. you have to integrate the differential law over
+some arbitrary volume, call it ˝V&rsquo;˝
+
+
+<div class="eq">
+££
+\bgnmaths
+
+    𝝏₍t₎ ∫₍V&#39;₎ ρ dV 
+&= 
+
+ -∫₍V&#39;₎ ∇⦁(ρ↗v) dV
+    
+\n
+&=
+
+ -∫₍S₎ ρ↗v⦁d↗S
+  
+\endmaths
+££
+</div>
+</p>
+<ul>
+<li>this is an application of gauss&rsquo; law</li>
+<li>S is the closed surface that bounds ˝V&rsquo;˝</li>
+<li>LHS: the rate of change of mass in volume ˝V&rsquo;˝</li>
+<li>RHS: the rate at which mass flows into ˝V&rsquo;˝ through surface ˝𝝏S˝</li>
+<li>˝ρ↗v˝ is the mass flux</li>
+<li>˝-d↗S˝ is the inward facing surface element</li>
+</ul>
+<h2 id="conservation-of-mass-lagrangian">conservation of mass, lagrangian</h2>
+<hr>
+<p>¶ in the lagrangian approach to mass conservation, you look at the change in
+density as an observer who moves with the flow ˝↗v˝ [thorne p692]</p>
+<p>¶ mass conservation, differential form, lagrangian:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Ɗ₍t₎ρ = -ρ ∇⦁↗v 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>˝Ɗ₍t₎˝ is the advective time derivative, ˝Ɗ₍t₎ = 𝝏₍t₎ + ↗v⦁∇˝</li>
+<li>derivation: expand the second term in \eqref{221},
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∇⦁(ρ↗v) = (∇ρ)⦁↗v &#43; ρ∇⦁↗v 
+	\end{equation}
+	££
+	</div>
+
+
+∴
+
+
+<div class="eq">
+££
+\bgnmaths
+
+      Ɗ₍t₎ρ 
+      
+&= 
+
+ 𝝏₍t₎ρ &#43; ↗v⦁(∇ρ)
+      
+\n
+&=
+
+ -(∇ρ)⦁↗v - ρ∇⦁↗v &#43; ↗v⦁(∇ρ)
+    
+\endmaths
+££
+</div>
+
+the first and last terms cancel, so
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Ɗ₍t₎ρ = -ρ∇⦁↗v    𝓮𝓺{222} 
+	\end{equation}
+	££
+	</div>
+
+
+</li>
+</ul>
+<p>¶ ˝Ɗ₍t₎˝, the <strong>advective time derivative</strong>,</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Ɗ₍t₎ = 𝝏₍t₎ &#43; ↗v⦁∇ 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>physical interpretation?</li>
+<li>note, the partial derivative ˝𝝏₍t₎˝ is the rate of change of something
+(XXX), wrt time, at a fixed point in space, ie you could express it more
+formally as ˝𝝏₍t₎ = 𝝏₍t₎|₍↗x₎˝</li>
+<li>so, for a system in motion (a system changing with time), the partial
+derivative ˝𝝏₍t₎˝ compares the qty XXX at two <em>different points in the
+flow</em>, but at the <em>same point in space</em>. it compares qty XXX at location
+˝↗x˝ at time ˝t˝ to qty  XXX at location ˝↗x˝ at time ˝t + dt˝.</li>
+<li>the advective derivative follows the motion. it compares XXX at two
+different times, at the <em>same point in the material</em></li>
+</ul>
+<p>¶ how the lagrangian approach works:</p>
+<ul>
+<li>consider an block of fluid, volume ˝V˝</li>
+<li>the mass in the block of fluid is ˝m = ρV˝</li>
+<li>as the fluid flows, the mass must be conserved, so
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Ɗ₍t₎m = (Ɗ₍t₎ρ)·V &#43; ρ·(Ɗ₍t₎V) = 0 
+	\end{equation}
+	££
+	</div>
+
+
+or
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Ɗ₍t₎ρ = -÷ρV·Ɗ₍t₎V 
+	\end{equation}
+	££
+	</div>
+
+
+</li>
+<li>now compare this with \eqref{222}, since ˝Ɗ₍t₎ρ = -ρ∇⦁↗v˝,
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∇⦁↗v = ÷1V Ɗ₍t₎V 
+	\end{equation}
+	££
+	</div>
+
+
+</li>
+<li>so the divergence of the flow velocity ˝↗v˝ is the rate of change of the
+fluid block&rsquo;s volume divided by ˝V˝ (thorne calls this the &ldquo;fractional rate
+of increase of the fluid block&rsquo;s volume)</li>
+</ul>
+<p>¶ define a fluid&rsquo;s <strong>rate of expansion</strong>, ˝θ˝,</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  θ = ∇⦁↗v = Ɗ₍t₎Θ 
+	\end{equation}
+	££
+	</div>
+
+
+<h2 id="conservation-of-momentum">conservation of momentum</h2>
+<hr>
+<p>¶ for momentum conservation, the equation should be of form ˝𝝏₍t₎˝(momentum
+density)+ ˝∇⦁˝(momentum flux) = 0</p>
+<p>¶ for fluids the momentum density is ˝ρv˝.</p>
+<p>¶ the momentum flux is (generally) the stress tensor ˝T˝</p>
+<p>¶ momentum conservation, eulerian</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏₍t₎(ρ↗v) &#43; ∇⦁T = 0 
+	\end{equation}
+	££
+	</div>
+
+
+
+
+</body>
+
+</html>

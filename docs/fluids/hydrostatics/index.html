@@ -1,0 +1,397 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../css/note.css'>
+
+
+<title>physics</title>
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../fluids/">fluids</a>&nbsp;> <a href="">hydrostatics</a>
+
+</div>
+
+<h1 class="title">hydrostatics</h1>
+
+<nav id="TableOfContents">
+  <ol>
+    <li><a href="#stress-σ">STRESS, σ</a></li>
+    <li><a href="#strain-deformation">STRAIN, DEFORMATION</a></li>
+    <li><a href="#shear-force-and-shear-stress">SHEAR FORCE AND SHEAR STRESS</a></li>
+    <li><a href="#what-distinguishes-a-fluid">WHAT DISTINGUISHES A FLUID</a></li>
+    <li><a href="#hydrostatics-fluids-at-rest">HYDROSTATICS: FLUIDS AT REST</a></li>
+    <li><a href="#pressure-varies-with-height">PRESSURE VARIES WITH HEIGHT</a></li>
+    <li><a href="#pressure-on-a-small-cube-of-water">PRESSURE ON A SMALL CUBE OF WATER</a></li>
+    <li><a href="#equation-of-hydrostatic-equilibrium">EQUATION OF HYDROSTATIC EQUILIBRIUM</a></li>
+  </ol>
+</nav>
+
+
+
+<h1 id="stress-σ">STRESS, σ</h1>
+<hr>
+<p>¶ is a quantity that describes the forces in an object that cause deformation
+(strain). describes the internal forces that neighbouring particles exert on
+each other, in a continuous material.</p>
+<p>¶ defined as force per unit area.</p>
+<p>¶ compressive stress: is when forces (like tension or compression) cause an
+object to become compressed.</p>
+<ul>
+<li>the bigger these forces and the smaller the cross sectional area, the
+greater the stress.</li>
+<li>is why stress is defined as force per unit area</li>
+</ul>
+<p>¶ dimensions: ˝[σ] = L⁽-1⁾ M T⁽-2⁾˝</p>
+<p>¶ SI unit: pascal</p>
+<ul>
+<li>base units: ˝Pa = kg m⁽-1⁾ s⁽-2⁾˝</li>
+</ul>
+<p>¶ <a href="https://en.wikipedia.org/wiki/Stress_(mechanics)#/media/File:Different-types-of-mechanical-stress_EN.svg">examples</a> of mechanical stress:</p>
+<ul>
+<li>tension</li>
+<li>compression</li>
+<li>shear</li>
+<li>bending</li>
+<li>torsion</li>
+</ul>
+<h1 id="strain-deformation">STRAIN, DEFORMATION</h1>
+<hr>
+<p>¶ strain is a measure of deformation of an object. it describes the displacement
+between particles relative to a reference length</p>
+<p>¶ functional form of deformation:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ↗x = F(↗x&#39;) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>↗x&rsquo; is an array of reference positions for points of the body</li>
+<li>deformations have units of length</li>
+</ul>
+<p>¶ strains are usually dimensionless</p>
+<p>¶ whenever a solid material undergoas a strain (deformation), there is an
+internal elastic stress that causes the object to restore to its original
+non-deformed state (like the spring force)</p>
+<p>¶ in liquids and gases, ONLY deformations that change the volume will generate a
+persistent elastic stress</p>
+<ul>
+<li>if the deformation changes gradually, in fluids there will be some viscous
+stress that opposes the change.</li>
+</ul>
+<p>¶ elastic and viscous stresses are both kinds of mechanical stress.</p>
+<h1 id="shear-force-and-shear-stress">SHEAR FORCE AND SHEAR STRESS</h1>
+<hr>
+
+
+
+
+<div class="defn">
+<p class="defn-name">SHEAR FORCES
+
+<div class="defn-entry">
+forces that acts on one part of a body in a certain direction, and another
+part in the opposite direction
+</div>
+
+</div>
+
+<p>¶ if the forces are aligned (collinear), then they are just tension or
+compression forces</p>
+
+
+
+
+<div class="defn">
+<p class="defn-name">SHEAR STRESS τ
+
+<div class="defn-entry">
+<p>the component of stress that&rsquo;s coplanar with the body&rsquo;s cross section</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  τ = ÷FA 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>˝A˝ is the cross sectional area of the material that&rsquo;s parallel to the
+applied force</li>
+<li>points are coplanar if there&rsquo;s a plane that contains them all</li>
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="fig">
+<img src="../figs/shearstress.png" width="480">
+</div>
+
+<h1 id="what-distinguishes-a-fluid">WHAT DISTINGUISHES A FLUID</h1>
+<hr>
+<p>¶ the main difference between a fluid and solid: a fluid can&rsquo;t maintain a shear
+stress for any length of time.</p>
+<ul>
+<li>ie if you apply a shear to a fluid, it&rsquo;ll move</li>
+<li>some fluids move more easily under shear than others</li>
+</ul>
+<p>¶ viscosity: property that describes how easily a fluid yields (under a shear
+stress)</p>
+<h1 id="hydrostatics-fluids-at-rest">HYDROSTATICS: FLUIDS AT REST</h1>
+<hr>
+
+
+
+
+<div class="defn">
+<p class="defn-name">HYDROSTATICS
+
+<div class="defn-entry">
+the theory of liquids at rest.
+</div>
+
+</div>
+
+<p>¶ in hydrostatics, ignore viscous effects.</p>
+<p>¶ when liquids are at rest, there are no shear forces.</p>
+<p>¶ basic law of hydrostatics: stresses are always normal to any surface inside
+the fluid.</p>
+<p>¶ pressure is the same in all directions.</p>
+<ul>
+<li>for a given (arbitrary) surface in the fluid, the normal force on that
+surface per area is the pressure.</li>
+<li>the pressure stress must be the same in all directions because there is no
+shear on any plane in a static fluid (should prove this)</li>
+</ul>
+<h1 id="pressure-varies-with-height">PRESSURE VARIES WITH HEIGHT</h1>
+<hr>
+<p>¶ in a static fluid on the earth&rsquo;s surface, pressure varies with height, because
+of the weight of the fluid.</p>
+<ul>
+<li>assume density ˝ρ˝ is constant</li>
+<li>let the pressure at some arbitrary reference level be ˝p₍0₎˝</li>
+<li>the pressure at height ˝h˝ above the reference point is:
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  p = p₍0₎ - ρgh 
+	\end{equation}
+	££
+	</div>
+
+
+</li>
+</ul>
+<p>¶ the quantity ˝p + ρgh˝ is a constant in a static fluid.</p>
+<h1 id="pressure-on-a-small-cube-of-water">PRESSURE ON A SMALL CUBE OF WATER</h1>
+<hr>
+<p>what is the net force on the cube of water from the pressure?</p>
+<p>¶ note:</p>
+<ul>
+<li>pressure is the same in all directions in a static fluid</li>
+<li>thus the only way there can be a net force per volume on the cube is because
+the pressure changes from one point to another</li>
+</ul>
+
+
+
+<div class="fig">
+<img src="../figs/pressureoncubewater.jpg" width="480">
+</div>
+
+<p>¶ suppose there&rsquo;s some external force that can be described by a potential field
+(like gravity).</p>
+<ul>
+<li>let ˝φ˝ be the potential energy per unit mass</li>
+<li>the force per unit mass (for the potential field) is ˝-∇φ˝</li>
+<li>if ˝ρ˝ is the fluid density, then the force per unit volume is ˝-ρ∇φ˝</li>
+<li>since the system is in equilibrium, the force per unit volume for the
+potential field must cancel the pressure force per unit volume, ie when you
+add them they must be zero, so ˝-∇p - ρ∇φ = 0˝</li>
+<li>this is the equation of hydrostatics</li>
+</ul>
+<h1 id="equation-of-hydrostatic-equilibrium">EQUATION OF HYDROSTATIC EQUILIBRIUM</h1>
+<hr>
+<p>¶ here:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  -∇p - ρ∇φ = 0 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>in general it has no solution</li>
+<li>if the density varies arbitrarily, there&rsquo;s no way for the forces to balance,
+and the fluid can&rsquo;t be in static equilibrium. convection currents will
+start.</li>
+<li>lookie here: the pressure term is a &ldquo;pure&rdquo; gradient. the other term has the
+˝ρ˝ prefactor. if it&rsquo;s a variable, this term <em>isn&rsquo;t</em> a &ldquo;pure&rdquo; gradient.</li>
+<li>only when ˝ρ˝ is constant will the second term be a pure gradient.</li>
+<li>then the equation has a solution</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  p &#43; ρφ = const 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>alternatively, ˝ρ˝ could also be a function of ˝p˝. this scenario also gives
+hydrostatic equilibrium, and the equation will have a solution.</li>
+</ul>
+<p>¶ another (thorne&rsquo;s) formulation of this: for a fluid at rest in a gravitational
+field ˝↗g˝, the equation of hydrostatic equilibrium is the same as that for
+(elastostatic) equilibrium with a vanishing shear stress, so</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  T = P↗g 
+	\end{equation}
+	££
+	</div>
+
+
+<p>and</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∇⦁T = ∇P = ρ↗g 
+	\end{equation}
+	££
+	</div>
+
+
+<p>you can express ˝↗g˝ as a potential: ˝↗g = -∇φ˝. and then you get feynman&rsquo;s
+form.</p>
+
+
+</body>
+
+</html>

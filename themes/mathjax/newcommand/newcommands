@@ -1,0 +1,152 @@
+# syntax
+nc, fooo, 0, \text{fooo}
+nc, f, 2, \frac{#1}{#2}
+
+## equation typesetting
+#nc, l, 0, \left
+#nc, r, 0, \right
+#nc, h, 0, \hspace{5mm}
+#nc, rar, 0, \rightarrow
+#nc, lar, 0, \leftarrow
+#nc, Rar, 0, \Longrightarrow
+#nc, Lar, 0, \Longleftarrow
+#nc, lrar, 0, \leftrightarrow
+#nc, LRar, 0, \Longleftrightarrow
+#nc, xrar, 1, \xrightarrow[#1]{}
+#nc, xRar, 1, \xRightarrow[#1]{}
+#nc, qc, 1, \qcircle{#1}
+#nc, q, 1, \qcircle{#1}
+#nc, qs, 1, \qsquare{#1}
+#nc, qr, 1, \qcurly{#1}
+#nc, qv, 1, \qvert{#1}
+#nc, eq, 1, \eqref{#1}
+nc, n, 0, \nonumber \\[0.5em]
+nc, no, 0, \nonumber 
+nc, nl, 0, \\[0.5em]
+#nc, ou, 0, \hspace{5mm} {\small \textrm{ou}} \hspace{2mm}
+#nc, for, 0, \hspace{5mm} {\small \textrm{for}} \hspace{2mm}
+#nc, and, 0, \hspace{5mm} {\small \textrm{and}} \hspace{5mm}
+#nc, or, 0, \hspace{5mm} {\small \textrm{or}} \hspace{5mm}
+#nc, continue, 0, \n &\hspace{5mm} 
+nc, cntd, 0, \n &\hspace{5mm} 
+#nc, thus, 0, \therefore
+#nc, ub, 2, \underbrace{#1}_{\small{#2}}
+#
+## math
+#nc, x, 0, \times
+#nc, s, 0, \cdot
+#nc, qfrac, 2, \qc{ \frac{#1}{#2} }
+#nc, inv, 1, \qc{ #1 }^{-1}
+#nc, invn, 2, \qc{ #1 }^{-#2}
+#nc, invf, 1, \frac{1}{#1}
+#nc, invnf, 2, \frac{1}{ \qc{#1}^{#2} }
+#nc, tento, 1, \cdot 10^{#1}
+#nc, inf, 0, \infty
+#nc, sumf, 3, \sum_{\small{#1 = #2..#3}}
+#nc, limf, 2, \lim_{#1 \rightarrow #2}
+#nc, intf, 2, \int_{#1}^{#2}
+#nc, evat, 1, \bigg\vert_{#2}^{#1}
+#nc, pow, 1, ^{#1}
+#nc, to, 1, ^{#1}
+#nc, sub, 1, _{#1}
+#nc, cc, 2, ^{(#1)}_{#2}
+#nc, arg, 1, \__{#1}
+#nc, mapto, 0, \mapsto
+#nc, goesto, 0, \rightarrow
+#nc, mapf, 1, \rightarrow_{#1}
+#nc, at, 1, \bigg|_{#1}
+#nc, compose, 0, \circ
+#
+## vectors
+##nc, vec, 1, \vec{#1}
+#nc, vhat, 1, \hat{\vec{#1}}
+#nc, ehat, 1, \hat{e}_{#1}
+#nc, tdv, 1, \td{\vec{#1}}
+#nc, ttdv, 1, \ttdv{\vec{#1}}
+#nc, dotp, 0, \boldsymbol{\cdot}
+#nc, vdot, 0, \boldsymbol{\cdot}
+#nc, cross, 0, \times
+#
+## matrices
+#nc, tr, 0, \textrm{tr}
+#nc, m, 1, \l[ #1 \r]
+#nc, colmat, 1, \matrix #1 \endmatrix
+#nc, rowmat, 1, \matrix #1 \endmatrix
+#nc, mat, 1, \l[ #1 \r]
+#
+## operators
+#nc, kron, 2, \delta_{#1 #2}
+#nc, levi, 3, \epsilon_{#1 #2 #3}
+#nc, grad, 0, \vec{\nabla}
+#nc, div, 0, \vec{\nabla} \cdot
+#nc, curl, 0, \vec{\nabla} \times
+#nc, lap, 0, \nabla^2
+#
+## leibniz diff operators
+#nc, d, 0, \textrm{d}
+#nc, dd, 2, \frac{\d #1}{\d #2}
+#nc, ddd, 2, \frac{\d^2 #1}{\d #2^2}
+#nc, dnd, 3, \frac{\d^{#3} #1}{\d #2^{#3}}
+#nc, ddt, 1, \frac{\d #1}{\d t}
+#nc, dddt, 1, \frac{\d^2 #1}{\d t^2}
+#nc, p, 0, \partial
+#nc, pp, 2, \frac{\partial #1}{\partial #2}
+#nc, ppp, 2, \frac{\partial^2 #1}{\partial #2^2}
+#nc, pnp, 3, \frac{\partial^{#3} #1}{\partial #2^{#3}}
+#
+## newton diff operators
+#nc, td, 1, \dot{#1}
+#nc, ttd, 1, \ddot{#1}
+#nc, tttd, 1, \dot{\ddot{#1}}
+#
+## euler diff operators
+#nc, D, 1, \; D_{#1}
+#nc, Dn, 2, \; D_{#1}^{#2}
+#nc, DA, 1, \; D_{#1}^{-1}
+#nc, DAn, 2, \; D_{#1}^{#2}
+#nc, P, 1, \; \partial_{#1}
+#nc, Pn, 2, \; \partial_{#1}^{#2}
+#nc, PP, 2, \; \partial_{#1#2}
+#
+## quantum/dirac 
+#nc, braopket, 3, \matrixelement{#1}{#2}{#3}
+#nc, matrixel, 3, \matrixelement{#1}{#2}{#3}
+#nc, inner, 2, \braket{#1}{#2}
+#nc, outer, 2, \ketbra{#1}{#2}
+#nc, adj, 0, ^\dagger
+#nc, cj, 0, ^*
+#nc, avg, 1, \expval{#1}
+#nc, dreh, 0, \mathscr{D}
+#
+## symbols
+#nc, eo, 0, \epsilon_0
+#nc, muo, 0, \mu_0
+#nc, eps, 0, \epsilon
+#nc, ih, 0, i\hbar
+#nc, fih, 0, \frac i\hbar
+#nc, deg, 0, ^\circ
+#nc, degc, 0, ^\circ \textrm{C}
+#nc, avo, 0, 6.023 \cdot 10^{23}
+#nc, Lag, 0, \mathscr{L}
+#nc, Ham, 0, \mathscr{H}
+#nc, ms, 1, \mathscr{#1}
+#nc, mf, 1, \mathfrak{#1}
+#nc, lbar, 0, \bar{\lambda}
+#nc, C, 0, \mathbb{C}
+#nc, R, 0, \mathbb{R}
+#nc, Re, 0, \textrm{Re}
+#nc, Im, 0, \textrm{Im}
+#nc, O, 0, \mathscr{O}
+#nc, spc, 1, \mathbb{#1}
+##nc, scr, 1, \mathscr{#1}
+#
+## environments
+nc, bgnmaths, 0, \begin{align}
+nc, endmaths, 0, \end{align}
+nc, bgnmath, 0, \begin{align*}
+nc, endmath, 0, \end{align*}
+#nc, matrix, 0, \begin{bmatrix}
+#nc, endmatrix, 0, \end{bmatrix}
+#nc, cases, 0, \begin{cases}
+#nc, endcases, 0, \end{cases}
+

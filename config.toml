@@ -1,4 +1,4 @@
-baseURL = 'https://knbe.github.io/fluidserver'
+baseURL = ''
 languageCode = "en-us"
 title = "fluids"
 publishDir = "docs"
@@ -47,20 +47,20 @@ enableGitInfo = true
 		    endLevel = 2
 		    ordered = true
 
-[module]
-	replacements = """
-		gitlab.com/scholium/mathjax -> themes/mathjax, \
-		#gitlab.com/libph/figs -> /home/k/no/figs
-		"""
-
-	[[module.imports]]
-		path = "gitlab.com/scholium/mathjax"
-	[[module.imports.mounts]]
-		source = "MathJax"
-		target = "static/mathjax/MathJax"
-	[[module.imports.mounts]]
-		source = "phizzy/phizzy.js"
-		target = "static/mathjax/MathJax/extensions/phizzy.js"
-	[[module.imports.mounts]]
-		source = "config"
-		target = "layouts/partials/mathjax"
+#[module]
+#	replacements = """
+#		gitlab.com/scholium/mathjax -> themes/mathjax, \
+#		#gitlab.com/libph/figs -> /home/k/no/figs
+#		"""
+#
+#	[[module.imports]]
+#		path = "gitlab.com/scholium/mathjax"
+#	[[module.imports.mounts]]
+#		source = "MathJax"
+#		target = "static/mathjax/MathJax"
+#	[[module.imports.mounts]]
+#		source = "phizzy/phizzy.js"
+#		target = "static/mathjax/MathJax/extensions/phizzy.js"
+#	[[module.imports.mounts]]
+#		source = "config"
+#		target = "layouts/partials/mathjax"

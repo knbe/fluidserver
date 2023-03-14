@@ -1,0 +1,71 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'fluidnotes'
+
+
+aseURL = ""
+languageCode = "en-us"
+title = "notes"
+publishDir = "docs"
+relativeURLs = true
+sectionPagesMenu = "main"
+enableGitInfo = true
+
+[author]
+	name = "kian abe"
+
+[frontmatter]
+	lastmod = "lastmod"
+
+[markup]
+	defaultMarkdownHandler = 'goldmark'
+	[markup.goldmark]
+		[markup.goldmark.extensions]
+			definitionList = true
+			footnote = true
+			linkify = true
+			strikethrough = true
+			table = true
+			taskList = true
+			typographer = true
+
+		[markup.goldmark.parser]
+			autoHeadingID = true
+			autoHeadingIDType = "github"
+			[markup.goldmark.parser.attribute]
+				block = true 
+				title = true
+
+		[markup.goldmark.renderer]
+			hardWraps = false
+			unsafe = true
+			xhtml = false
+
+	[markup.highlight]
+		anchorLineNos = true
+		codeFences = true
+		lineAnchors = ''
+		lineNos = true
+
+	[markup.tableOfContents]
+		    startLevel = 1
+		    endLevel = 2
+		    ordered = true
+
+[module]
+#	replacements = """
+#		gitlab.com/scholium/mathjax -> /home/k/sc/mathjax, \
+#		gitlab.com/libph/figs -> /home/k/no/figs
+#		"""
+
+	[[module.imports]]
+		path = "gitlab.com/scholium/mathjax"
+	[[module.imports.mounts]]
+		source = "MathJax"
+		target = "static/mathjax/MathJax"
+	[[module.imports.mounts]]
+		source = "phizzy/phizzy.js"
+		target = "static/mathjax/MathJax/extensions/phizzy.js"
+	[[module.imports.mounts]]
+		source = "config"
+		target = "layouts/partials/mathjax"

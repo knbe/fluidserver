@@ -1,0 +1,4 @@
+---
+title: examples
+type: example
+---

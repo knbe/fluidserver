@@ -4,7 +4,6 @@ type: subject
 ---
 
 - {{< dir notes >}}
-- {{< dir examples >}}
 - {{< dir figures >}}
 
 <div class="topic-list">

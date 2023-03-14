@@ -133,13 +133,12 @@ type: long
     anything about the behaviour though? we're just playing around with 
     mathematical forms
     - oh oh  oh oh ho. got it.
-    - firsty, read about fucking [degenerate distributions][1]
+    - firsty, read about [degenerate distributions][1]
     - basically, it's a deterministic distribution that takes only a single 
       value, and it only has support at a single point (although that's kinda 
       weird af tho)
     - basically, look at the initial condition. the long term form of this 
       distribution (long term means for large ˝t˝) is the same as the 
-      - ok, no. fuck.
       - arrgh
     - ok. look at the initial condition. good. now look at the time dependent 
       form of the initial condition (fuck me, ie, the fucking solution, ie, 

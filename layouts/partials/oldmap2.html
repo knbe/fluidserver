@@ -1,0 +1,12 @@
+{{ $nargs := strings.Count "/" .RelPermalink }}
+{{ $args := split .RelPermalink "/" }}
+
+<a href={{ .Site.BaseURL }}>{{- .Site.Home.Title -}}</a>
+
+{{ $nlim := sub $nargs 1 }}
+
+{{- range first $nlim (after 1 $args) -}}
+{{- with $.GetPage . }}
+> <a href="{{ .RelPermalink }}">{{- .Title | humanize | lower -}}</a>
+{{- end -}}
+{{- end -}}

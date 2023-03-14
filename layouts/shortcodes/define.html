@@ -1,0 +1,5 @@
+{{ $name := print .Params }}
+{{ $name := strings.TrimRight "]" $name }}
+{{ $name := strings.TrimLeft "[" $name }}
+
+[ <i>define</i> <strong>{{ $name }}</strong> ] :

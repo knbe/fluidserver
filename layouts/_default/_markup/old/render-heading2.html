@@ -1,0 +1,36 @@
+{{ $nargs := strings.Count ";;" .Text }}
+{{ $args := split .Text ";;" }}
+{{ $data := newScratch }}
+
+{{ if eq $nargs 1 }}
+
+<h{{ .Level }} class="imp">
+<span class="anchor"><a href="#{{ .Anchor | safeURL }}">¶ </a></span>
+<span class="typedef">{{ range first 1 $args }}{{.}}{{ end }}. </span>
+{{ range first 1 (after 1 $args) }}
+{{ $data.Set "sectitle" . }}
+{{ . | safeHTML }}
+{{ end }} 
+</h{{ .Level }}>
+
+{{ $dashname := $data.Get "sectitle" }}
+
+{{ else if eq $nargs 2 }}
+
+<h{{ .Level }} class="imp">
+<span class="anchor"><a href="#{{ .Anchor | safeURL }}">¶</a></span>
+<span class="typedef">{{ range first 1 $args }}{{.}}{{ end }}</span>
+<span class="thing">{{- range first 1 (after 1 $args) -}}[{{ . | safeHTML }}]{{ end }} </span>
+{{ range first 1 (after 2 $args) }}{{ . | safeHTML }}{{ end }}
+</h{{ .Level }}>
+
+{{ else }}
+
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">
+<span class="anchor"><a href="#{{ .Anchor | safeURL }}">¶ </a></span>
+{{ .Text | safeHTML }}</span>
+</h{{ .Level }}>
+
+{{ end }}
+
+

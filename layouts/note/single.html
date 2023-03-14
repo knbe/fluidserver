@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<head>
+<link rel='stylesheet' href='/css/note.css'>
+{{ partial "colour.html" . }}
+<title>{{ .Site.Home.Title }}</title>
+</head>
+
+<body>
+
+<div class="map">
+{{ partial "map.html" . }}
+</div>
+
+<h1 class="title">{{ .Title }}</h1>
+
+{{ .TableOfContents }}
+
+{{ .Params.time }}
+
+{{ .Content }}
+
+</body>
+
+{{ end }}

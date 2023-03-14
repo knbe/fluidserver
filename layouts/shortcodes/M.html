@@ -1,0 +1,22 @@
+{{ $expressions := split .Inner "==" }}
+
+<div class="eq">
+££
+\bgnmaths
+{{ range first 1 $expressions -}}
+{{ . }}
+{{ end }}
+{{- range first 1 (after 1 $expressions) -}}
+&= 
+
+{{ . }}
+{{- end }}
+{{- range (after 2 $expressions) }}
+\n
+&=
+
+{{ . }}
+{{- end }}
+\endmaths
+££
+</div>

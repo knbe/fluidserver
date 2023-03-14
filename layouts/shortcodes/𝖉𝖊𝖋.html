@@ -1,0 +1,12 @@
+{{ $name := print .Params }}
+{{ $name := strings.TrimRight "]" $name }}
+{{ $name := strings.TrimLeft "[" $name }}
+
+<div class="defn">
+<p class="defn-name">{{ $name }}
+
+<div class="defn-entry">
+{{ .Inner | markdownify }}
+</div>
+
+</div>

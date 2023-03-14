@@ -1,0 +1,118 @@
+{{ if eq .Type "mm" }}
+
+	{{ $expressions := split .Inner "&" }}
+	{{ $N := len $expressions }}
+
+	<div class="eq">
+	££
+	\begin{align}
+	{{ range first 1 $expressions -}}
+		{{ $sub_exp := split . "**" }}
+		{{ range first 1 $sub_exp }} {{ . }} {{ end }}
+		{{ range (after 1 $sub_exp) }} {{ . }} {{ end }}
+	{{ end }}
+	{{- range first 1 (after 1 $expressions) -}}
+		& 
+		{{ $sub_exp := split . "**" }}
+		{{ range first 1 $sub_exp }} {{ . }} {{ end }}
+		{{ range (after 1 $sub_exp) }} {{ . }} {{ end }}
+	{{- end }}
+	{{- range (after 2 $expressions) }}
+		\n
+		&
+		{{ $sub_exp := split . "**" }}
+		{{ range first 1 $sub_exp }} {{ . }} {{ end }}
+		{{ range (after 1 $sub_exp) }} {{ . }} {{ end }}
+	{{- end }}
+	\end{align}
+	££
+	</div>
+
+{{ else if eq .Type "ee" }}
+
+	{{ $expressions := split .Inner "&" }}
+	{{ $N := len $expressions }}
+
+	<div class="eq">
+	££
+	\begin{align}
+	{{ range first 1 $expressions -}}
+		{{ $sub_exp := split . "**" }}
+		{{ range first 1 $sub_exp }} {{ . }} {{ end }}
+		{{ range (after 1 $sub_exp) }} {{ . }} {{ end }}
+	{{ end }}
+	{{- range first 1 (after 1 $expressions) -}}
+		&= 
+		{{ $sub_exp := split . "**" }}
+		{{ range first 1 $sub_exp }} {{ . }} {{ end }}
+		{{ range (after 1 $sub_exp) }} {{ . }} {{ end }}
+	{{- end }}
+	{{- range (after 2 $expressions) }}
+	\n
+	&=
+		{{ $sub_exp := split . "**" }}
+		{{ range first 1 $sub_exp }} {{ . }} {{ end }}
+		{{ range (after 1 $sub_exp) }} {{ . }} {{ end }}
+	{{- end }}
+	\end{align}
+	££
+	</div>
+
+{{ else if eq .Type "m" }}
+
+	{{ $expressions := split .Inner "\n" }}
+	{{ $N := len $expressions }}
+
+	{{- if eq $N 1 -}}
+	{{- range first 1 $expressions -}}
+	<div class="eq">
+	££
+	\begin{equation}
+	{{ . }} 
+	\end{equation}
+	££
+	</div>
+	{{ end }}
+	{{ end }}
+
+	{{- if ge $N 2 -}}
+
+	{{ $M := (sub $N 2) }}
+
+	{{- range first 1 $expressions -}}
+	<div class="eq-m-first">
+	££
+	{{ . }}
+	££
+	</div>
+	{{ end }}
+
+	{{- range first $M (after 1 $expressions) -}}
+	<div class="eq-m-middle">
+	££
+	{{ . }}
+	££
+	</div>
+	{{ end }}
+
+	{{- range last 1 $expressions -}}
+	<div class="eq-m-last">
+	££
+	{{ . }}
+	££
+	</div>
+	{{ end }}
+
+	{{ end }}
+
+{{ else }}
+
+	<div class="eq">
+	££
+	\begin{equation}
+	{{ .Inner }} 
+	\end{equation}
+	££
+	</div>
+
+{{ end }}

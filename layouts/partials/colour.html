@@ -1,0 +1,4 @@
+{{ if isset .Params "colour" }} 
+{{ $colour := $.Param "colour" }}
+<link rel='stylesheet' href='/css/colours/{{ $colour }}.css'>
+{{ end }}

@@ -1,0 +1,26 @@
+{{ $nargs := strings.Count ";;" .Text }}
+{{ $args := split .Text ";;" }}
+
+{{ if eq $nargs 1 }}
+
+<h{{ .Level }} class="{{ range first 1 $args }}{{ . }}{{ end }}">
+<span class="typedef"><a href="#{{ .Anchor | safeURL }}">¶ </a> {{ range first 1 $args }}{{.}}{{ end }}.</span>
+{{ range first 1 (after 1 $args) }}{{ . | safeHTML }}{{ end }} 
+</h{{ .Level }}>
+
+{{ else if eq $nargs 2 }}
+
+<h{{ .Level }} class="{{ range first 1 $args }}{{ . }}{{ end }}">
+<span class="typedef"><a href="#{{ .Anchor | safeURL }}">¶ </a> {{ range first 1 $args }}{{.}}{{ end }}.</span>
+<span class="bbig">{{ range first 1 (after 1 $args) }}{{ . | safeHTML }}{{ end }}. </span>
+{{ range first 1 (after 2 $args) }}{{ . | safeHTML }}{{ end }}
+</h{{ .Level }}>
+
+{{ else }}
+
+<h{{ .Level }} id="{{ .Anchor | safeURL }}" class="note">
+<a href="#{{ .Anchor | safeURL }}" class="typedef">¶.</a>
+{{ .Text | safeHTML }}</span>
+</h{{ .Level }}>
+
+{{ end }}

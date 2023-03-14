@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<head>
+<link rel='stylesheet' href='/css/list.css'>
+{{ partial "colour.html" . }}
+<title>{{ .Site.Home.Title }}{{ .RelPermalink }}</title>
+</head>
+
+<body>
+
+<div class="map">
+{{ partial "listmap.html" . }}
+</div>
+
+{{ .Content }}
+
+</body>
+
+{{ end }}

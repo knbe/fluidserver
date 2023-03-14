@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<head>
+<link rel='stylesheet' href='/css/list.css'>
+{{ partial "colour.html" . }}
+<title>{{ .Site.Home.Title }}</title>
+</head>
+
+<body>
+
+<div class="map">
+{{ partial "listmap.html" . }}
+</div>
+
+{{ .Content }}
+
+<div class="topic-list">
+{{ range .Pages }}
+<li class="corpus">
+<a href={{ .Permalink }}>{{ .Title | markdownify }}</a><br>
+<div class="toc-view">{{ .TableOfContents }}</div>
+</li>
+{{ end }}
+</div>
+
+</body>
+
+{{ end }}

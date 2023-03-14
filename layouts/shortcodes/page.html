@@ -1,0 +1,11 @@
+{{ $name := print .Params }}
+{{ $name := strings.TrimRight "]" $name }}
+{{ $name := strings.TrimLeft "[" $name }}
+{{ $urlname := $name | urlize }}
+
+{{ with .Page.GetPage $urlname }}
+<li class="corpus">
+<a href={{ .Permalink }}>{{ .Title | markdownify }}</a><br>
+<div class="toc-view">{{ .TableOfContents }}</div>
+</li>
+{{ end }}

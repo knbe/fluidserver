@@ -1,0 +1,23 @@
+{{ $nargs := strings.Count "/" .RelPermalink }}
+{{ $args := split .RelPermalink "/" }}
+
+<a href={{ .Site.BaseURL }}>{{- .Site.Home.Title -}}</a>
+
+{{ $nlim := sub $nargs 1 }}
+
+{{ if .IsSection }}
+{{ range first $nlim (after 1 $args) }}
+{{ with $.GetPage . }}
+/<a href="{{ .RelPermalink }}">{{ .Title | humanize | lower }}</a>
+{{ end }}
+{{ end }}
+
+{{ else if .IsPage }}
+
+{{ range first (sub $nlim 1) (after 1 $args) }}
+{{ with $.GetPage . }}
+/<a href="{{ .RelPermalink }}">{{ .Title | humanize | lower }}</a>
+{{ end }}
+{{ end }}
+
+{{ end }}

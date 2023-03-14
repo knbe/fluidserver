@@ -1,0 +1,8 @@
+:root {
+	--c-bg: #b94e48;
+	--c-bg-lo: #a32638;
+	--c-bg-hi: #c32148; 
+	--c-fg: #000000; 
+	--c-fg-hot: #65000b; 
+	--c-fg-cold: #edddd4;
+}

@@ -1,0 +1,143 @@
+@import url("/fonts/cmun/sans/cmun-sans.css"); 
+@import url("/fonts/cmun/serif/cmun-serif.css");
+@import url("/fonts/cmun/serif-slanted/cmun-serif-slanted.css");
+@import url("/fonts/cmun/classical-serif-italic/cmun-classical-serif-italic.css"); 
+@import url("/fonts/cmun/upright-italic/cmun-upright-italic.css"); 
+@import url("/fonts/cmun/typewriter/cmun-typewriter.css"); 
+@import url("/fonts/cmun/typewriter-variable/cmun-typewriter-variable.css"); 
+@import url("/fonts/cmun/typewriter-light/cmun-typewriter-light.css"); 
+@import url("/fonts/cmun/bright-semibold/cmun-bright-semibold.css"); 
+
+@font-face { 
+	font-family: 'concrete'; 
+	src: url('/fonts/euler/CMU-Concrete-Roman.ttf.eot') format('embedded-opentype'),
+	url('/fonts/euler/CMU-Concrete-Roman.ttf.woff') format('woff'), 
+	url('/fonts/euler/CMU-Concrete-Roman.ttf.svg') format('svg'); 
+}
+
+@font-face { 
+	font-family: 'neoeuler'; 
+	font-style: normal; 
+	font-weight: normal; 
+	src: url('/fonts/neoeuler/euler.woff') format('woff');
+}
+
+@font-face { 
+	font-family: 'et-book'; 
+	font-style: normal; 
+	font-weight: normal; 
+	src: url('/fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff') format('woff');
+}
+
+:root {
+	--c-bg: #ffffff; 
+	--c-bg-lo: #ffffff;
+	#--c-bg-hi: #e5eef3; 
+	--c-bg-hi: #deb887; 
+	--c-fg: #000000; 
+	--c-fg-hot: #de3163;
+	--c-fg-cold: #000000; 
+}
+
+:root {
+	--c-txt: var(--c-fg); 
+	--c-link: var(--c-fg-hot); 
+	--c-highlight: var(--c-bg-hi); 
+	--c-map-bg: var(--c-bg-lo); 
+	--c-map-txt: var(--c-fg); 
+	--c-list-link: var(--c-fg-hot); 
+}
+
+:root {
+	--f-txt: 'cmtypewriter', monospace;
+	--f-map: 'cmtypewriter', monospace; 
+
+	--f-problem: 'cmtypewriter', monospace; 
+
+	--f-anchors: 'cmtypewriter', sans-serif; 
+	--f-annotations: 'cmtypewriter', sans-serif; 
+
+	--f-list: 'cmtypewriter', sans-serif; 
+}
+
+html {
+	position: relative; 
+	min-height: 100%; 
+	font-size: 18px; 
+	background: var(--c-bg-lo); 
+	color: var(--c-fg); 
+	scrollbar-width: none; 
+}
+
+::-webkit-scrollbar {
+	display: none; 
+}
+
+.map {
+	font-family: var(--f-map); 
+	font-size: 0.9rem; 
+	font-weight: 400; 
+	line-height: 1.0rem; 
+	background: var(--c-map-bg);
+	color: var(--c-map-txt);
+	position: relative;
+	padding-left: 10px; 
+	padding-bottom: 10px; 
+	width: 100vw; 
+}
+.map a {
+	text-decoration: none; 
+	color: var(--c-map-txt);
+}
+
+a.lex {
+	text-decoration: none;
+	color: var(--c-txt);
+}
+
+.eq {
+	margin-top: -1.0rem; 
+	margin-bottom: -1.0rem; 
+}
+.eq-m-middle {
+	margin-top: -1.5rem; 
+	#margin-bottom: -1.5rem; 
+}
+.eq-m-first {
+	margin-top: -1.0rem; 
+	#margin-bottom: -1.5rem; 
+}
+.eq-m-last {
+	margin-top: -1.5rem; 
+	margin-bottom: -1.0rem; 
+}
+.eq + ul {
+	margin-top: 1.0rem; 
+}
+
+ul .eq {
+	margin-top: -0.5rem;
+	margin-bottom: -0.5rem;
+}
+
+table,th,td {
+	font-family: 'neoeuler';
+	font-weight: 400;
+	text-align: left;
+}
+table {
+	#width: 300px;
+	border: 1px solid;
+	margin-left: 30px;
+}
+th {
+	border-bottom: 1px solid;
+}
+th, td {
+	width: 80px; 
+}
+
+
+@media print {
+	.anchors {display: none; }
+}

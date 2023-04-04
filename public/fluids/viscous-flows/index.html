@@ -1,0 +1,397 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../css/long.css'>
+
+
+<title>viscous flows</title>
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../fluids/">fluids</a>&nbsp;> <a href="">viscous flows</a>
+
+</div>
+
+<h1 class="title">viscous flows</h1>
+
+<nav id="TableOfContents">
+  <ol>
+    <li><a href="#fluid-motion-recap">FLUID MOTION RECAP</a></li>
+    <li><a href="#viscosity">VISCOSITY</a></li>
+    <li><a href="#shear-stress-decomposition-of-velocity-gradient">SHEAR, STRESS, DECOMPOSITION OF VELOCITY GRADIENT</a></li>
+    <li><a href="#fluids-and-shear-stresses">FLUIDS AND SHEAR STRESSES</a></li>
+    <li><a href="#navier-stokes-eqation">NAVIER STOKES EQATION</a></li>
+    <li><a href="#viscosity-1">VISCOSITY</a></li>
+  </ol>
+</nav>
+
+
+
+<h1 id="fluid-motion-recap">FLUID MOTION RECAP</h1>
+<hr>
+<p>¶ the laws of motion for a fluid are contained in the equation</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏{t}{↗v} &#43; (↗v⦁∇)↗v = -÷1ρ·∇p - ∇φ &#43; ÷1ρ·↗f₍visc₎ 
+	\end{equation}
+	££
+	</div>
+
+
+<p>¶ in the dry water approximation you leave out the last term, ie neglect viscous
+effects</p>
+<p>¶ another (additional) approximation is assuming the fluid is incompressible, so</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∇⦁↗v = 0 
+	\end{equation}
+	££
+	</div>
+
+
+<p>¶ the incompressible approximation is good when flow speeds are much slower than
+the speed of sound. but in real fluids the dry water approximation is not a
+good approximation at all. most of the interesting dynamics come from the
+viscosity term</p>
+<ul>
+<li>in dry water the circulation never changes. if circulation is zero at the
+beginning, it will always be (the opposite of reality)</li>
+</ul>
+<h1 id="viscosity">VISCOSITY</h1>
+<hr>
+<p>¶ to be clear, viscosity is a measure of the internal frictional force between
+adjacent layers of a liquid that are in relative motion. in a viscous liquid,
+flow near the centre of a pipe is faster than at the walls.</p>
+<ul>
+<li>stress is needed to sustain a viscous flow. you need a force to overcome the
+friction between layers of the fluid that are in relative motion.</li>
+<li>for a tube with constant flow rate, the strength of the compensating force
+is proportional to the fluid viscosity.</li>
+</ul>
+<p>¶ viscosity of a newtonian fluid doesn&rsquo;t change much with rate of deformation.</p>
+<p>¶ viscous stress tensor: a tensor to model the part of stress in a material
+that&rsquo;s attributed to the strain rate, the rate at which it&rsquo;s deforming around
+that point</p>
+<p>¶ consider viscous drag between parallel plates. if you measure the force needed
+to keep the upper plate moving, you&rsquo;ll find it&rsquo;s proportional to the area of
+the plates and to ˝v₍0₎/d˝, where ˝d˝ is the distance between the plates</p>
+<ul>
+<li>ie, the shear stress ˝F/A˝ is proportional to ˝v₍0₎/d˝</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ÷FA = μ·÷{v₍0₎}{d} 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>the constant of proportionality ˝μ˝ is the viscosity (coefficient of
+viscosity)</li>
+</ul>
+<h1 id="shear-stress-decomposition-of-velocity-gradient">SHEAR, STRESS, DECOMPOSITION OF VELOCITY GRADIENT</h1>
+<hr>
+<p>¶ some fluids develop a shear stress as they flow (eg honey), some can flow
+freely (eg water)</p>
+<ul>
+<li>reason: pretty much all flows are in contact with a solid body (like walls
+of a pipe etc). this contact forms boundary layers.</li>
+<li>the thickness and behaviour of boundary layers are controlled by viscous
+forces.</li>
+<li>the boundary layers can then influence the bulk flow (in the bulk flow the
+viscosity is negligible), eg by initiating turbulence in the bulk flow</li>
+</ul>
+<p>¶ we have to mod the fluid dynamics equations ot include viscous stresses.</p>
+<p>¶ decomposition of the velocity gradient tensor ˝∇↗v˝:</p>
+<ul>
+<li>˝θ˝, rate of expansion</li>
+<li>˝↗σ˝, rate of shear tensor (symmetric)</li>
+<li>˝↗r˝, rate of rotation tensor (antisymmetric)</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∇↗v = ÷13 θ ↗g &#43; ↗σ &#43; ↗r 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>inverting this equation gives</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  θ = ∇⦁↗v
+  σ⟦ij⟧ = ÷12 (v⟦ij⟧ &#43; v⟦ji⟧) - ÷13 θ g⟦ij⟧
+  r⟦ij⟧ = ÷12 (v⟦ij⟧ - v⟦ji⟧) = -÷12 ε⟦ijk⟧ ω⁽k⁾ 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>where ˝↗ω = 2d↗φ/dt˝ is the vorticity</li>
+</ul>
+<h1 id="fluids-and-shear-stresses">FLUIDS AND SHEAR STRESSES</h1>
+<hr>
+<p>¶ a fluid at rest doesn&rsquo;t exert a shear stress. this is what distinguishes it
+from an elastic fluid.</p>
+<p>¶ a fluid in motion <em>can</em> resist shear in the velocity field.</p>
+<p>¶ the <em>magnitude</em> of shear stress is linearly related to the velocity gradient.</p>
+<ul>
+<li>well, in most fluids anyway; this is an experimental result</li>
+<li>discovered by newton (ie attributed to newton)</li>
+<li>fluids that obey this law are <strong>newtonian fluids</strong></li>
+</ul>
+<p>¶ fluids are usually isotropic.</p>
+<ul>
+<li>exception: liquid crystals, which are smectic.</li>
+</ul>
+<h1 id="navier-stokes-eqation">NAVIER STOKES EQATION</h1>
+<hr>
+<p>¶ the linear relation between stress and rate of strain can be described by two
+constants: the <strong>bulk viscosity</strong> ˝ζ˝ and the <strong>shear viscosity</strong> ˝η˝.</p>
+<p>¶ the viscous contribution to the stress tensor:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  T₍vis₎ = -ζθg - 2ησ 
+	\end{equation}
+	££
+	</div>
+
+
+<p>if you include this viscous contribution in the stress tensor, and make use of
+momentum conservation,</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏{t}{(ρ↗v)} &#43; ∇⦁T = ρg    𝓮𝓺{1} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>you get:</p>
+<p>¶ <strong>navier stokes equation:</strong></p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ρ Ɗ{t}{↗v} = -∇P &#43; ρg &#43; ∇(ζθ) &#43; 2∇⦁(ησ) 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>the last two terms are the viscous force density</li>
+<li>in incompressible flows, ˝θ˝ can be approximated as zero, and you can ignore
+bulk viscosity.</li>
+<li>the viscosity coefficient ˝η˝ varies much more slowly than the shear ˝σ˝. so
+you can take it outside the divergence.</li>
+<li>then you get:</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  Ɗ{t}{↗v} = - ÷1ρ ∇P &#43; g &#43; ν∇⁽2⁾↗v 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>where the <strong>kinematic viscosity</strong></li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ν = ÷ηρ 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>˝η˝ is the <strong>dynamic viscosity</strong></li>
+<li>this is the more common form of the NS equation</li>
+</ul>
+<h1 id="viscosity-1">VISCOSITY</h1>
+<hr>
+<p>¶ microscopic difference between gases and liquids:</p>
+<ul>
+<li>in a gas a molecule of mass ˝m˝ travels a distance that&rsquo;s of the order of
+its mean free path, ˝λ˝, before it collides</li>
+<li>if there&rsquo;s a shear in the fluid, then the molecule (travelling upwards in
+the y direction, look at the diagram) will transfer momentum in the
+x-direction around ˝-mλσ₍xy₎˝ between collisions</li>
+</ul>
+
+  
+  
+  <div class="fig">
+  <img src="../figs/molecularOriginOfViscosity.png" width="360">
+  </div>
+
+<ul>
+<li>if ilya ˝n˝ molecules per unit volume moving with mean thermal speeds
+˝v₍th₎˝, the transferred momentum crossing a unit area in unit time is</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  T₍xy₎ ∼ -nm v₍th₎ λσ₍xy₎ 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>compare to this to 𝓮𝓻{1}. you can estimate the coefficient of shear
+viscosity:</li>
+</ul>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  η ≃ ÷13 ρ v₍th₎ λ 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>in a gas, the mean thermal KE ˝÷32 ƙT˝ is ˝∼mv₍th₎⁽2⁾˝</li>
+<li>∴ the coeffcient of viscosity increases with temperature via ˝ν ∝ T⁽1/2⁾˝</li>
+</ul>
+
+
+</body>
+
+</html>

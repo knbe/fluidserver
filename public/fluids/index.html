@@ -1,0 +1,357 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../css/list.css'>
+
+
+<title>physics/fluids/</title>
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="">fluids</a>
+
+</div>
+
+<ul>
+<li>
+
+<a class="dir" href="./notes">notes</a><br>
+</li>
+<li>
+
+<a class="dir" href="./figures">figures</a><br>
+</li>
+</ul>
+<div class="topic-list">
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="corpus">
+<a href=../fluids/hydrostatics/>hydrostatics</a><br>
+<div class="toc-view"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#stress-σ">STRESS, σ</a></li>
+    <li><a href="#strain-deformation">STRAIN, DEFORMATION</a></li>
+    <li><a href="#shear-force-and-shear-stress">SHEAR FORCE AND SHEAR STRESS</a></li>
+    <li><a href="#what-distinguishes-a-fluid">WHAT DISTINGUISHES A FLUID</a></li>
+    <li><a href="#hydrostatics-fluids-at-rest">HYDROSTATICS: FLUIDS AT REST</a></li>
+    <li><a href="#pressure-varies-with-height">PRESSURE VARIES WITH HEIGHT</a></li>
+    <li><a href="#pressure-on-a-small-cube-of-water">PRESSURE ON A SMALL CUBE OF WATER</a></li>
+    <li><a href="#equation-of-hydrostatic-equilibrium">EQUATION OF HYDROSTATIC EQUILIBRIUM</a></li>
+  </ol>
+</nav></div>
+</li>
+
+
+
+
+
+
+
+
+<li class="corpus">
+<a href=../fluids/hydrodynamics/>hydrodynamics</a><br>
+<div class="toc-view"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#hydrodynamics">HYDRODYNAMICS</a></li>
+    <li><a href="#conservation">CONSERVATION</a>
+      <ol>
+        <li><a href="#conservation-of-mass-eulerian">conservation of mass, eulerian</a></li>
+        <li><a href="#conservation-of-mass-lagrangian">conservation of mass, lagrangian</a></li>
+        <li><a href="#conservation-of-momentum">conservation of momentum</a></li>
+      </ol>
+    </li>
+    <li><a href="#mechanical-stress-tensor">MECHANICAL STRESS TENSOR</a></li>
+    <li><a href="#ideal-fluids">IDEAL FLUIDS</a></li>
+    <li><a href="#lagrangian-momentum-conservation">LAGRANGIAN MOMENTUM CONSERVATION</a></li>
+    <li><a href="#mass-conservation">MASS CONSERVATION</a></li>
+    <li><a href="#momentum-conservation">MOMENTUM CONSERVATION</a></li>
+    <li><a href="#the-incompressible-approximation">THE INCOMPRESSIBLE APPROXIMATION</a></li>
+    <li><a href="#the-equation-of-state">THE EQUATION OF STATE</a></li>
+    <li><a href="#vorticity">VORTICITY</a></li>
+    <li><a href="#viscosity">VISCOSITY</a></li>
+  </ol>
+</nav></div>
+</li>
+
+
+
+
+
+
+
+
+<li class="corpus">
+<a href=../fluids/similarity-solutions/>diffusion, similarity solutions, intermediate asymptotics</a><br>
+<div class="toc-view"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#recap-anomalous-dimensions">RECAP: ANOMALOUS DIMENSIONS</a></li>
+    <li><a href="#the-diffusion-equation">THE DIFFUSION EQUATION</a></li>
+    <li><a href="#lt-behaviour-of-the-diffusion-equation">LT BEHAVIOUR OF THE DIFFUSION EQUATION</a></li>
+    <li><a href="#dimensional-analysis-of-the-diffusion-equation">DIMENSIONAL ANALYSIS OF THE DIFFUSION EQUATION</a></li>
+    <li><a href="#intermediate-asymptotics-of-the-first-kind">INTERMEDIATE ASYMPTOTICS OF THE FIRST KIND</a></li>
+    <li><a href="#where-anomalous-dimensions-come-in">WHERE ANOMALOUS DIMENSIONS COME IN</a></li>
+  </ol>
+</nav></div>
+</li>
+
+
+
+
+
+
+
+
+<li class="corpus">
+<a href=../fluids/barenblatt-equation/>barenblatt equation</a><br>
+<div class="toc-view"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#barenblatts-equation">BARENBLATT&rsquo;S EQUATION</a></li>
+    <li><a href="#dimensional-analysis-of-barenblatts-equation">DIMENSIONAL ANALYSIS OF BARENBLATT&rsquo;S EQUATION</a></li>
+    <li><a href="#similarity-solution-with-an-anomalous-dimension">SIMILARITY SOLUTION WITH AN ANOMALOUS DIMENSION</a></li>
+  </ol>
+</nav></div>
+</li>
+
+
+
+
+
+
+
+
+<li class="corpus">
+<a href=../fluids/viscous-flows/>viscous flows</a><br>
+<div class="toc-view"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#fluid-motion-recap">FLUID MOTION RECAP</a></li>
+    <li><a href="#viscosity">VISCOSITY</a></li>
+    <li><a href="#shear-stress-decomposition-of-velocity-gradient">SHEAR, STRESS, DECOMPOSITION OF VELOCITY GRADIENT</a></li>
+    <li><a href="#fluids-and-shear-stresses">FLUIDS AND SHEAR STRESSES</a></li>
+    <li><a href="#navier-stokes-eqation">NAVIER STOKES EQATION</a></li>
+    <li><a href="#viscosity-1">VISCOSITY</a></li>
+  </ol>
+</nav></div>
+</li>
+
+
+
+
+
+
+
+
+<li class="corpus">
+<a href=../fluids/bernoullis-theorem/>bernoulli&rsquo;s theorem</a><br>
+<div class="toc-view"><nav id="TableOfContents"></nav></div>
+</li>
+
+
+
+
+
+
+
+
+<li class="corpus">
+<a href=../fluids/conservation-laws/>conservation laws</a><br>
+<div class="toc-view"><nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#conservation-of-mass-eulerian">conservation of mass, eulerian</a></li>
+        <li><a href="#conservation-of-mass-lagrangian">conservation of mass, lagrangian</a></li>
+        <li><a href="#conservation-of-momentum">conservation of momentum</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav></div>
+</li>
+
+
+
+
+
+
+
+
+<li class="corpus">
+<a href=../fluids/stress-tensor/>stress tensor</a><br>
+<div class="toc-view"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#stresses--internal-forces">STRESSES &amp; INTERNAL FORCES</a></li>
+    <li><a href="#constructing-the-stress-tensor">CONSTRUCTING THE STRESS TENSOR</a></li>
+    <li><a href="#tenets">TENETS</a></li>
+  </ol>
+</nav></div>
+</li>
+
+
+
+
+
+
+
+
+<li class="corpus">
+<a href=../fluids/incompressible-flows/>incompressible flows</a><br>
+<div class="toc-view"><nav id="TableOfContents"></nav></div>
+</li>
+
+
+
+
+
+
+
+
+<li class="corpus">
+<a href=../fluids/navier-stokes/>navier stokes</a><br>
+<div class="toc-view"><nav id="TableOfContents"></nav></div>
+</li>
+
+
+
+
+
+
+
+
+<li class="corpus">
+<a href=../fluids/euler-equation/>euler equation</a><br>
+<div class="toc-view"><nav id="TableOfContents"></nav></div>
+</li>
+
+
+
+
+
+
+
+
+<li class="corpus">
+<a href=../fluids/modified-porous-medium-equation/>modified porous medium equation</a><br>
+<div class="toc-view"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#intro">INTRO</a></li>
+    <li><a href="#the-modified-porous-medium-equation">THE MODIFIED POROUS MEDIUM EQUATION</a></li>
+    <li><a href="#mathematical-formulation">MATHEMATICAL FORMULATION</a></li>
+    <li><a href="#the-modified-porous-medium-equation-1">THE MODIFIED POROUS MEDIUM EQUATION</a></li>
+  </ol>
+</nav></div>
+</li>
+
+</p>
+</div>
+
+
+</body>
+
+</html>

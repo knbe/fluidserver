@@ -1,0 +1,157 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../css/list.css'>
+
+
+<title>physics</title>
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../fluids/">fluids</a>&nbsp;> <a href="">notes</a>
+
+</div>
+
+
+
+<div class="topic-list">
+
+<li class="corpus">
+<a href=../../fluids/notes/shear-stress/>shear stress</a><br>
+<div class="summary">¶ shear stress: the component of stress that&rsquo;s coplanar from the material&rsquo;s cross section. denoted ˝τ˝:
+££ \begin{equation} τ = F/A \end{equation} ££ ˝F˝ is the force applied, ˝A˝ is the crosssectional area of the material whose area is parallel to the applied force vector ¶ &ldquo;ordinary&rdquo; stress comes from the force vector component perpendicular to the material cross section.</div>
+</li>
+
+<li class="corpus">
+<a href=../../fluids/notes/reynolds-number/>reynolds number</a><br>
+<div class="summary">¶ kinematic viscosity ˝ν˝ has dimensions ˝length⁽2⁾/time˝. to quantiy viscosity in fluid flow, you compare ˝ν˝ with the product of the flow&rsquo;s characteristic velocity ˝V˝ and its characteristic length scale ˝L˝.
+££ \begin{equation} Re = ÷{LV}{ν} \end{equation} ££ this is the reynolds number it&rsquo;s dimensionless flows with ˝Re &lt; 1˝ are dominated by viscosity flows with ˝Re &gt; 1˝ can be influenced by viscosity, especially when it acts near boundaries, BUT the viscous stresses are negligible over most of the flow&rsquo;s volume </div>
+</li>
+
+<li class="corpus">
+<a href=../../fluids/notes/constructing-the-mechanical-stress-tensor/>constructing the mechanical stress tensor</a><br>
+<div class="summary">¶ consider a small area element, d↗A. momentum flows through this area in the +ve direction. the MASS FLOW RATE thru the surface is
+££ \begin{equation} ρ↗v ⦁ d↗A = dot(momentumͺdensity, vectorͺareaͺelement) \end{equation} ££ multiply by velocity to get the MOMENTUM FLOW RATE:
+££ \begin{equation} ḍ₍t₎⬀p = (ρ⬀v)·(⬀v⦁d⬀A) \end{equation} ££ this is just the force ˝⬀F = ḍ⬀p˝ across the area element ˝d↗A˝. from the definition of the stress tensor, you can compute the force by inserting ˝d↗A˝ into the 2nd arg of a stress tensor,</div>
+</li>
+
+<li class="corpus">
+<a href=../../fluids/notes/archimedes-law/>archimedes law</a><br>
+<div class="summary">¶ archimedes&rsquo; law: when a solid is immersed (fully or partially) in a fluid, and there&rsquo;s a uniform gravitational field ˝↗g = -g↗e₍z₎˝, the total upwards force of the fluid on the body (&ldquo;buoyant force&rdquo;) equals the weight of displaced fluid.</div>
+</li>
+
+<li class="corpus">
+<a href=../../fluids/notes/what-is-a-fluid/>what is a fluid</a><br>
+<div class="summary">¶ fluids are macroscopic. two reasons:
+the macroscopic continuum approximation is valid. ie observable quantities of the fluid (flow velocity, density, etc) VARY SMOOTHLY in space and time, at macroscopic scales. this is because the mean free paths of the molecules in a fluid are SMALL compared to macroscopic length scales. uh, how do we actually know this about the mean free path of molecules in a fluid? &laquo;
+this is actually what allows you to define a mean local velocity ˝↗v(↗x,t)˝.</div>
+</li>
+
+<li class="corpus">
+<a href=../../fluids/notes/ideal-fluid/>ideal fluid</a><br>
+<div class="summary">¶ you can decompose the stress tensor into:
+an isotropic pressure term a viscous term linear in the rate of shear (velocity gradient) if the viscous stress is negligible (in many cases it is) and diffusive heatconductivity is negligible, the fluid is ideal. </div>
+</li>
+
+</div>
+
+</body>
+
+</html>

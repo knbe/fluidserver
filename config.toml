@@ -1,7 +1,7 @@
 baseURL = ''
 languageCode = "en-us"
 title = "fluids"
-publishDir = "docs"
+publishDir = "public"
 relativeURLs = true
 sectionPagesMenu = "main"
 enableGitInfo = true

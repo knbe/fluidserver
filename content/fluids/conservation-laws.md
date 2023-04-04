@@ -3,7 +3,7 @@ title: "conservation laws"
 type: long 
 ---
 
-## conservation of mass, eulerian
+# conservation of mass, eulerian
 ----------------------------------
 
 ¶ in the eulerian approach to mass conservation, you monitor the change in 
@@ -35,7 +35,7 @@ type: long
   - ˝-d↗S˝ is the inward facing surface element
 
 
-## conservation of mass, lagrangian
+# conservation of mass, lagrangian
 ------------------------------------
 
 ¶ in the lagrangian approach to mass conservation, you look at the change in 
@@ -100,7 +100,7 @@ type: long
     θ = ∇⦁↗v = Ɗ₍t₎Θ
   ```
 
-## conservation of momentum
+# conservation of momentum
 -----------------------------
 
 ¶ for momentum conservation, the equation should be of form ˝𝝏₍t₎˝(momentum 

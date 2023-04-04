@@ -28,7 +28,7 @@ type: note
   - consider a flow for which ˝L « vT˝.
 
 
-¶ *define* {{< ℑ FLOW SPEED >}} : the magnitude of the flow velocity vector.
+¶ *define* {{< ℑ flow speed >}} : the magnitude of the flow velocity vector.
   
-¶ *define* {{< ℑ VELOCITY PROFILE >}} : the flow velocity evaluated along a 
+¶ *define* {{< ℑ velocity profile >}} : the flow velocity evaluated along a 
   line.

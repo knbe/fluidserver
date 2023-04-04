@@ -2,31 +2,71 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/fluids/lexicon/archimedes-law/</loc>
+  </url><url>
     <loc>/fluids/notes/archimedes-law/</loc>
   </url><url>
     <loc>/fluids/barenblatt-equation/</loc>
   </url><url>
+    <loc>/fluids/lexicon/barotropic-fluid/</loc>
+  </url><url>
+    <loc>/fluids/examples/barotropic-model-of-dark-energy/</loc>
+  </url><url>
     <loc>/fluids/bernoullis-theorem/</loc>
+  </url><url>
+    <loc>/fluids/examples/bucket/</loc>
   </url><url>
     <loc>/categories/</loc>
   </url><url>
+    <loc>/fluids/lexicon/christoffel-symbol/</loc>
+  </url><url>
     <loc>/fluids/conservation-laws/</loc>
+  </url><url>
+    <loc>/fluids/examples/constructing-the-mechanical-stress-tensor/</loc>
   </url><url>
     <loc>/fluids/notes/constructing-the-mechanical-stress-tensor/</loc>
   </url><url>
+    <loc>/fluids/lexicon/density/</loc>
+  </url><url>
+    <loc>/fluids/examples/asmp61a-vorticity-equation-from-ns-2d/</loc>
+  </url><url>
     <loc>/fluids/similarity-solutions/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/equation-of-hydrostatics/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/equation-of-state/</loc>
   </url><url>
     <loc>/fluids/euler-equation/</loc>
   </url><url>
+    <loc>/fluids/examples/</loc>
+  </url><url>
+    <loc>/fluids/figs/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/flow-speed/</loc>
+  </url><url>
     <loc>/fluids/</loc>
+  </url><url>
+    <loc>/fluids/hallway/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/hydrodynamic-continuity-equation/</loc>
   </url><url>
     <loc>/fluids/hydrodynamics/</loc>
   </url><url>
+    <loc>/fluids/lexicon/hydrodynamics/</loc>
+  </url><url>
     <loc>/fluids/hydrostatics/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/hydrostatics/</loc>
   </url><url>
     <loc>/fluids/notes/ideal-fluid/</loc>
   </url><url>
     <loc>/fluids/incompressible-flows/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/incompressible-fluid/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/ionisation-energy/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/</loc>
   </url><url>
     <loc>/fluids/modified-porous-medium-equation/</loc>
   </url><url>
@@ -34,17 +74,49 @@
   </url><url>
     <loc>/fluids/notes/</loc>
   </url><url>
+    <loc>/fluids/lexicon/ideal-fluid/</loc>
+  </url><url>
     <loc>/</loc>
+  </url><url>
+    <loc>/fluids/examples/power-spectrum-of-a-cube/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/pressure/</loc>
+  </url><url>
+    <loc>/fluids/examples/pressure-on-an-infinitesimal-cube-of-liquid/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/reynolds-number/</loc>
   </url><url>
     <loc>/fluids/notes/reynolds-number/</loc>
   </url><url>
+    <loc>/fluids/lexicon/shear-stress/</loc>
+  </url><url>
     <loc>/fluids/notes/shear-stress/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/strain/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/stress/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/stress-tensor/</loc>
   </url><url>
     <loc>/fluids/stress-tensor/</loc>
   </url><url>
     <loc>/tags/</loc>
   </url><url>
+    <loc>/fluids/examples/asmp62-vorticity-with-coriolis/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/thin-liquid/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/velocity-profile/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/viscosity/</loc>
+  </url><url>
     <loc>/fluids/viscous-flows/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/vorticity/</loc>
+  </url><url>
+    <loc>/fluids/vorticity/</loc>
+  </url><url>
+    <loc>/fluids/hallway/what-is-a-fluid/</loc>
   </url><url>
     <loc>/fluids/notes/what-is-a-fluid/</loc>
   </url>

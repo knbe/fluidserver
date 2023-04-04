@@ -1,0 +1,175 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../../css/lexicon.css'>
+ 
+
+<link rel='stylesheet' href='../../../css/colours/martian.css'>
+
+
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../../fluids/">fluids</a>
+	> <a href="../../../fluids/lexicon/">lexicon</a>&nbsp;> <a href="">shear stress</a>
+</div>
+
+<h1 class="title">shear stress</h1>
+
+
+
+
+
+<div class="defn">
+<p class="defn-name">SHEAR FORCES
+
+<div class="defn-entry">
+forces that acts on one part of a body in a certain direction, and another
+part in the opposite direction
+</div>
+
+</div>
+
+<p>¶ if the forces are aligned (collinear), then they are just tension or
+compression forces</p>
+
+
+
+
+<div class="defn">
+<p class="defn-name">SHEAR STRESS τ
+
+<div class="defn-entry">
+<p>the component of stress that&rsquo;s coplanar with the body&rsquo;s cross section</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  τ = ÷FA 
+	\end{equation}
+	££
+	</div>
+
+
+<ul>
+<li>˝A˝ is the cross sectional area of the material that&rsquo;s parallel to the
+applied force</li>
+<li>points are coplanar if there&rsquo;s a plane that contains them all</li>
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="fig">
+<img src="../../../figs/shearstress.png" width="600">
+</div>
+
+<p>¶ &ldquo;ordinary&rdquo; stress comes from the force vector component perpendicular to the
+material cross section.</p>
+
+
+</body>
+
+</html>

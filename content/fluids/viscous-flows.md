@@ -161,3 +161,27 @@ type: long
   ```
   - in a gas, the mean thermal KE ˝÷32 ƙT˝ is ˝∼mv₍th₎⁽2⁾˝
   - ∴ the coeffcient of viscosity increases with temperature via ˝ν ∝ T⁽1/2⁾˝
+
+# REYNOLDS
+--------------------------------------------------------------------------------
+
+¶ reynolds number is a label that you use for a specific setup, it's not 
+  specific to a fluid. it's specific to a context.
+
+¶ reynolds numbers are useful, because they esentially make the equations 
+  dimensionless.
+
+¶ viscosity doesn't matter when you're going fast, because of Re.
+
+¶ some examples
+  - marble in treacle: 0.001
+  - bubbles in carbonated drink: 0.1
+  - blood flow: 100-1000
+  - swimming fish: 10000
+  - car at 30mph: 1,000,000
+  - baseball being bowled: 1,000,000
+  - cruise ship: 1,000,000,000
+
+¶ if Re » 1, i.e. over ∼ 1000: turbulence.
+
+¶ flows with the same Re number behave similarly.

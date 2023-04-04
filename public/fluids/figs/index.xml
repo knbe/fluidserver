@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>figures on fluids</title>
+    <link>/fluids/figs/</link>
+    <description>Recent content in figures on fluids</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/fluids/figs/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

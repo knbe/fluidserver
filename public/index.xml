@@ -8,6 +8,15 @@
     <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>archimedes law</title>
+      <link>/fluids/lexicon/archimedes-law/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/archimedes-law/</guid>
+      <description>when a solid is immersed (fully or partially) in a fluid, and there&amp;rsquo;s a uniform gravitational field ˝↗g = -g↗e₍z₎˝, the total upwards force of the fluid on the body (&amp;ldquo;buoyant force&amp;rdquo;) equals the weight of displaced fluid.</description>
+    </item>
+    
+    <item>
+      <title>archimedes law</title>
       <link>/fluids/notes/archimedes-law/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -28,6 +37,29 @@
     </item>
     
     <item>
+      <title>barotropic fluid</title>
+      <link>/fluids/lexicon/barotropic-fluid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/barotropic-fluid/</guid>
+      <description>a fluid where ρ is a function of p only.
+barotropic fluids also allow hydrostatic equilibrium (also is in, in addition to perfect fluids). hang on a minute&amp;hellip;
+so what&amp;rsquo;s the difference between a barotropic fluid and a perfect fluid?</description>
+    </item>
+    
+    <item>
+      <title>barotropic model of dark energy</title>
+      <link>/fluids/examples/barotropic-model-of-dark-energy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/examples/barotropic-model-of-dark-energy/</guid>
+      <description>Barotropic fluid: a fluid where density is a function of pressure only (although a &amp;ldquo;perfect fluid&amp;rdquo; has a suspiciously similar definition&amp;hellip;) The key thing is, the relation between pressure and density is given by ˝w = P/ρ˝, where ˝w˝ is an equation of state parameter.
+Define
+££ \begin{equation} w&amp;#39; = ÷{dw}{dͺln(a)} \end{equation} ££ Insert ˝w = P₍X₎/ρ₍X₎˝ and use the product rule:
+££ \begin{align} w&amp;#39; &amp; = ÷{d}{dͺln(a)} (P₍X₎⋄÷1{ρ₍X₎}) \n &amp; = ÷{dͺP₍X₎}{dͺln(a)} ÷1{ρ₍X₎} &amp;#43; P₍X₎ ÷{dͺρ₍X₎⁽-1⁾}{dͺln(a)} \n &amp; = ÷{dͺP₍X₎}{dͺρ₍X₎} ÷{dͺρ₍X₎}{dͺln(a)} ÷1{ρ₍X₎} - w ρ₍X₎ ÷1{ρ₍X₎⁽2⁾} ÷{dͺρ₍X₎}{dͺln(a)} \end{align} ££ (in the last step: use the chain rule to expand ˝d₍ln(a)₎P₍X₎˝, and likewise for ˝d₍ln(a)₎ρ₍X₎⁽-1⁾˝, and substitute ˝P₍X₎ = wρ₍X₎˝)</description>
+    </item>
+    
+    <item>
       <title>bernoulli&#39;s theorem</title>
       <link>/fluids/bernoullis-theorem/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -38,6 +70,31 @@
 in a steady flow, the sum of all forms of energy is the same at all points (free of viscous forces). KE + PE + internal energy = constant.
 means that an increase in speed of fluid occurs simultaneously with decrease in static pressure.
 ¶ can derive bernoulli&amp;rsquo;s principle from euler&amp;rsquo;s equation (restatement of newton&amp;rsquo;s second law).</description>
+    </item>
+    
+    <item>
+      <title>bucket</title>
+      <link>/fluids/examples/bucket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/examples/bucket/</guid>
+      <description>how long does it take for a bucket with a small hole in the side to empty?
+you can start with the continuity equation:
+££ \begin{equation} A₍1₎ v₍1₎ = A₍2₎ v₍2₎ \end{equation} ££ the flux out:
+££ \begin{equation} A₍2₎ √{2gh} \end{equation} ££ convert to volumetric flux:
+££ \begin{equation} V = A₍2₎v₍2₎t \end{equation} ££ so time taken is:
+££ \begin{equation} t = V / A₍2₎√{2gh} \end{equation} ££ [attach table of results]</description>
+    </item>
+    
+    <item>
+      <title>christoffel symbol</title>
+      <link>/fluids/lexicon/christoffel-symbol/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/christoffel-symbol/</guid>
+      <description>for a n-dimensional space, the christoffel symbol is a n×n×n array of numbers that describes the curvature of a surface.
+you calculate the christoffel symbol (that is, the components of the christoffel symbol) from the metric tensor of the surface/manifold. (the metric tensor is what defines the distance between points on the manifold).
+the christoffel symbol defines the covariant derivative. this is a special derivative for a curved surface that accounts for the curvature of the surface.</description>
     </item>
     
     <item>
@@ -52,6 +109,17 @@ means that an increase in speed of fluid occurs simultaneously with decrease in 
     
     <item>
       <title>constructing the mechanical stress tensor</title>
+      <link>/fluids/examples/constructing-the-mechanical-stress-tensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/examples/constructing-the-mechanical-stress-tensor/</guid>
+      <description>¶ consider a small area element, d↗A. momentum flows through this area in the +ve direction. the MASS FLOW RATE thru the surface is
+££ \begin{equation} ρ↗v ⦁ d↗A = dot(momentumͺdensity, vectorͺareaͺelement) \end{equation} ££ multiply by velocity to get the MOMENTUM FLOW RATE:
+££ \begin{equation} ḍ₍t₎⬀p = (ρ⬀v)·(⬀v⦁d⬀A) \end{equation} ££ this is just the force ˝⬀F = ḍ⬀p˝ across the area element ˝d↗A˝. from the definition of the stress tensor, you can compute the force by inserting ˝d↗A˝ into the 2nd arg of a stress tensor,</description>
+    </item>
+    
+    <item>
+      <title>constructing the mechanical stress tensor</title>
       <link>/fluids/notes/constructing-the-mechanical-stress-tensor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -62,6 +130,28 @@ means that an increase in speed of fluid occurs simultaneously with decrease in 
     </item>
     
     <item>
+      <title>density</title>
+      <link>/fluids/lexicon/density/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/density/</guid>
+      <description>the density Ω is the ratio of the actual observed density ρ to the critical density ρ₍c₎ of a friedmann universe. the ratio determines the overall geometry of the universe. when they&amp;rsquo;re equal, flat.
+in earlier models that didn&amp;rsquo;t have a cosmological constant, critical density was defined as the watershed point between an expanding and contracting universe.
+ρ₍c₎ is estimated to be 5 atoms of monatomic hydrogen per cubic metre today.</description>
+    </item>
+    
+    <item>
+      <title>deriving the vorticity equation from navier-stokes in 2d</title>
+      <link>/fluids/examples/asmp61a-vorticity-equation-from-ns-2d/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/examples/asmp61a-vorticity-equation-from-ns-2d/</guid>
+      <description>Start with the incompressible Navier-Stokes equation
+££ \begin{equation} 𝝏₍t₎↗v &amp;#43; (↗v⦁∇)↗v = ν∇⁽2⁾↗v - ÷1ρ·∇p 𝓮𝓺{611} \end{equation} ££ where
+˝↗v = ↗v(↗r,t)˝ is the flow velocity (vector field) ˝p = p(↗r,t)˝ is the pressure (scalar field) ˝ρ˝ is the density ˝ν˝ is the kinematic viscosity, ˝ν = μ/ρ˝ Some context: the NSE is an equation for the time evolution of the fluid&amp;rsquo;s velocity field. The specific form of the equation derives from momentum conservation (and whatever assumptions you deign to make about the fluid, e.</description>
+    </item>
+    
+    <item>
       <title>diffusion, similarity solutions, intermediate asymptotics</title>
       <link>/fluids/similarity-solutions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -69,6 +159,26 @@ means that an increase in speed of fluid occurs simultaneously with decrease in 
       <guid>/fluids/similarity-solutions/</guid>
       <description>RECAP: ANOMALOUS DIMENSIONS ¶ when anomalous dimensions arise, it means there&amp;rsquo;s a microscopic length at work.
 this microscopic length scale affects the thermo functions and the correlation function asymptotically near the critical point mmly this means you can&amp;rsquo;t approximate a function ˝f(x)˝ with ˝f(x = 0)˝ when ˝x → 0˝. that kind of limit approximation is not valid. ¶ so basically, whenever there&amp;rsquo;s a function ˝f(x)˝ that you can&amp;rsquo;t replace with ˝f(0)˝ when ˝x˝ is small, it means there&amp;rsquo;s an anomalous dimension.</description>
+    </item>
+    
+    <item>
+      <title>equation of hydrostatics</title>
+      <link>/fluids/lexicon/equation-of-hydrostatics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/equation-of-hydrostatics/</guid>
+      <description> ££ \begin{equation} -∇p - ρ∇φ = 0 \end{equation} ££ </description>
+    </item>
+    
+    <item>
+      <title>equation of state</title>
+      <link>/fluids/lexicon/equation-of-state/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/equation-of-state/</guid>
+      <description>an equation that relates ρ to p.
+in a perfect fluid, the EOS is ρ = const.
+in a barotropic fluid, ρ is a function of p.</description>
     </item>
     
     <item>
@@ -84,6 +194,25 @@ this microscopic length scale affects the thermo functions and the correlation f
     </item>
     
     <item>
+      <title>flow speed</title>
+      <link>/fluids/lexicon/flow-speed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/flow-speed/</guid>
+      <description>the magnitude of the flow velocity</description>
+    </item>
+    
+    <item>
+      <title>hydrodynamic continuity equation</title>
+      <link>/fluids/lexicon/hydrodynamic-continuity-equation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/hydrodynamic-continuity-equation/</guid>
+      <description>is essentially a statement of mass conservation:
+££ \begin{equation} 𝝏₍t₎ρ = -∇⦁(ρ⬀v) \end{equation} ££ </description>
+    </item>
+    
+    <item>
       <title>hydrodynamics</title>
       <link>/fluids/hydrodynamics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -92,6 +221,15 @@ this microscopic length scale affects the thermo functions and the correlation f
       <description>HYDRODYNAMICS ¶ hydrodynamics is when the fluid velocity ˝↗v(↗x,t)˝ is nonzero (as opposed to hydrostatics).
 CONSERVATION conservation of mass, eulerian ¶ in the eulerian approach to mass conservation, you monitor the change in density at a given point in space, rather than moving with the flow [thorne p692].
 ¶ when dealing with continua, all conservation of mass laws tend to have the form ˝𝝏₍t₎˝(density of something) = ˝∇⦁˝(flux of that thing).</description>
+    </item>
+    
+    <item>
+      <title>hydrodynamics</title>
+      <link>/fluids/lexicon/hydrodynamics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/hydrodynamics/</guid>
+      <description>study of fluids in motion. assume the flow velocity ˝⬀v(⬀x,t)˝ is nonzero.</description>
     </item>
     
     <item>
@@ -104,6 +242,15 @@ CONSERVATION conservation of mass, eulerian ¶ in the eulerian approach to mass 
 ¶ defined as force per unit area.
 ¶ compressive stress: is when forces (like tension or compression) cause an object to become compressed.
 the bigger these forces and the smaller the cross sectional area, the greater the stress. is why stress is defined as force per unit area ¶ dimensions: ˝[σ] = L⁽-1⁾ M T⁽-2⁾˝</description>
+    </item>
+    
+    <item>
+      <title>hydrostatics</title>
+      <link>/fluids/lexicon/hydrostatics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/hydrostatics/</guid>
+      <description>theory of fluids at rest</description>
     </item>
     
     <item>
@@ -129,6 +276,27 @@ note this equation has the same form as the equation for a solenoidal field. ind
     </item>
     
     <item>
+      <title>incompressible fluid</title>
+      <link>/fluids/lexicon/incompressible-fluid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/incompressible-fluid/</guid>
+      <description>¶ if you assume density is constant, you&amp;rsquo;re saying the fluid is incompressible (pq to compress the fluid, you have to induce some kind of density variation)
+¶ incompressible fluid: you&amp;rsquo;re assuming variations of pressure are so small that changes in density are negligible
+¶ to be clear, this is an approximation. approximating constant ˝ρ˝ is only valid when:
+the velocities of the flow are much less than the speed of sound in the fluid, then you don&amp;rsquo;t have to worry about density variations ¶ incompressible fluids obey</description>
+    </item>
+    
+    <item>
+      <title>ionisation energy</title>
+      <link>/fluids/lexicon/ionisation-energy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/ionisation-energy/</guid>
+      <description>the energy needed to remove the most loosely bound outer electron in a neutral atom.</description>
+    </item>
+    
+    <item>
       <title>modified porous medium equation</title>
       <link>/fluids/modified-porous-medium-equation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -151,6 +319,58 @@ show an example of this (how you can&amp;rsquo;t always get SSs using DA) by loo
     </item>
     
     <item>
+      <title>perfect fluid</title>
+      <link>/fluids/lexicon/ideal-fluid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/ideal-fluid/</guid>
+      <description>¶ a fluid that you can describe using only the density ρ and pressure p.
+¶ or: a fluid that doesn&amp;rsquo;t have viscosity or shear stresses.
+¶ you can decompose the stress tensor into:
+an isotropic pressure term a viscous term linear in the rate of shear (velocity gradient) if the viscous stress is negligible (in many cases it is) and heat conductivity is negligible, then the fluid is ideal.</description>
+    </item>
+    
+    <item>
+      <title>power spectrum of a cube</title>
+      <link>/fluids/examples/power-spectrum-of-a-cube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/examples/power-spectrum-of-a-cube/</guid>
+      <description>A cosmological cube:
+The contrast in the image shows (somewhat) the local variations in the (over)density field. The power spectrum is essentially a measure of the density contrast in space.
+Some theory: the fractional overdensity ˝δ(⬀x)˝ describes the deviation of the density field, ˝ρ(⬀x)˝, from the average density, ˝⟨ρ⟩˝
+££ \begin{equation} δ(⬀x) = ÷{ ρ(⬀x) - ⟨ρ⟩ }{ ⟨ρ⟩ } \end{equation} ££ where ˝ρ(⬀x)˝ is the density at point ˝⬀x˝ and ˝⟨ρ⟩˝ is the average density over (all) space.</description>
+    </item>
+    
+    <item>
+      <title>pressure</title>
+      <link>/fluids/lexicon/pressure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/pressure/</guid>
+      <description>the normal force per unit area.</description>
+    </item>
+    
+    <item>
+      <title>pressure on an infinitesimal cube of liquid</title>
+      <link>/fluids/examples/pressure-on-an-infinitesimal-cube-of-liquid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/examples/pressure-on-an-infinitesimal-cube-of-liquid/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>reynolds number</title>
+      <link>/fluids/lexicon/reynolds-number/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/reynolds-number/</guid>
+      <description>¶ is basically a metric for quantifying/comparing viscosities. you ompare the [viscosity] ˝ν˝ with the product of the flow&amp;rsquo;s characteristic velocity ˝V˝ and its characteristic length scale ˝L˝.
+££ \begin{equation} Re = ÷{LV}{ν} \end{equation} ££ this is the reynolds number it&amp;rsquo;s dimensionless flows with ˝Re &amp;lt; 1˝ are dominated by viscosity flows with ˝Re &amp;gt; 1˝ can be influenced by viscosity, especially when it acts near boundaries, BUT the viscous stresses are negligible over most of the flow&amp;rsquo;s volume </description>
+    </item>
+    
+    <item>
       <title>reynolds number</title>
       <link>/fluids/notes/reynolds-number/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -162,12 +382,59 @@ show an example of this (how you can&amp;rsquo;t always get SSs using DA) by loo
     
     <item>
       <title>shear stress</title>
+      <link>/fluids/lexicon/shear-stress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/shear-stress/</guid>
+      <description>SHEAR FORCES forces that acts on one part of a body in a certain direction, and another part in the opposite direction ¶ if the forces are aligned (collinear), then they are just tension or compression forces
+SHEAR STRESS τ the component of stress that&amp;rsquo;s coplanar with the body&amp;rsquo;s cross section
+££ \begin{equation} τ = ÷FA \end{equation} ££ ˝A˝ is the cross sectional area of the material that&amp;rsquo;s parallel to the applied force points are coplanar if there&amp;rsquo;s a plane that contains them all ¶ &amp;ldquo;ordinary&amp;rdquo; stress comes from the force vector component perpendicular to the material cross section.</description>
+    </item>
+    
+    <item>
+      <title>shear stress</title>
       <link>/fluids/notes/shear-stress/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/fluids/notes/shear-stress/</guid>
       <description>¶ shear stress: the component of stress that&amp;rsquo;s coplanar from the material&amp;rsquo;s cross section. denoted ˝τ˝:
 ££ \begin{equation} τ = F/A \end{equation} ££ ˝F˝ is the force applied, ˝A˝ is the crosssectional area of the material whose area is parallel to the applied force vector ¶ &amp;ldquo;ordinary&amp;rdquo; stress comes from the force vector component perpendicular to the material cross section.</description>
+    </item>
+    
+    <item>
+      <title>strain</title>
+      <link>/fluids/lexicon/strain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/strain/</guid>
+      <description>¶ strain is a measure of deformation of an object. it describes the displacement between particles relative to a reference length
+¶ functional form of deformation:
+££ \begin{equation} ↗x = F(↗x&amp;#39;) \end{equation} ££ ↗x&amp;rsquo; is an array of reference positions for points of the body deformations have units of length ¶ strains are usually dimensionless
+¶ whenever a solid material undergoas a strain (deformation), there is an internal elastic stress that causes the object to restore to its original non-deformed state (like the spring force)</description>
+    </item>
+    
+    <item>
+      <title>stress</title>
+      <link>/fluids/lexicon/stress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/stress/</guid>
+      <description>¶ is a quantity that describes the forces in an object that cause deformation (strain). describes the internal forces that neighbouring particles exert on each other, in a continuous material.
+¶ defined as force per unit area.
+¶ compressive stress: is when forces (like tension or compression) cause an object to become compressed.
+the bigger these forces and the smaller the cross sectional area, the greater the stress. is why stress is defined as force per unit area ¶ dimensions: ˝[σ] = L⁽-1⁾ M T⁽-2⁾˝</description>
+    </item>
+    
+    <item>
+      <title>stress tensor</title>
+      <link>/fluids/lexicon/stress-tensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/stress-tensor/</guid>
+      <description>GOAL: describe the internal forces in a material/body in terms of a tensor.
+STRESSES &amp;amp; INTERNAL FORCES ¶ the STRESSES in a material are the various internal forces that maintain its form.
+suppose you dissect a 3d object with a plane. take a small area element of the plane. the material on the left of the area element will exert a force ΔF to the right, and v.v.
+¶ PRESSURE in a static liquid is one kind of stress.</description>
     </item>
     
     <item>
@@ -183,6 +450,46 @@ suppose you dissect a 3d object with a plane. take a small area element of the p
     </item>
     
     <item>
+      <title>the vorticity equation in a rotating frame</title>
+      <link>/fluids/examples/asmp62-vorticity-with-coriolis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/examples/asmp62-vorticity-with-coriolis/</guid>
+      <description>The NSE:
+££ \begin{equation} Ɗ₍t₎↗v = ν∇⁽2⁾↗v - ÷1ρ∇p 𝓮𝓺{621} \end{equation} ££ where ˝Ɗ₍t₎˝ is the advective derivative, ˝Ɗ₍t₎ = 𝝏₍t₎ + (↗v⦁∇)˝. Suppose we&amp;rsquo;re now in a rotating reference frame RF that&amp;rsquo;s rotating at angular velocity ˝↗Ω˝ w.r.t. the inertial frame IF. Since all the vector quantities are now fixed in the rotating frame, you have to transform them to a form that&amp;rsquo;s valid in the inertial frame. Let ˝↗r˝ be the position vector, ˝↗r = ∑₍i₎r₍i₎↑e₍i₎˝.</description>
+    </item>
+    
+    <item>
+      <title>thin liquid</title>
+      <link>/fluids/lexicon/thin-liquid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/thin-liquid/</guid>
+      <description>a liquid where you ignore viscosity.
+von neumann called it &amp;ldquo;dry water&amp;rdquo; since this approximation is a fairly large departure from the way real liquids behave.</description>
+    </item>
+    
+    <item>
+      <title>velocity profile</title>
+      <link>/fluids/lexicon/velocity-profile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/velocity-profile/</guid>
+      <description>the flow velocity evaluated along a line.</description>
+    </item>
+    
+    <item>
+      <title>viscosity</title>
+      <link>/fluids/lexicon/viscosity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/viscosity/</guid>
+      <description>¶ physically: viscosity is a measure of how easily a fluid yields to a shear stress.
+any time you apply a shear to a fluid, the fluid will move. fluids that more more easily are less viscous, and v.v. ¶ think about the fluid as a series of parallel plates. if there is a shear force, the plates move at different rates.
+¶ pick two plates, let d be the distance between them, and let ˝v₍0₎˝ be the speed of the slower one.</description>
+    </item>
+    
+    <item>
       <title>viscous flows</title>
       <link>/fluids/viscous-flows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -192,6 +499,38 @@ suppose you dissect a 3d object with a plane. take a small area element of the p
 ££ \begin{equation} 𝝏{t}{↗v} &amp;#43; (↗v⦁∇)↗v = -÷1ρ·∇p - ∇φ &amp;#43; ÷1ρ·↗f₍visc₎ \end{equation} ££ ¶ in the dry water approximation you leave out the last term, ie neglect viscous effects
 ¶ another (additional) approximation is assuming the fluid is incompressible, so
 ££ \begin{equation} ∇⦁↗v = 0 \end{equation} ££ ¶ the incompressible approximation is good when flow speeds are much slower than the speed of sound.</description>
+    </item>
+    
+    <item>
+      <title>vorticity</title>
+      <link>/fluids/lexicon/vorticity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/vorticity/</guid>
+      <description>the curl of the velocity field
+££ \begin{equation} ⬀Ω = ∇×⬀v \end{equation} ££ </description>
+    </item>
+    
+    <item>
+      <title>vorticity</title>
+      <link>/fluids/vorticity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/vorticity/</guid>
+      <description>VORTICITY ¶ define vorticity, ˝↗Ω˝, the curl of the velocity field ˝↗v˝
+££ \begin{equation} ↗Ω = ∇×↗v \end{equation} ££ this is also a vector field ¶ what vorticity actually is:
+take a small fluid element. consider how this fluid element moves over a short period of time ˝dt˝ each &amp;ldquo;bit&amp;rdquo; of fluid in the fluid element has a small displacement in this interval. let the displacement of this bit be ˝↗ε = ↗vdt˝ the gradient of the displacement ˝↗ε˝ will be comprised of an expansion, rotation, and shear.</description>
+    </item>
+    
+    <item>
+      <title>what is a fluid</title>
+      <link>/fluids/hallway/what-is-a-fluid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/hallway/what-is-a-fluid/</guid>
+      <description>¶ fluids are macroscopic. two reasons:
+the macroscopic continuum approximation is valid. ie observable quantities of the fluid (flow velocity, density, etc) VARY SMOOTHLY in space and time, at macroscopic scales. this is because the mean free paths of the molecules in a fluid are SMALL compared to macroscopic length scales. uh, how do we actually know this about the mean free path of molecules in a fluid? &amp;laquo;
+this is actually what allows you to define a mean local velocity ˝↗v(↗x,t)˝.</description>
     </item>
     
     <item>

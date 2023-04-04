@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hallway on fluids</title>
+    <link>/fluids/hallway/</link>
+    <description>Recent content in hallway on fluids</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/fluids/hallway/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>what is a fluid</title>
+      <link>/fluids/hallway/what-is-a-fluid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/hallway/what-is-a-fluid/</guid>
+      <description>¶ fluids are macroscopic. two reasons:
+the macroscopic continuum approximation is valid. ie observable quantities of the fluid (flow velocity, density, etc) VARY SMOOTHLY in space and time, at macroscopic scales. this is because the mean free paths of the molecules in a fluid are SMALL compared to macroscopic length scales. uh, how do we actually know this about the mean free path of molecules in a fluid? &amp;laquo;
+this is actually what allows you to define a mean local velocity ˝↗v(↗x,t)˝.</description>
+    </item>
+    
+  </channel>
+</rss>

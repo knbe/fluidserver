@@ -1,0 +1,4 @@
+---
+title: lexicon
+type: lexicon
+---

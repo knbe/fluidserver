@@ -1,0 +1,273 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../../css/example.css'>
+
+
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../../fluids/">fluids</a>
+	> <a href="../../../fluids/examples/">examples</a>&nbsp;> <a href="">barotropic model of dark energy</a>
+</div>
+
+<h1 class="title">barotropic model of dark energy.</h1>
+
+
+
+<p><em>Barotropic fluid:</em> a fluid where density is a function of pressure only
+(although a &ldquo;perfect fluid&rdquo; has a suspiciously similar definition&hellip;) The key
+thing is, the relation between pressure and density is given by ˝w = P/ρ˝, where
+˝w˝ is an equation of state parameter.</p>
+<p>Define</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  w&#39; = ÷{dw}{dͺln(a)} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>Insert ˝w = P₍X₎/ρ₍X₎˝ and use the product rule:</p>
+
+
+	
+	
+
+	<div class="eq">
+	££
+	\begin{align}
+	
+		   w&#39;  
+		
+	& 
+		
+		 = ÷{d}{dͺln(a)} (P₍X₎⋄÷1{ρ₍X₎})
+   
+		
+		\n
+		&
+		
+		 = ÷{dͺP₍X₎}{dͺln(a)} ÷1{ρ₍X₎} &#43; P₍X₎ ÷{dͺρ₍X₎⁽-1⁾}{dͺln(a)}
+   
+		
+		\n
+		&
+		
+		 = ÷{dͺP₍X₎}{dͺρ₍X₎} ÷{dͺρ₍X₎}{dͺln(a)} ÷1{ρ₍X₎} 
+      - w ρ₍X₎ ÷1{ρ₍X₎⁽2⁾} ÷{dͺρ₍X₎}{dͺln(a)} 
+		
+	\end{align}
+	££
+	</div>
+
+
+<p>(in the last step: use the chain rule to expand ˝d₍ln(a)₎P₍X₎˝, and likewise for
+˝d₍ln(a)₎ρ₍X₎⁽-1⁾˝, and substitute ˝P₍X₎ = wρ₍X₎˝)</p>
+<p>This simplifies to</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  w&#39; = ÷{dͺρ₍X₎}{dͺln(a)} ÷1{ρ₍X₎} ( ÷{dͺP₍X₎}{dͺρ₍X₎} - w)  
+	\end{equation}
+	££
+	</div>
+
+
+<p>Using the scaling relationship of ˝ρ˝ with ˝a˝ from the previous problem, you
+can simplify the prefactor in the above expression to ˝-3(1+w₍X₎)˝. Then,
+substituting ˝dP₍X₎/dρ₍X₎ = c₍s₎⁽2⁾˝, you get</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  w&#39; = -3(1&#43;w) (c₍s₎⁽2⁾ - w) 
+	\end{equation}
+	££
+	</div>
+
+
+<p>If ˝c₍s₎⁽2⁾ ≥ 0˝, then, by substituting ˝0 → c₍s₎⁽2⁾˝ into the equation, you can
+see that ˝w&rsquo;˝ must satisfy ˝w&rsquo; ≤ 3w(1+w)˝. Likewise if ˝c₍s₎⁽2⁾ ≤ 1˝ then ˝w&rsquo; ≥
+-3(1+w)(1-w)˝. And so you get</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  -3(1&#43;w)(1-w) ≤ w&#39; ≤ 3w(1&#43;w) 
+	\end{equation}
+	££
+	</div>
+
+
+<p>Since we&rsquo;re talking about dark energy, the e.o.s parameter ˝w˝ is necessarily ˝&lt;
+0˝. Looking at the RH equality in ˝(6)˝, you can see that this implies ˝w&rsquo; &lt; 0˝
+for barotropic dark energy fluids (however this observation is only valid if ˝w˝
+is also ˝&gt; -1˝, i.e. you&rsquo;re excluding scenarios that might lead to the &ldquo;big
+rip&rdquo;).</p>
+<p>(b) When you take the sound speed at the limit ˝c₍s₎ → c₍∞₎ = c₍s₎(a→∞)˝ then
+you end up with the equation</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ÷{dͺln(1&#43;w)}{dͺln(a)} ≈ -3(1 &#43; c₍∞₎⁽2⁾) 
+	\end{equation}
+	££
+	</div>
+
+
+<p>or</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  (1&#43;w) ≈ a⁽-3(1 &#43; c₍∞₎)⁾ 
+	\end{equation}
+	££
+	</div>
+
+
+<blockquote class="question"><p>(although, what are we really talking about here? When ˝a → ∞˝ aren&rsquo;t we
+talking about the end of the universe?),</p>
+</blockquote>
+<p>When you take this relation in the limit ˝c₍s₎ → c₍∞₎˝, you get ˝w → -1˝. And
+from this, you can derive the density relation</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ρ₍X₎ - ρ₍∞₎ ≈ a⁽-3(1&#43;c₍∞₎⁽2⁾)⁾ 
+	\end{equation}
+	££
+	</div>
+
+
+<p>So essentially, ˝ρ₍∞₎˝ is a constant that the density tends to approach as ˝a →
+∞˝, i.e. at very late times. This suggests you can write</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ρ₍X₎ = ρ₍∞₎ &#43; ρ₍γ₎ 
+	\end{equation}
+	££
+	</div>
+
+
+<p>or, in other words, the density of a barotropic fluid can be expressed as the
+sumn of a cosmological constant term and a positive e.o.s. fluid. Substituting
+an arbitrary ˝ρ₍γ₎ ≈ a⁽-3(1+w₍γ₎)⁾˝, you get ˝0 ≤ w₍γ₎ ≤ 1˝.</p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../../css/example.css'>
+
+
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../../fluids/">fluids</a>
+	> <a href="../../../fluids/examples/">examples</a>&nbsp;> <a href="">bucket</a>
+</div>
+
+<h1 class="title">bucket.</h1>
+
+
+
+<p>how long does it take for a bucket with a small hole in the side to empty?</p>
+<p>you can start with the continuity equation:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  A₍1₎ v₍1₎ = A₍2₎ v₍2₎ 
+	\end{equation}
+	££
+	</div>
+
+
+<p>the flux out:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  A₍2₎ √{2gh} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>convert to volumetric flux:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  V = A₍2₎v₍2₎t 
+	\end{equation}
+	££
+	</div>
+
+
+<p>so time taken is:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  t = V / A₍2₎√{2gh} 
+	\end{equation}
+	££
+	</div>
+
+
+
+
+
+<div class="fig">
+<img src="../../../figs/bucket.png" width="600">
+</div>
+
+<p>[<code>attach table of results</code>]</p>
+<p>not entirely sure this is correct. experimentally, I find it empties slower.
+perhaps this is because of viscosity? are we operating in some kind of
+approximation limit here? I mean, I know we are, but which one?</p>
+
+
+</body>
+
+</html>

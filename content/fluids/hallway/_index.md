@@ -1,0 +1,4 @@
+---
+title: hallway
+type: example
+---

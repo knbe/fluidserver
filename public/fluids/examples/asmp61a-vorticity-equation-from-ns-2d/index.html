@@ -1,0 +1,410 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../../css/example.css'>
+
+
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../../fluids/">fluids</a>
+	> <a href="../../../fluids/examples/">examples</a>&nbsp;> <a href="">deriving the vorticity equation from navier-stokes in 2d</a>
+</div>
+
+<h1 class="title">deriving the vorticity equation from navier-stokes in 2d.</h1>
+
+
+
+<p>Start with the incompressible Navier-Stokes equation</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏₍t₎↗v &#43; (↗v⦁∇)↗v = ν∇⁽2⁾↗v - ÷1ρ·∇p                             𝓮𝓺{611}  
+	\end{equation}
+	££
+	</div>
+
+
+<p>where</p>
+<ul>
+<li>˝↗v = ↗v(↗r,t)˝ is the flow velocity (vector field)</li>
+<li>˝p = p(↗r,t)˝ is the pressure (scalar field)</li>
+<li>˝ρ˝ is the density</li>
+<li>˝ν˝ is the kinematic viscosity, ˝ν = μ/ρ˝</li>
+</ul>
+<p>Some context: the NSE is an equation for the time evolution of the fluid&rsquo;s
+velocity field. The specific form of the equation derives from momentum
+conservation (and whatever assumptions you deign to make about the fluid, e.g.
+incompressibility). The LHS of \eqref{611} is an expression for the rate of
+change of flow velocity, ˝Ɗ₍t₎↗v˝, where ˝Ɗ₍t₎˝ is the <a href="https://wikiless.org/wiki/Substantive_derivative?lang=en">advective
+derivative</a> ˝Ɗ₍t₎ = 𝝏₍t₎ + ↗v⦁∇˝.  The RHS is the total force density (force
+per unit mass) from all the forces on the fluid. Here we&rsquo;re only considering
+internal contributions from viscosity and pressure. If there were external
+forces, they&rsquo;d appear as additional terms on the RHS.</p>
+<p>Vorticity is defined as the curl of the flow velocity, ˝↗ω = ∇×↗v˝. You can
+derive an equation for the time evolution of vorticity by taking the curl of the
+NSE \eqref{611}:</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∇×(𝝏₍t₎↗v) &#43; ∇×((↗v⦁∇)↗v) = ∇×(ν∇⁽2⁾↗v) - ∇×(÷1ρ·∇p)          𝓮𝓺{612} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>Let&rsquo;s go through these terms one by one. I&rsquo;m going to use Levi-Civita notation
+to keep things concise (see Appendix 6-1A for some rather more hideous brute
+force vector math). In Levi-Civita notation, the cross product ˝↗v×↗w˝ is
+expressed ˝ε₍ijk₎v₍j₎w₍k₎˝.  Thus, the first term on the LHS of \eqref{612} is</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∇×(𝝏₍t₎↗v)
+  == 𝝏₍i₎(𝝏₍t₎v₍j₎)ε₍ijk₎
+  == 𝝏₍t₎(𝝏₍i₎v₍j₎ε₍ijk₎)
+  == 𝝏₍t₎(∇×↗v) 
+	\end{equation}
+	££
+	</div>
+
+
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  == 𝝏₍t₎↗ω                                 𝓮𝓺{614} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>where in step 2 I&rsquo;ve used the <a href="https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives">symmetry of second derivatives</a> to swap the
+˝𝝏₍i₎˝ and ˝𝝏₍t₎˝ derivatives.</p>
+<p>Now for the second term on the LHS of \eqref{612}. There is more than one way to
+go about this &mdash; in Appendix 6-1A you can see a full brute force expansion of
+the vector terms.  Here though, I shan&rsquo;t be so uncouth. First, note the vector
+identity</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  (↗v⦁∇)↗v = ÷12∇(↗v⦁↗v) - ↗v×(∇×↗v) 
+	\end{equation}
+	££
+	</div>
+
+
+<p>To prove this identity, take ith component of each term (in LC notation),
+
+
+<div class="eq">
+££
+\bgnmaths
+
+  v₍j₎𝝏₍j₎v₍i₎ 
+&= 
+
+ ÷12𝝏₍i₎(v₍j₎⁽2⁾) - ε₍ijk₎v₍j₎ \underbrace{ (∇×↗v)₍k₎ 
+  }_{=ε₍klm₎𝝏₍l₎v₍m₎} 
+\n
+&=
+
+ ÷12𝝏₍i₎(v₍j₎⁽2⁾) - ε₍ijk₎ε₍klm₎v₍j₎𝝏₍l₎v₍m₎
+  
+\n
+&=
+
+ \underbrace{ ÷12𝝏₍i₎(v₍j₎⁽2⁾) }_{ =v₍j₎𝝏₍i₎v₍j₎ }
+  - \underbrace{ (δ₍il₎δ₍jm₎ - δ₍im₎δ₍jl₎)v₍j₎𝝏₍l₎v₍m₎ }_{=v₍j₎𝝏₍i₎v₍j₎ - 
+    v₍j₎𝝏₍j₎v₍i₎}
+  
+\n
+&=
+
+ v₍j₎𝝏₍i₎v₍j₎ - v₍j₎𝝏₍i₎v₍j₎ &#43; v₍j₎𝝏₍j₎v₍i₎
+  
+\n
+&=
+
+ v₍j₎𝝏₍j₎v₍i₎
+
+\endmaths
+££
+</div>
+</p>
+<p>∴ LHS = RHS. Now take the curl,</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∇×(÷12∇(↗v⦁↗v) - ↗v×∇×↗v)
+  == ε₍ijk₎𝝏₍j₎(÷12∇(↗v⦁↗v))₍k₎ - ε₍ijk₎𝝏₍j₎(↗v×∇×↗v)₍k₎
+  == ÷12 ε₍ijk₎𝝏₍j₎𝝏₍k₎v₍l₎⁽2⁾ - ε₍ijk₎𝝏₍j₎(v₍l₎𝝏₍k₎v₍l₎ - v₍l₎𝝏₍l₎v₍k₎)
+  == ÷12 ε₍ijk₎𝝏₍j₎𝝏₍k₎v₍l₎v₍l₎ - ε₍ijk₎𝝏₍j₎v₍l₎𝝏₍k₎v₍l₎ &#43; ε₍ijk₎𝝏₍j₎v₍l₎𝝏₍l₎v₍k₎
+  == \underbrace{ ε₍ijk₎𝝏₍j₎v₍l₎𝝏₍k₎v₍l₎ - ε₍ijk₎𝝏₍j₎v₍l₎𝝏₍k₎v₍l₎ }_{=0} &#43; ε₍ijk₎𝝏₍j₎v₍l₎𝝏₍l₎v₍k₎
+  == ε₍ijk₎𝝏₍j₎v₍l₎𝝏₍l₎v₍k₎
+  == (v₍l₎𝝏₍l₎)(ε₍ijk₎𝝏₍l₎v₍k₎)
+  == (↗v⦁∇)(∇×↗v)
+  == (↗v⦁∇)↗ω 
+	\end{equation}
+	££
+	</div>
+
+
+<p>∴</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∇×(↗v⦁∇)↗v = (↗v⦁∇)↗ω               𝓮𝓺{615} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>Next, the viscosity term (first term on the RHS of \eqref{612}):</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ∇×(ν·∇⁽2⁾↗v)
+  == 𝝏₍i₎·(ν·∇⁽2⁾↗v)₍j₎·ε₍ijk₎
+  == 𝝏₍i₎·(ν·𝝏₍l₎⁽2⁾v₍j₎)·ε₍ijk₎
+  == ν·𝝏₍l₎⁽2⁾(𝝏₍i₎↗v₍j₎ε₍ijk₎)
+  == ν·∇⁽2⁾(∇×↗v) 
+	\end{equation}
+	££
+	</div>
+
+
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  == ν·∇⁽2⁾↗ω                             𝓮𝓺{616} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>Finally, the pressure term (second term on the RHS of \eqref{612}). Since we&rsquo;re
+taking the curl of the gradient of pressure, ˝∇×(÷1ρ·∇p)˝, which is a scalar
+field, this term is zero.</p>
+<p>When you combine the results from \eqref{614}, \eqref{615}, \eqref{616}, you get</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏₍t₎↗ω &#43; (↗v⦁∇)↗ω = ν∇⁽2⁾↗v           𝓮𝓺{616a} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>So far I&rsquo;ve kept all the vector expansions general, for a 3D vorticity vector
+˝↗ω˝. For 2D flows where ˝↗v˝ is defined in the ˝xy˝ plane, you can use the
+scalar vorticity, ˝ω = ↑z⦁(∇×↗v)˝ and, taking the ˝↑z˝ component of \eqref{616a}
+gives</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏₍t₎ω &#43; (↗v⦁∇)ω = ν∇⁽2⁾↗v 
+	\end{equation}
+	££
+	</div>
+
+
+<p>Next, note that the incompressibility condition, ˝∇⦁↗v = 0˝, implies the
+velocity field is solenoidal (zero divergence) and can be expressed as the curl
+of a vector potential,</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  ↗v = ∇×↗ψ           𝓮𝓺{617} 
+	\end{equation}
+	££
+	</div>
+
+
+<p>where ˝↗ψ˝ is the stream function. For 2D flows, where ˝↗v˝ has components only
+in the ˝xy˝ plane, then ˝↗ψ = (0,0,ψ)˝, and you can write the stream function
+as a scalar function, ˝ψ˝.</p>
+<p>In term of the scalar ˝ψ˝, the curl in \eqref{617} can be expressed ˝↗v =
+-∇×(ψ↑z)˝. The negative sign is a matter of convention (supposedly <a href="https://en.wikipedia.org/wiki/Stream_function#Alternative_definition_(opposite_sign)">common in
+meterology and oceanography</a>). Explicitly computing this cross product gives
+an expression for the components of ˝↗v˝ in terms of ˝ψ˝:
+
+
+<div class="eq">
+££
+\bgnmaths
+
+  ↗v = -∇×(ψ↑z) = -\begin{vmatrix}
+    ↑x &amp; ↑y &amp; ↑z \\
+    𝝏₍x₎ &amp; 𝝏₍y₎ &amp; 𝝏₍z₎ \\
+    0 &amp; 0 &amp; ψ
+  \end{vmatrix}
+  = (-𝝏₍y₎ψ)↑x &#43; (𝝏₍x₎ψ)↑y
+
+
+\endmaths
+££
+</div>
+
+The definition of vorticity means you can also write ˝ω = ∇⁽2⁾ψ˝. Combining
+these results, you can rewrite the advection term in \eqref{616a} as</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  (↗v⦁∇)↗ω
+  == (-𝝏₍y₎ψ𝝏₍x₎ &#43; 𝝏₍x₎ψ𝝏₍y₎)ω
+  == 𝝏₍x₎ψ 𝝏₍y₎ω - 𝝏₍x₎ω 𝝏₍y₎ψ
+  == J(ψ,ω) 
+	\end{equation}
+	££
+	</div>
+
+
+<p>where ˝J˝ is the Jacobian. The vorticity equation becomes</p>
+
+
+	<div class="eq">
+	££
+	\begin{equation}
+	  𝝏₍t₎ω &#43; J(ψ,ω) = ν⁽2⁾ω 
+	\end{equation}
+	££
+	</div>
+
+
+
+
+
+<div class="fig">
+<img src="../../../figs/L1010778.jpg" width="780">
+</div>
+
+<pre><code>    Appendix 6-1A. The blackboard.
+</code></pre>
+
+
+</body>
+
+</html>

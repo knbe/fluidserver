@@ -3,23 +3,25 @@ title: fluids
 type: subject
 ---
 
-- {{< dir notes >}}
+- {{< dir lexicon >}}
+- {{< dir examples >}}
 - {{< dir figures >}}
+- {{< dir hallway >}}
 
 <div class="topic-list">
 
-{{< page reynolds number >}}
 {{< page hydrostatics >}}
+{{< page incompressible flows >}}
+{{< page bernoullis theorem >}}
 {{< page hydrodynamics >}}
+{{< page conservation laws >}}
+{{< page euler equation >}}
+{{< page navier stokes >}}
+{{< page vorticity >}}
+{{< page viscous flows >}}
+{{< page stress tensor >}}
 {{< page similarity solutions>}}
 {{< page barenblatt equation >}}
-{{< page viscous flows >}}
-{{< page bernoullis theorem >}}
-{{< page conservation laws >}}
-{{< page stress tensor >}}
-{{< page incompressible flows >}}
-{{< page navier stokes >}}
-{{< page euler equation >}}
 {{< page modified porous medium equation >}}
 
 </div>

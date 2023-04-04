@@ -128,8 +128,6 @@
     <li><a href="#momentum-conservation">MOMENTUM CONSERVATION</a></li>
     <li><a href="#the-incompressible-approximation">THE INCOMPRESSIBLE APPROXIMATION</a></li>
     <li><a href="#the-equation-of-state">THE EQUATION OF STATE</a></li>
-    <li><a href="#vorticity">VORTICITY</a></li>
-    <li><a href="#viscosity">VISCOSITY</a></li>
   </ol>
 </nav>
 
@@ -375,21 +373,22 @@ density)+ ˝∇⦁˝(momentum flux) = 0</p>
 
 <h1 id="mechanical-stress-tensor">MECHANICAL STRESS TENSOR</h1>
 <hr>
-<p>¶ building the mechanical stress tensor in a fluid: momentum flows through a
-surface element d↗A, back to front.</p>
-<ul>
-<li>see note on constructing the mechanical stress tensor [insert link]</li>
-</ul>
+<p>¶ building the mechanical 
+
+
+
+
+
+
+[<a class="lex" href="fluids/lexicon/stress-tensor/">stress tensor</a>]
+ in a fluid: momentum flows
+through a surface element d↗A, back to front.</p>
 <p>¶ mechanical stress tensor ˝T₍m₎˝. flow of mechanical momentum.</p>
-<ul>
-<li>
-<blockquote>
-<blockquote>
-<p>what is mechanical momentum? &laquo;</p>
+<blockquote class="question"><blockquote>
+<p>so what actually is &ldquo;mechanical&rdquo; momentum? mechanical, as opposed to what?
+&laquo;</p>
 </blockquote>
 </blockquote>
-</li>
-</ul>
 <h1 id="ideal-fluids">IDEAL FLUIDS</h1>
 <hr>
 <p>¶ an ideal fluid: one where you ignore dissipative processes like viscosity and
@@ -431,7 +430,7 @@ conservation as</p>
 
 
 
-[<a class="lex" href="lexicon/lagrangian-law-of-mass-conservation/">LAGRANGIAN LAW OF MASS CONSERVATION</a>]
+[<a class="lex" href="fluids/lexicon/lagrangian-law-of-mass-conservation/">LAGRANGIAN LAW OF MASS CONSERVATION</a>]
 </p>
 
 
@@ -547,7 +546,15 @@ force.</p>
 <hr>
 <p>¶ if you assume density is constant, you&rsquo;re saying the fluid is incompressible
 (pq to compress the fluid, you have to induce some kind of density variation)</p>
-<p>¶ incompressible fluid: you&rsquo;re assuming variations of pressure are so small that
+<p>¶ 
+
+
+
+
+
+
+[<a class="lex" href="fluids/lexicon/incompressible-fluid/">incompressible fluid</a>]
+: you&rsquo;re assuming variations of pressure are so small that
 changes in density are negligible</p>
 <p>¶ when the approximation of constant ˝ρ˝ is valid:</p>
 <ul>
@@ -693,80 +700,6 @@ the equation you end up getting is</p>
 	</div>
 
 
-<h1 id="vorticity">VORTICITY</h1>
-<hr>
-<p>¶ define vorticity, ˝↗Ω˝, the curl of the velocity field ˝↗v˝</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ↗Ω = ∇×↗v 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
-<li>this is also a vector field</li>
-</ul>
-<p>¶ what vorticity actually is:</p>
-<ul>
-<li>take a small fluid element.</li>
-<li>consider how this fluid element moves over a short period of time ˝dt˝</li>
-<li>each &ldquo;bit&rdquo; of fluid in the fluid element has a small displacement in this
-interval. let the displacement of this bit be ˝↗ε = ↗vdt˝</li>
-<li>the gradient of the displacement ˝↗ε˝ will be comprised of an expansion,
-rotation, and shear.</li>
-<li>the &ldquo;vectorial&rdquo; angle of rotation is ˝↗φ = ÷12·∇×↗ε˝</li>
-<li>the time derivative of the vectorial angle of rotation is
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎↗φ = ÷12·Ɗ₍t₎↗ε = ÷12·∇×↗v 
-	\end{equation}
-	££
-	</div>
-
-
-</li>
-<li>this is just the fluid element&rsquo;s rotational angular velocity</li>
-<li>thus, the vortivity is just twice the angular velocity of rotation of a
-fluid element.</li>
-</ul>
-<p>¶ the equation of motion becomes</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{↗v} &#43; ↗Ω×↗v &#43; ÷12 ∇v⁽2⁾ = -÷1ρ ∇p - ∇φ 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ if vorticity is zero everywhere, the flow is <strong>irrotational</strong></p>
-<ul>
-<li>recall: the circulation of a vector field around any closed loop</li>
-<li>the circulation around a closed loop in a fluid is the line integral of the
-fluid velocity at a particular instant of time around that loop</li>
-</ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  (circulation) = ∮ ↗v⦁d↗s 
-	\end{equation}
-	££
-	</div>
-
-
-<h1 id="viscosity">VISCOSITY</h1>
-<hr>
 
 
 </body>

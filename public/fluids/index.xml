@@ -144,5 +144,16 @@ suppose you dissect a 3d object with a plane. take a small area element of the p
 ££ \begin{equation} ∇⦁↗v = 0 \end{equation} ££ ¶ the incompressible approximation is good when flow speeds are much slower than the speed of sound.</description>
     </item>
     
+    <item>
+      <title>vorticity</title>
+      <link>/fluids/vorticity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/vorticity/</guid>
+      <description>VORTICITY ¶ define vorticity, ˝↗Ω˝, the curl of the velocity field ˝↗v˝
+££ \begin{equation} ↗Ω = ∇×↗v \end{equation} ££ this is also a vector field ¶ what vorticity actually is:
+take a small fluid element. consider how this fluid element moves over a short period of time ˝dt˝ each &amp;ldquo;bit&amp;rdquo; of fluid in the fluid element has a small displacement in this interval. let the displacement of this bit be ˝↗ε = ↗vdt˝ the gradient of the displacement ˝↗ε˝ will be comprised of an expansion, rotation, and shear.</description>
+    </item>
+    
   </channel>
 </rss>

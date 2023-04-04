@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<head>
+<link rel='stylesheet' href='/css/paper2.css'>
+{{ partial "colour.html" . }}
+<title>{{ .Site.Home.Title }}</title>
+</head>
+
+<body>
+
+<div class="map">
+{{ partial "map.html" . }}
+</div>
+
+<h1 class="title">{{ .Title }}</h1>
+<div class="author">
+{{ .Params.author }}
+</div>
+
+
+{{ .Content }}
+
+</body>
+
+{{ end }}

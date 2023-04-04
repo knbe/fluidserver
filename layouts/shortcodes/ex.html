@@ -1,0 +1,8 @@
+{{ $name := print .Params }}
+{{ $name := strings.TrimRight "]" $name }}
+{{ $name := strings.TrimLeft "[" $name }}
+{{ $urlname := $name | urlize }}
+
+{{ $redirect := .Get "re" }}
+
+[<a class="lex" href="{{ .Site.BaseURL }}fluids/examples/{{ $urlname }}/">{{ $name }}</a>]

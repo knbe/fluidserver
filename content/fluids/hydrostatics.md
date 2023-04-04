@@ -80,7 +80,7 @@ type: note
   - points are coplanar if there's a plane that contains them all
 {{< /𝖉𝖊𝖋 >}}
 
-{{< fig shearstress.png 8 >}}
+link: {{< ℑ shear stress >}}
 
 # WHAT DISTINGUISHES A FLUID
 --------------------------------------------------------------------------------
@@ -130,24 +130,7 @@ type: note
 # PRESSURE ON A SMALL CUBE OF WATER
 --------------------------------------------------------------------------------
 
-what is the net force on the cube of water from the pressure?
-
-¶ note:
-  - pressure is the same in all directions in a static fluid
-  - thus the only way there can be a net force per volume on the cube is because 
-    the pressure changes from one point to another
-
-{{< fig pressureoncubewater.jpg 8 >}}
-
-¶ suppose there's some external force that can be described by a potential field 
-  (like gravity). 
-  - let ˝φ˝ be the potential energy per unit mass
-  - the force per unit mass (for the potential field) is ˝-∇φ˝ 
-  - if ˝ρ˝ is the fluid density, then the force per unit volume is ˝-ρ∇φ˝
-  - since the system is in equilibrium, the force per unit volume for the 
-    potential field must cancel the pressure force per unit volume, ie when you 
-    add them they must be zero, so ˝-∇p - ρ∇φ = 0˝
-  - this is the equation of hydrostatics
+link: {{< ex pressure on an infinitesimal cube of liquid >}}
 
 # EQUATION OF HYDROSTATIC EQUILIBRIUM
 --------------------------------------------------------------------------------

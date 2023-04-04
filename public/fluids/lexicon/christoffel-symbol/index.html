@@ -1,0 +1,152 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../../css/lexicon.css'>
+
+
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../../fluids/">fluids</a>
+	> <a href="../../../fluids/lexicon/">lexicon</a>&nbsp;> <a href="">christoffel symbol</a>
+</div>
+
+<h1 class="title">christoffel symbol</h1>
+
+<p>for a n-dimensional space, the christoffel symbol is a n×n×n array of numbers
+that describes the curvature of a surface.</p>
+<p>you calculate the christoffel symbol (that is, the components of the christoffel
+symbol) from the metric tensor of the surface/manifold. (the metric tensor is
+what defines the distance between points on the manifold).</p>
+<p>the christoffel symbol defines the covariant derivative. this is a special
+derivative for a curved surface that accounts for the curvature of the surface.</p>
+<p>in euclidean space, the general definition of the christoffel symbol (of the
+second kind)</p>
+
+
+	
+	
+
+	<div class="eq">
+	££
+	\begin{align}
+	
+		   Γ⟦k&#39;ij⟧  
+		
+	& 
+		
+		 = ÷{𝝏↗e⟦i⟧}{𝝏x⟦j&#39;⟧} ⦁ ↗e⟦k&#39;⟧
+           
+		
+		\n
+		&
+		
+		 = ÷{𝝏↗e⟦i⟧}{𝝏x⟦j&#39;⟧} · g⟦k&#39;m&#39;⟧ · ↗e⟦m⟧ 
+		
+	\end{align}
+	££
+	</div>
+
+
+
+
+</body>
+
+</html>

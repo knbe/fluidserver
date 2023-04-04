@@ -1,0 +1,6 @@
+{{ $widthscaling := index .Params 1 }}
+{{ $width := mul 60 $widthscaling }}
+
+<div class="fig">
+<img src="../figs/{{ index .Params 0 }}" width="{{ $width }}">
+</div>

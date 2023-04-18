@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<head>
+<link rel='stylesheet' href='/css/example2.css'>
+{{ partial "colour.html" . }}
+</head>
+
+<body>
+
+<div class="map">
+{{ partial "map.html" . }}
+</div>
+
+<h1 class="title">{{ .Title }}.</h1>
+
+{{ if .Param "what" }}
+<div class="what">
+{{ .Params.what | markdownify }}
+</div>
+{{ end }}
+
+{{ .Content }}
+
+</body>
+
+{{ end }}

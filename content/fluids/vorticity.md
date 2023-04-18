@@ -42,3 +42,6 @@ type: long
     (circulation) = ∮ ↗v⦁d↗s
   ```
 
+
+{{< fig A7S-ekman-rossby.JPG 10 >}}
+

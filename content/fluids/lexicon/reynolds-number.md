@@ -3,7 +3,7 @@ title: "reynolds number"
 type: long
 ---
 
-¶ is basically a metric for quantifying/comparing viscosities. you ompare the 
+¶ is basically a metric for quantifying/comparing viscosities. you compare the 
   {{< ℑ viscosity >}} ˝ν˝ with the product of the flow's characteristic velocity 
   ˝V˝ and its characteristic length scale ˝L˝.
   ```

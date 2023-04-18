@@ -123,18 +123,8 @@
 
 <h1 id="barenblatts-equation">BARENBLATT&rsquo;S EQUATION</h1>
 <p>¶ recall, the modified porous medium equation</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{u(r,t)} = D·Δ₍d₎·u(r,t)⁽1&#43;n⁾ 
-	\end{equation}
-	££
-	</div>
-
-
-<p>the case ˝n = 0˝ is the barenblatt equation. this is a fluid that can expand
+<pre tabindex="0"><code>  𝝏{t}{u(r,t)} = D·Δ₍d₎·u(r,t)⁽1+n⁾
+</code></pre><p>the case ˝n = 0˝ is the barenblatt equation. this is a fluid that can expand
 and contract irreversibly in response to a fluid flow through it.</p>
 <ul>
 <li>?? what does it mean, to expand and contract <em>irreversibly</em>?</li>
@@ -142,99 +132,39 @@ and contract irreversibly in response to a fluid flow through it.</p>
 <h1 id="dimensional-analysis-of-barenblatts-equation">DIMENSIONAL ANALYSIS OF BARENBLATT&rsquo;S EQUATION</h1>
 <hr>
 <p>¶ barenblatt&rsquo;s equation in 1d:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{u(x,t)} = Dκ·𝝏n{2}{x}{u(x,t)} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  𝝏{t}{u(x,t)} = Dκ·𝝏n{2}{x}{u(x,t)}
+</code></pre><ul>
 <li>where</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  D
+<pre tabindex="0"><code>  D
   == ÷12            𝝏{t}{u} &gt; 0
-  == ÷{1&#43;ε}{2}      𝝏{t}{u} &lt; 0 
-	\end{equation}
-	££
-	</div>
-
-
-<p>˝κ˝ and ˝ε˝ are constants. ˝κ˝ stands in for the combination of constants in
+  == ÷{1+ε}{2}      𝝏{t}{u} &lt; 0
+</code></pre><p>˝κ˝ and ˝ε˝ are constants. ˝κ˝ stands in for the combination of constants in
 the elasto-plastic porous medium equation (˝κ,ρ,g,μ,σ˝). ˝ε˝ represents the
 constant term you have to add to include the dynamical asymmetry.</p>
 <p>˝[κ] = L⁽2⁾T⁽-1⁾˝. ˝ε˝ is a pure number (dimensionless).</p>
 <p>¶ consider an initial condition of form</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  u(x,t=0) = ÷{A₍0₎}{l}·φ(÷xl) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  u(x,t=0) = ÷{A₍0₎}{l}·φ(÷xl)
+</code></pre><ul>
 <li>˝l˝ is the initial width, ˝A₍0₎˝ is the area under the distribution.</li>
 <li>˝φ˝ is a function that represents the &ldquo;profile&rdquo; of the distribution. in the
 case of 1d diffusion, recall we used a gaussian profile, so ˝φ =
 exp{x⁽2⁾/2l⁽2⁾}˝.</li>
 </ul>
 <p>˝u(x,t=0)˝ and ˝φ(x)˝ obey the normalisation:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∫{-∞}{∞} ɗx u(x,0) = A₍0₎
-  ∫{-∞}{∞} ɗz φ(z) = 1 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ dimensionless groups for the problem (same reasoning as for 1d diffusion
+<pre tabindex="0"><code>  ∫{-∞}{∞} ɗx u(x,0) = A₍0₎
+  ∫{-∞}{∞} ɗz φ(z) = 1
+</code></pre><p>¶ dimensionless groups for the problem (same reasoning as for 1d diffusion
 equation):</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Π = ÷{u}{A₍0₎}·√{κt}
+<pre tabindex="0"><code>  Π = ÷{u}{A₍0₎}·√{κt}
   Π₍1₎ = ÷{x}{√{κt}}
   Π₍2₎ = ÷{l}{√{κt}}
-  Π₍3₎ = ε 
-	\end{equation}
-	££
-	</div>
-
-
-<p>all the other dimensionless groups of parameters can be constructed from
-this set. since the ˝Π˝&rsquo;s are dimensionless, the solution to the problem must
+  Π₍3₎ = ε
+</code></pre><p>all the other dimensionless groups of parameters can be constructed from
+this set. since the ˝Π˝'s are dimensionless, the solution to the problem must
 be of form</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Π = f(Π₍1₎, Π₍2₎, Π₍3₎) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Π = f(Π₍1₎, Π₍2₎, Π₍3₎)
+</code></pre><ul>
 <li>where ˝f˝ is a scaling function that represents the solution to the problem</li>
 </ul>
 <p>¶ now look at long term considerations. for long times ˝Π₍2₎ → 0˝. use the
@@ -246,105 +176,45 @@ define a relation like ˝Π = f₍s₎(Π₍1₎, Π₍3₎)˝, where ˝f₍s₎
 function for the similarity solution.</p>
 <p>to find ˝f₍s₎˝, let ˝ξ = x / √{κt}˝, and from DA the solution should be of
 form</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  u(x,t) = ÷{A₍0₎}{√{κt}}·f(ξ,ε) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  u(x,t) = ÷{A₍0₎}{√{κt}}·f(ξ,ε)
+</code></pre><ul>
 <li>just using ˝f˝ instead of ˝f₍s₎˝</li>
 </ul>
 <p>˝u˝ has to be even, and it has to vanish monotonically at ∞.</p>
 <p>¶ let the +ve values of ˝x˝ where ˝𝝏{t}{u(x,t)} = 0˝ be ˝X(t,ε)˝, and let the
 correspond value of ˝ξ˝ be ˝ξ₍0₎˝,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ξ₍0₎ = ÷{X(t,ε)}{√{κt}} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ξ₍0₎ = ÷{X(t,ε)}{√{κt}}
+</code></pre><ul>
 <li>?? is this analagous to the role of ˝r₍0₎˝ in the porous equation?</li>
 </ul>
 <p>˝ξ₍0₎˝ is a dimensionless constnat.</p>
 <p>¶ substitute this into the barenblatt equation, you get two ODEs for the scaling
 function ˝f˝, one valid for ˝𝝏{t}{u} &lt; 0˝ and the other for ˝𝝏{t}{u} &gt; 0˝</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  (1&#43;ε)·f&#39;&#39; &#43; (ξf)&#39; = 0     for: 0 ≤ ξ ≤ ξ₍0₎
-  f&#39;&#39; &#43; (ξf)&#39; = 0           for: ξ₍0₎ ≤ ξ ≤ ∞ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  (1+ε)·f'' + (ξf)' = 0     for: 0 ≤ ξ ≤ ξ₍0₎
+  f'' + (ξf)' = 0           for: ξ₍0₎ ≤ ξ ≤ ∞
+</code></pre><ul>
 <li>?? I guess I still don&rsquo;t really get what ˝ξ˝ actually is. it looks a helluva
 lot like ˝r˝ in the porous medium problem. it&rsquo;s got the whole asymmetry
 thing about a certain value of it, etc.</li>
 </ul>
 <p>¶ integrate the ODEs, you get</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  (1&#43;ε)·f&#39; &#43; (ξf) = B₍1₎    for: 0 ≤ ξ ≤ ξ₍0₎ 
-  f&#39; &#43; (ξf) = B₍2₎          for: ξ₍0₎ ≤ ξ ≤ ∞ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  (1+ε)·f' + (ξf) = B₍1₎    for: 0 ≤ ξ ≤ ξ₍0₎ 
+  f' + (ξf) = B₍2₎          for: ξ₍0₎ ≤ ξ ≤ ∞
+</code></pre><ul>
 <li>the ˝B˝s are constants of integration.</li>
 </ul>
-<p>recall ˝f(ξ)˝ is required to be even. means that at ˝ξ = 0, f&rsquo;(ξ) = 0˝ and
+<p>recall ˝f(ξ)˝ is required to be even. means that at ˝ξ = 0, f'(ξ) = 0˝ and
 ∴ ˝B₍1₎ = 0˝.</p>
-<p>as ˝ξ → ∞˝ both ˝f˝ and ˝f&rsquo;˝ must go to zero, so that ˝f˝ remains integrable
+<p>as ˝ξ → ∞˝ both ˝f˝ and ˝f'˝ must go to zero, so that ˝f˝ remains integrable
 (ok&hellip;). ∴ ˝B₍2₎ = 0˝.</p>
 <p>integrate again, get</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  f
-  == C₍1₎·exp{-ξ⁽2⁾/2(1&#43;ε)}     for: 0 ≤ ξ ≤ ξ₍0₎
-  == C₍2₎·exp{-ξ⁽2⁾/2}          for: ξ₍0₎ ≤ ξ &lt; ∞ 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ match ˝f˝ and ˝f&rsquo;˝ at ˝ξ = ξ₍0₎˝:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  C₍1₎·exp{-ξ₍0₎⁽2⁾/2(1&#43;ε)} = C₍2₎·exp{-ξ₍0₎⁽2⁾/2}
-  ÷{C₍1₎}{1&#43;ε}·exp{-ξ₍0₎⁽2⁾/2(1&#43;ε)} = C₍2₎·exp{-ξ₍0₎⁽2⁾/2} 
-	\end{equation}
-	££
-	</div>
-
-
-<p>the only solution to these equations is ˝C₍1₎ = C₍2₎ = 0˝ (trivial solution).</p>
+<pre tabindex="0"><code>  f
+  == C₍1₎·exp{-ξ⁽2⁾/2(1+ε)}     for: 0 ≤ ξ ≤ ξ₍0₎
+  == C₍2₎·exp{-ξ⁽2⁾/2}          for: ξ₍0₎ ≤ ξ &lt; ∞
+</code></pre><p>¶ match ˝f˝ and ˝f'˝ at ˝ξ = ξ₍0₎˝:</p>
+<pre tabindex="0"><code>  C₍1₎·exp{-ξ₍0₎⁽2⁾/2(1+ε)} = C₍2₎·exp{-ξ₍0₎⁽2⁾/2}
+  ÷{C₍1₎}{1+ε}·exp{-ξ₍0₎⁽2⁾/2(1+ε)} = C₍2₎·exp{-ξ₍0₎⁽2⁾/2}
+</code></pre><p>the only solution to these equations is ˝C₍1₎ = C₍2₎ = 0˝ (trivial solution).</p>
 <p>conclusion: there is no nontrivial similarity solution of form ˝u(x,t) =
 (A₍0₎/√{κt})·f(ξ,ε)˝ with continuous derivatives up to 2nd order.</p>
 <p>¶ if you&rsquo;re an unlearned imbecile, you might assume this conclusion implies the
@@ -364,53 +234,23 @@ dimension!</p>
 <p>¶ ok, so, we know there&rsquo;s no similarity solution in the &ldquo;conventional&rdquo; sense (ie
 conventional being the shiz we did for the diffusion equation).</p>
 <p>¶ recall, when you define the dimless groups, the form of the  should be</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Π = f(Π₍1₎, Π₍2₎, Π₍3₎)
-  (e5) 
-	\end{equation}
-	££
-	</div>
-
-
-<p>and we found just above that a solution of form ˝Π = f₍s₎(Π₍1₎, Π₍3₎)˝ doesn&rsquo;t
+<pre tabindex="0"><code>  Π = f(Π₍1₎, Π₍2₎, Π₍3₎)
+  (e5)
+</code></pre><p>and we found just above that a solution of form ˝Π = f₍s₎(Π₍1₎, Π₍3₎)˝ doesn&rsquo;t
 quite work out.</p>
 <p>whither now?</p>
 <p>¶ you can still find the asymptotic behaviour (pfft. can you know). what you do
 is you <em>postulate</em> that as ˝t → ∞˝ and ˝Π₍2₎ → 0˝, the equation (e5) becomes</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Π ∼ Π₍2₎⁽2α⁾·g(Π₍1₎, Π₍3₎)
-  (e6) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Π ∼ Π₍2₎⁽2α⁾·g(Π₍1₎, Π₍3₎)
+  (e6)
+</code></pre><ul>
 <li>˝α˝ is an anomalous dimension tbd.</li>
 <li>GF: this equation (e6) arises from RG. for now just follow along (aaaaa)</li>
 </ul>
 <p>equation (e6) suggests you should seek a solution to the barenblatt equation
 with initial conditions of form</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  u(x,t) = ÷{A₍0₎}{√{κt}}·÷{l⁽2α⁾}{(κt)⁽α⁾}·g(÷{x}{√{κt}}, ε) 
-	\end{equation}
-	££
-	</div>
-
-
-
+<pre tabindex="0"><code>  u(x,t) = ÷{A₍0₎}{√{κt}}·÷{l⁽2α⁾}{(κt)⁽α⁾}·g(÷{x}{√{κt}}, ε)
+</code></pre>
 
 </body>
 

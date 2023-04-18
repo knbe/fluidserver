@@ -117,80 +117,20 @@
 
 <p>¶ consider a small area element, d↗A. momentum flows through this area in the
 +ve direction. the MASS FLOW RATE thru the surface is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ρ↗v ⦁ d↗A = dot(momentumͺdensity, vectorͺareaͺelement) 
-	\end{equation}
-	££
-	</div>
-
-
-<p>multiply by velocity to get the MOMENTUM FLOW RATE:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ḍ₍t₎⬀p = (ρ⬀v)·(⬀v⦁d⬀A) 
-	\end{equation}
-	££
-	</div>
-
-
-<p>this is just the force ˝⬀F = ḍ⬀p˝ across the area element ˝d↗A˝. from the
+<pre tabindex="0"><code>  ρ↗v ⦁ d↗A = dot(momentumͺdensity, vectorͺareaͺelement)
+</code></pre><p>multiply by velocity to get the MOMENTUM FLOW RATE:</p>
+<pre tabindex="0"><code>  ḍ₍t₎⬀p = (ρ⬀v)·(⬀v⦁d⬀A)
+</code></pre><p>this is just the force ˝⬀F = ḍ⬀p˝ across the area element ˝d↗A˝. from the
 definition of the stress tensor, you can compute the force by inserting ˝d↗A˝
 into the 2nd arg of a stress tensor,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ↗F = d₍t₎↗p = T(ͺͺ,d↗A)  
-	\end{equation}
-	££
-	</div>
-
-
-<p>in index notation</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  F⟦i⟧ = d₍t₎p⟦i⟧ = (p·v⟦i⟧)·v⟦j⟧·dA⟦j⟧ = T⟦ij⟧·dA⟦j⟧ 
-	\end{equation}
-	££
-	</div>
-
-
-<p>from the middle expression, the stress tensor is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  T⟦ij⟧ = ρ·v⟦i⟧·v⟦j⟧ 
-	\end{equation}
-	££
-	</div>
-
-
-<p>or</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  T = ρ·↗v⊗↗v 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ so the mechanical stress tensor is the MOMENTUM FLUX (the momentum flow rate).</p>
+<pre tabindex="0"><code>  ↗F = d₍t₎↗p = T(ͺͺ,d↗A) 
+</code></pre><p>in index notation</p>
+<pre tabindex="0"><code>  F⟦i⟧ = d₍t₎p⟦i⟧ = (p·v⟦i⟧)·v⟦j⟧·dA⟦j⟧ = T⟦ij⟧·dA⟦j⟧
+</code></pre><p>from the middle expression, the stress tensor is</p>
+<pre tabindex="0"><code>  T⟦ij⟧ = ρ·v⟦i⟧·v⟦j⟧
+</code></pre><p>or</p>
+<pre tabindex="0"><code>  T = ρ·↗v⊗↗v
+</code></pre><p>¶ so the mechanical stress tensor is the MOMENTUM FLUX (the momentum flow rate).</p>
 <ul>
 <li>
 <blockquote>

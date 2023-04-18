@@ -116,61 +116,21 @@
 
 
 <p>¶ the navier stokes equations</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇⦁↗v = 0
-  ρ·𝝏{t}{↗v} = -∇p &#43; μ∇⁽2⁾↗v &#43; ρF 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ the conservation of mass equation</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇⦁↗v = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ∇⦁↗v = 0
+  ρ·𝝏{t}{↗v} = -∇p + μ∇⁽2⁾↗v + ρF
+</code></pre><p>¶ the conservation of mass equation</p>
+<pre tabindex="0"><code>  ∇⦁↗v = 0
+</code></pre><ul>
 <li>aka the incompressibility equation</li>
 <li>expanded:
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  (𝝏{x}{}↑x &#43; 𝝏{y}{}↑y &#43; 𝝏{z}{}↑z)⦁(v₍x₎↑x &#43; v₍y₎↑y &#43; v₍z₎↑z) = 0
-  𝝏{x}{v₍x₎} &#43; 𝝏{y}{v₍y₎} &#43; 𝝏{z}{v₍z₎} = 0 
-	\end{equation}
-	££
-	</div>
-
-
-</li>
+<pre tabindex="0"><code>  (𝝏{x}{}↑x + 𝝏{y}{}↑y + 𝝏{z}{}↑z)⦁(v₍x₎↑x + v₍y₎↑y + v₍z₎↑z) = 0
+  𝝏{x}{v₍x₎} + 𝝏{y}{v₍y₎} + 𝝏{z}{v₍z₎} = 0
+</code></pre></li>
 <li>all this equation says is, <em>mass is conserved</em></li>
 </ul>
 <p>¶ newton&rsquo;s 2nd law, mass × acceleration = force</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ρ·𝝏{t}{↗v} = -∇p &#43; μ∇⁽2⁾↗v &#43; ρF 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ρ·𝝏{t}{↗v} = -∇p + μ∇⁽2⁾↗v + ρF
+</code></pre><ul>
 <li>the momentum equation</li>
 <li>the first two terms are the internal forces, the force from all the
 particles colliding with each other</li>
@@ -178,18 +138,8 @@ particles colliding with each other</li>
 can also add E&amp;M effects (magnetohydrodynamics, is how stars/galaxies
 form), coriolis, etc)</li>
 <li>first term: pressure gradient (internal force)
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇p = 𝝏{x}{p} &#43; 𝝏{y}{p} &#43; 𝝏{z}{p} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ∇p = 𝝏{x}{p} + 𝝏{y}{p} + 𝝏{z}{p}
+</code></pre><ul>
 <li>when there&rsquo;s a difference in pressure between two regions, there&rsquo;s a
 pressure gradient, which causes movement. the fluid will move along the
 pressure gradient</li>

@@ -170,18 +170,8 @@ the angular coordinate ˝θ˝. <a href="https://www.sciencedirect.com/topics/eng
 <p>¶ under these conditions, two valid approximations:</p>
 <p>¶ approximation 1: the pressure in the groundwater mound is given by the
 <a href="https://en.wikipedia.org/wiki/Hydrostatics#Hydrostatic_pressure">hydrostatic pressure</a></p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  p(r,z,t) = ρg(h(r,t) - z) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  p(r,z,t) = ρg(h(r,t) - z)
+</code></pre><ul>
 <li>in a fluid at rest, all frictional and inertial stresses are zero. in these
 conditions, the state of stress is hydrostatic.</li>
 <li>in a <a href="https://en.wikipedia.org/wiki/Barotropic_fluid">barotropic fluid</a> in a conservative force field (like gravity), the
@@ -189,11 +179,11 @@ pressure exerted by the fluid at equilibrium is a function of force exerted
 by gravity</li>
 </ul>
 
-  
-  
-  <div class="fig">
-  <img src="../../figs/hydrostaticpressure.jpg" width="480">
-  </div>
+
+
+<div class="fig">
+<img src="../figs/hydrostaticpressure.jpg" width="480">
+</div>
 
 <ul>
 <li>now, assume the fluid is incompressible, ie constant density,</li>
@@ -201,47 +191,17 @@ by gravity</li>
 small compared to the radius of the earth, assume ˝g˝ is constant</li>
 <li>then the integral becomes</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  p - p₍0₎ = ρgh 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ approximation 2: the flux ˝j˝ of groundwater is proportional to the gradient
+<pre tabindex="0"><code>  p - p₍0₎ = ρgh
+</code></pre><p>¶ approximation 2: the flux ˝j˝ of groundwater is proportional to the gradient
 of the pressure head ˝p + ρgz˝. this is <a href="https://en.wikipedia.org/wiki/Darcy's_law">d&rsquo;arcy&rsquo;s law</a></p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  j = -÷κμ 𝝏{r}{ρgh} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  j = -÷κμ 𝝏{r}{ρgh}
+</code></pre><ul>
 <li>˝κ˝ is the permeability</li>
 <li>˝μ˝ is the viscosity of the groundwater</li>
 <li>more generally, in 3d, in isotropic porous media,</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ↗j = -÷κμ·∇p 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ↗j = -÷κμ·∇p
+</code></pre><ul>
 <li><a href="https://en.wikipedia.org/wiki/Darcy's_law#Derivation">read</a></li>
 </ul>
 <p>¶ now describe the physics of transporting groundwater into and out of the pores
@@ -268,11 +228,11 @@ decreasing with time) and outside the region, ˝𝝏{t}{u} &gt; 0˝ (density
 increasing with time)</li>
 </ul>
 
-  
-  
-  <div class="fig">
-  <img src="../../figs/groundwatermound.png" width="480">
-  </div>
+
+
+<div class="fig">
+<img src="../figs/groundwatermound.png" width="480">
+</div>
 
 <p>¶ derive the equation of motion for ˝h˝</p>
 <ul>
@@ -286,11 +246,11 @@ ordinarily the pores are filled with gas. suppose the porous medium is sitting
 on top of an impermeable region. imagine there&rsquo;s a groundwater mound in the
 porous region (a region where the pores are filled with groundwater, not gas).</p>
 
-  
-  
-  <div class="fig">
-  <img src="../../figs/porousmedium.jpg" width="480">
-  </div>
+
+
+<div class="fig">
+<img src="../figs/porousmedium.jpg" width="480">
+</div>
 
 <p>assume the mound is axially symmetric.</p>
 <p>under gravity the mound spreads out. eventually the mound will lie flat along
@@ -302,18 +262,8 @@ perpendicular to gravity) and time ˝t˝.</p>
 obviously, ˝r˝ increases with time.</p>
 <p>¶ assume the fluid motion is slow, so the water pressure in the mound obeys the
 equation for hydrostatic pressure:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  p = ρg(h-z) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  p = ρg(h-z)
+</code></pre><ul>
 <li>˝ρ˝ is the groundwater density</li>
 <li>˝g˝ is the acceleration due to gravity</li>
 </ul>
@@ -323,57 +273,27 @@ constant everywhere in the mound, equal to ˝ρgh˝</p>
 law. common for filtration problems.</p>
 <p>darcy&rsquo;s law: the flux of fluid (flow rate per unit area per unit time) is
 proportional to the gradient of the total head. in this case</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  j = -÷κμ·𝝏{r}{(ρgh)} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  j = -÷κμ·𝝏{r}{(ρgh)}
+</code></pre><ul>
 <li>˝κ˝ is the permeability coefficient. a property of the porous medium.
 dimensions of area.</li>
 <li>˝μ˝ is the dynamic viscosity of the groundwater.</li>
 </ul>
 <p>the total flux of water through a cylindrical surface of area ˝2πrh˝ is (from
 darcy&rsquo;s law)</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  j = -÷κμ·𝝏{r}{(ρgh)}·2πrh
+<pre tabindex="0"><code>  j = -÷κμ·𝝏{r}{(ρgh)}·2πrh
   == -÷κμ·ρg·(𝝏{r}{h})2πrh
-  == -÷{κρgπ}{μ}·r·𝝏{r}{h⁽2⁾} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+  == -÷{κρgπ}{μ}·r·𝝏{r}{h⁽2⁾}
+</code></pre><ul>
 <li>in the last step, note that</li>
 </ul>
+<pre tabindex="0"><code>  𝝏{r}{h⁽2⁾} = 2h·𝝏{r}{h}
+</code></pre>
 
 
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{r}{h⁽2⁾} = 2h·𝝏{r}{h} 
-	\end{equation}
-	££
-	</div>
-
-
-
-  
-  
-  <div class="fig">
-  <img src="../../figs/porousmedium2.jpg" width="480">
-  </div>
+<div class="fig">
+<img src="../figs/porousmedium2.jpg" width="480">
+</div>
 
 <p>¶ the <strong>porosity</strong> of the medium is the fraction of the rock occupied by pores
 (and thus the fraction of the rock that can occpuy water), denoted ˝m˝, is
@@ -388,11 +308,11 @@ forces). denote this fraction ˝σ₍0₎˝.</p>
 for ˝r &lt; r₍0₎˝ the water is leaving pores that were previously filled. and for
 ˝r &gt; r₍0₎˝ the water is filling pores that were previously empty.</p>
 
-  
-  
-  <div class="fig">
-  <img src="../../figs/porousmedium3.jpg" width="480">
-  </div>
+
+
+<div class="fig">
+<img src="../figs/porousmedium3.jpg" width="480">
+</div>
 
 <p>˝r₍0₎˝ is a function of time.</p>
 <p>when ˝r &gt; r₍0₎(t)˝, ˝𝝏{t}{h} &gt; 0˝,</p>
@@ -411,19 +331,19 @@ need to treat cases ˝r &lt; r₍0₎˝ and ˝r &gt; r₍0₎˝ separately.</p>
 <p>first, for both cases, you need to find the rate of change of volume of water in a
 &ldquo;shell&rdquo;. just to clarify, the mound is a 3d thing. here it is</p>
 
-  
-  
-  <div class="fig">
-  <img src="../../figs/hequation.jpg" width="480">
-  </div>
+
+
+<div class="fig">
+<img src="../figs/hequation.jpg" width="480">
+</div>
 
 <p>and here&rsquo;s a cross section, with this so-called &ldquo;shell&rdquo; highlighted:</p>
 
-  
-  
-  <div class="fig">
-  <img src="../../figs/shellofmound.jpg" width="480">
-  </div>
+
+
+<div class="fig">
+<img src="../figs/shellofmound.jpg" width="480">
+</div>
 
 <p>so the shell volume element is the volume of the mound between two cylinders,
 one with radius ˝r˝ and the other ˝r + dr˝. &ldquo;shell&rdquo;. pay attention.</p>
@@ -432,30 +352,10 @@ one with radius ˝r˝ and the other ˝r + dr˝. &ldquo;shell&rdquo;. pay attenti
 can just do area times length, the area being the SA of the inner cylinder,
 ˝2πrh˝, and the length being ˝dr˝. so the volume of the porous medium
 contained in this shell is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  V₍sh₎ = 2πrh·ɗr 
-	\end{equation}
-	££
-	</div>
-
-
-<p>the volume of <em>fluid</em> contained in ˝V₍shell₎˝ at time ˝t˝ is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  V₍sh,fl₎ = mσ·2πrh·ɗr 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  V₍sh₎ = 2πrh·ɗr
+</code></pre><p>the volume of <em>fluid</em> contained in ˝V₍shell₎˝ at time ˝t˝ is</p>
+<pre tabindex="0"><code>  V₍sh,fl₎ = mσ·2πrh·ɗr
+</code></pre><ul>
 <li>˝m˝ is the porosity, the fraction of the medium that is pores, ˝σ˝ is the
 fraction of each pore that can actually be occupied by water.</li>
 <li>here ˝h = h(r,t)˝, ie the value of ˝h˝ at radius ˝r˝ and time ˝t˝</li>
@@ -463,71 +363,21 @@ fraction of each pore that can actually be occupied by water.</li>
 <p>now, you need an expression for the rate of change of ˝V₍sh,fl₎˝. when ˝t →
 t+dt˝, the variable that changes in ˝V₍sh,fl₎˝ is ˝h˝, since ˝h = h(r,t)˝.</p>
 <p>when ˝r &gt; r₍0₎˝, the volume of water in the shell at time ˝t + dt˝ is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  V₍sh,fl₎(r &gt; r₍0₎, t = t &#43; dt) = mσ·2πr·h(r,t&#43;dt)·ɗr 
-	\end{equation}
-	££
-	</div>
-
-
-<p>so the rate of change of ˝V₍sh,fl₎˝ when ˝r &gt; r₍0₎˝ is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{V₍sh,fl₎|₍r &gt; r₍0₎₎} = mσ2πr·𝝏{t}{h}·ɗr 
-	\end{equation}
-	££
-	</div>
-
-
-<p>when ˝r &lt; r₍0₎˝, the volume of water in the shell at time ˝t + dt˝ is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  V₍sh,fl₎(r &lt; r₍0₎, t = t &#43; dt) 
-  = mσ·2πr·h(r,t&#43;dt)·ɗr &#43; mσ₍0₎·2πr·(h(r,t) - h(r,t&#43;dt))·ɗr 
-	\end{equation}
-	££
-	</div>
-
-
-<p>so the rate of change of ˝V₍sh,fl₎˝ when ˝r &lt; r₍0₎˝ is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{V₍sh,fl₎|₍r &lt; r₍0₎₎} = m(σ - σ₍0₎)·2πr·𝝏{t}{h}·ɗr 
-	\end{equation}
-	££
-	</div>
-
-
-<p>now, apply conservation (in this case conservation of water). ˝V₍sh,fl₎|₍r &lt;
+<pre tabindex="0"><code>  V₍sh,fl₎(r &gt; r₍0₎, t = t + dt) = mσ·2πr·h(r,t+dt)·ɗr
+</code></pre><p>so the rate of change of ˝V₍sh,fl₎˝ when ˝r &gt; r₍0₎˝ is</p>
+<pre tabindex="0"><code>  𝝏{t}{V₍sh,fl₎|₍r &gt; r₍0₎₎} = mσ2πr·𝝏{t}{h}·ɗr
+</code></pre><p>when ˝r &lt; r₍0₎˝, the volume of water in the shell at time ˝t + dt˝ is</p>
+<pre tabindex="0"><code>  V₍sh,fl₎(r &lt; r₍0₎, t = t + dt) 
+  = mσ·2πr·h(r,t+dt)·ɗr + mσ₍0₎·2πr·(h(r,t) - h(r,t+dt))·ɗr
+</code></pre><p>so the rate of change of ˝V₍sh,fl₎˝ when ˝r &lt; r₍0₎˝ is</p>
+<pre tabindex="0"><code>  𝝏{t}{V₍sh,fl₎|₍r &lt; r₍0₎₎} = m(σ - σ₍0₎)·2πr·𝝏{t}{h}·ɗr
+</code></pre><p>now, apply conservation (in this case conservation of water). ˝V₍sh,fl₎|₍r &lt;
 r₍0₎₎˝ should be equal to the rate of change of volume of water due to the
 decrease of water saturation from ˝σ˝ to ˝σ₍0₎˝.</p>
 <p>darcy&rsquo;s law says ˝j = -(κ/μ)·𝝏{r}{(ρgh)}˝. to be clear, this is the flux of
 groundwater per unit area per unit time. the flux through an area ˝2πrh˝ is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  -÷κμ·𝝏{r}{(ρgh)}·2πrh 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  -÷κμ·𝝏{r}{(ρgh)}·2πrh
+</code></pre><ul>
 <li>I have trouble with this, because the definition of darcy&rsquo;s law (on
 wikipedia anyway) incidates the pressure gradient is in the same direction
 as the flow, but here we&rsquo;re looking at a flow radially outwards, but the
@@ -537,100 +387,30 @@ outward flow is <em>caused</em> by the vertical pressure drop, or something&hell
 </ul>
 <p>anyway, so the <em>rate of change of</em> flux through area ˝2πrh˝ (wrt radius) is
 just</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ÷κμ·𝝏{r}{(𝝏{r}{(ρgh)}·2πrh)} 
-	\end{equation}
-	££
-	</div>
-
-
-<p>to compare this to the rate of change of ˝V₍sh,fl₎˝, you need to convert this
+<pre tabindex="0"><code>  ÷κμ·𝝏{r}{(𝝏{r}{(ρgh)}·2πrh)}
+</code></pre><p>to compare this to the rate of change of ˝V₍sh,fl₎˝, you need to convert this
 into a volume, so just multiply by the length ˝dr˝ (now it&rsquo;s the volumetric
 flux? I think?)</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ÷κμ·𝝏{r}{(𝝏{r}{(ρgh)}·2πrh)}·ɗr 
-	\end{equation}
-	££
-	</div>
-
-
-<p>now, <em>both</em> expressions for the rate of change of ˝V₍sh,fl₎˝ (for the two
+<pre tabindex="0"><code>  ÷κμ·𝝏{r}{(𝝏{r}{(ρgh)}·2πrh)}·ɗr
+</code></pre><p>now, <em>both</em> expressions for the rate of change of ˝V₍sh,fl₎˝ (for the two
 cases above) should be equal to this.</p>
 <p>for ˝r &gt; r₍0₎˝:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  mσ2πr·𝝏{t}{h}·ɗr = ÷κμ·𝝏{r}{(𝝏{r}{(ρgh)}·2πrh)}·ɗr 
-	\end{equation}
-	££
-	</div>
-
-
-<p>for ˝r &lt; r₍0₎˝:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  m(σ - σ₍0₎)·2πr·𝝏{t}{h}·ɗr = ÷κμ·𝝏{r}{(𝝏{r}{(ρgh)}·2πrh)}·ɗr 
-	\end{equation}
-	££
-	</div>
-
-
-<p>so, at long fucking last, the PDE for the mound height function is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{h} 
+<pre tabindex="0"><code>  mσ2πr·𝝏{t}{h}·ɗr = ÷κμ·𝝏{r}{(𝝏{r}{(ρgh)}·2πrh)}·ɗr
+</code></pre><p>for ˝r &lt; r₍0₎˝:</p>
+<pre tabindex="0"><code>  m(σ - σ₍0₎)·2πr·𝝏{t}{h}·ɗr = ÷κμ·𝝏{r}{(𝝏{r}{(ρgh)}·2πrh)}·ɗr
+</code></pre><p>so, at long fucking last, the PDE for the mound height function is</p>
+<pre tabindex="0"><code>  𝝏{t}{h} 
   = ÷{κ₍1₎}{r}·𝝏{r}{(r·𝝏{r}{h⁽2⁾})}   for: 𝝏{t}{h} ≤ 0
   = ÷{κ₍2₎}{r}·𝝏{r}{(r·𝝏{r}{h⁽2⁾})}   for: 𝝏{t}{h} ≥ 0
-  (*1) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+  (*1)
+</code></pre><ul>
 <li>where</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  κ₍1₎ = ÷{κρg}{2mμ(σ - σ₍0₎)}
-  κ₍2₎ = ÷{κρg}{2mμσ} 
-	\end{equation}
-	££
-	</div>
-
-
-<p>in shorter form:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{h} = ÷Dr·𝝏{r}{(r·𝝏{r}{h⁽2⁾})} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  κ₍1₎ = ÷{κρg}{2mμ(σ - σ₍0₎)}
+  κ₍2₎ = ÷{κρg}{2mμσ}
+</code></pre><p>in shorter form:</p>
+<pre tabindex="0"><code>  𝝏{t}{h} = ÷Dr·𝝏{r}{(r·𝝏{r}{h⁽2⁾})}
+</code></pre><ul>
 <li>where ˝D = κ₍1₎ for: 𝝏{t}{h} &lt; 0˝ and ˝D = κ₍2₎ for: 𝝏{t}{h} &gt; 0˝</li>
 </ul>
 <p>¶ conditions for the solution for ˝h(r,t)˝.</p>
@@ -648,54 +428,24 @@ concentrated within a finite region of the medium. the saturation in the mound
 is ˝σ˝ (no pores have gone through an emptying process), and the total volume
 of water in the mound is ˝V₍mound,fl₎˝.</p>
 <p>the initial height distribution of the mound, ˝h(r,t = 0)˝ is of form</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  h(r,t=0) = ÷{V₍mound,fl₎}{2πmσ·r₍init₎⁽2⁾}·h₍0₎(÷{r}{r₍init₎})
-  (*2) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  h(r,t=0) = ÷{V₍mound,fl₎}{2πmσ·r₍init₎⁽2⁾}·h₍0₎(÷{r}{r₍init₎})
+  (*2)
+</code></pre><ul>
 <li>˝r₍init₎˝ is the initial maximum radius of the mound</li>
 <li>˝h₍0₎(s)˝, where ˝s = r / r₍init₎˝, is a monotonic nonincreasing
 dimensionless function defined so that ˝h₍0₎(s)˝ is zero for ˝s ≥ 1˝ and the
 integral is equal to 1</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∫{0}{1} ɗs s·h₍0₎(s) = 1 
-	\end{equation}
-	££
-	</div>
-
-
-<p>this is a complete mathematical formulation of the groundwater mound problem.
+<pre tabindex="0"><code>  ∫{0}{1} ɗs s·h₍0₎(s) = 1
+</code></pre><p>this is a complete mathematical formulation of the groundwater mound problem.
 we want a solution to the PDE (*1) that&rsquo;s continuous, has a continuous
 derivative ˝𝝏{r}{h⁽2⁾}˝, and satisfies the  initial condition (*2)</p>
 <h1 id="the-modified-porous-medium-equation-1">THE MODIFIED POROUS MEDIUM EQUATION</h1>
 <hr>
 <p>¶ the PDE (*1) in cylindrical coordinates is a specific form of a more general
 equation called the <strong>modified porous medium equation</strong></p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{u(r,t)} = D·Δ₍d₎·u(r,t)⁽1&#43;n⁾ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  𝝏{t}{u(r,t)} = D·Δ₍d₎·u(r,t)⁽1+n⁾
+</code></pre><ul>
 <li>˝D˝ is a discontinuous function of ˝𝝏{t}{u}˝, similar to the one above.</li>
 <li>˝Δ₍d₎˝ is the laplacian operator in ˝d˝ dimensions.</li>
 <li>the case ˝n = 0˝ describes an <strong>elasto-plastic porous medium</strong>, ie the

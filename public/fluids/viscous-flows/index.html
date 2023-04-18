@@ -128,32 +128,12 @@
 <h1 id="fluid-motion-recap">FLUID MOTION RECAP</h1>
 <hr>
 <p>¶ the laws of motion for a fluid are contained in the equation</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{↗v} &#43; (↗v⦁∇)↗v = -÷1ρ·∇p - ∇φ &#43; ÷1ρ·↗f₍visc₎ 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ in the dry water approximation you leave out the last term, ie neglect viscous
+<pre tabindex="0"><code>  𝝏{t}{↗v} + (↗v⦁∇)↗v = -÷1ρ·∇p - ∇φ + ÷1ρ·↗f₍visc₎
+</code></pre><p>¶ in the dry water approximation you leave out the last term, ie neglect viscous
 effects</p>
 <p>¶ another (additional) approximation is assuming the fluid is incompressible, so</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇⦁↗v = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ the incompressible approximation is good when flow speeds are much slower than
+<pre tabindex="0"><code>  ∇⦁↗v = 0
+</code></pre><p>¶ the incompressible approximation is good when flow speeds are much slower than
 the speed of sound. but in real fluids the dry water approximation is not a
 good approximation at all. most of the interesting dynamics come from the
 viscosity term</p>
@@ -182,18 +162,8 @@ the plates and to ˝v₍0₎/d˝, where ˝d˝ is the distance between the plates
 <ul>
 <li>ie, the shear stress ˝F/A˝ is proportional to ˝v₍0₎/d˝</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ÷FA = μ·÷{v₍0₎}{d} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ÷FA = μ·÷{v₍0₎}{d}
+</code></pre><ul>
 <li>the constant of proportionality ˝μ˝ is the viscosity (coefficient of
 viscosity)</li>
 </ul>
@@ -216,34 +186,14 @@ viscosity is negligible), eg by initiating turbulence in the bulk flow</li>
 <li>˝↗σ˝, rate of shear tensor (symmetric)</li>
 <li>˝↗r˝, rate of rotation tensor (antisymmetric)</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇↗v = ÷13 θ ↗g &#43; ↗σ &#43; ↗r 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ∇↗v = ÷13 θ ↗g + ↗σ + ↗r
+</code></pre><ul>
 <li>inverting this equation gives</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  θ = ∇⦁↗v
-  σ⟦ij⟧ = ÷12 (v⟦ij⟧ &#43; v⟦ji⟧) - ÷13 θ g⟦ij⟧
-  r⟦ij⟧ = ÷12 (v⟦ij⟧ - v⟦ji⟧) = -÷12 ε⟦ijk⟧ ω⁽k⁾ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  θ = ∇⦁↗v
+  σ⟦ij⟧ = ÷12 (v⟦ij⟧ + v⟦ji⟧) - ÷13 θ g⟦ij⟧
+  r⟦ij⟧ = ÷12 (v⟦ij⟧ - v⟦ji⟧) = -÷12 ε⟦ijk⟧ ω⁽k⁾
+</code></pre><ul>
 <li>where ˝↗ω = 2d↗φ/dt˝ is the vorticity</li>
 </ul>
 <h1 id="fluids-and-shear-stresses">FLUIDS AND SHEAR STRESSES</h1>
@@ -266,44 +216,14 @@ from an elastic fluid.</p>
 <p>¶ the linear relation between stress and rate of strain can be described by two
 constants: the <strong>bulk viscosity</strong> ˝ζ˝ and the <strong>shear viscosity</strong> ˝η˝.</p>
 <p>¶ the viscous contribution to the stress tensor:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  T₍vis₎ = -ζθg - 2ησ 
-	\end{equation}
-	££
-	</div>
-
-
-<p>if you include this viscous contribution in the stress tensor, and make use of
+<pre tabindex="0"><code>  T₍vis₎ = -ζθg - 2ησ
+</code></pre><p>if you include this viscous contribution in the stress tensor, and make use of
 momentum conservation,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{(ρ↗v)} &#43; ∇⦁T = ρg    𝓮𝓺{1} 
-	\end{equation}
-	££
-	</div>
-
-
-<p>you get:</p>
+<pre tabindex="0"><code>  𝝏{t}{(ρ↗v)} + ∇⦁T = ρg    𝓮𝓺{1}
+</code></pre><p>you get:</p>
 <p>¶ <strong>navier stokes equation:</strong></p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ρ Ɗ{t}{↗v} = -∇P &#43; ρg &#43; ∇(ζθ) &#43; 2∇⦁(ησ) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ρ Ɗ{t}{↗v} = -∇P + ρg + ∇(ζθ) + 2∇⦁(ησ)
+</code></pre><ul>
 <li>the last two terms are the viscous force density</li>
 <li>in incompressible flows, ˝θ˝ can be approximated as zero, and you can ignore
 bulk viscosity.</li>
@@ -311,32 +231,12 @@ bulk viscosity.</li>
 you can take it outside the divergence.</li>
 <li>then you get:</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ{t}{↗v} = - ÷1ρ ∇P &#43; g &#43; ν∇⁽2⁾↗v 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Ɗ{t}{↗v} = - ÷1ρ ∇P + g + ν∇⁽2⁾↗v
+</code></pre><ul>
 <li>where the <strong>kinematic viscosity</strong></li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ν = ÷ηρ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ν = ÷ηρ
+</code></pre><ul>
 <li>˝η˝ is the <strong>dynamic viscosity</strong></li>
 <li>this is the more common form of the NS equation</li>
 </ul>
@@ -351,43 +251,23 @@ the y direction, look at the diagram) will transfer momentum in the
 x-direction around ˝-mλσ₍xy₎˝ between collisions</li>
 </ul>
 
-  
-  
-  <div class="fig">
-  <img src="../../figs/molecularOriginOfViscosity.png" width="360">
-  </div>
+
+
+<div class="fig">
+<img src="../figs/molecularOriginOfViscosity.png" width="360">
+</div>
 
 <ul>
 <li>if ilya ˝n˝ molecules per unit volume moving with mean thermal speeds
 ˝v₍th₎˝, the transferred momentum crossing a unit area in unit time is</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  T₍xy₎ ∼ -nm v₍th₎ λσ₍xy₎ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  T₍xy₎ ∼ -nm v₍th₎ λσ₍xy₎
+</code></pre><ul>
 <li>compare to this to 𝓮𝓻{1}. you can estimate the coefficient of shear
 viscosity:</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  η ≃ ÷13 ρ v₍th₎ λ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  η ≃ ÷13 ρ v₍th₎ λ
+</code></pre><ul>
 <li>in a gas, the mean thermal KE ˝÷32 ƙT˝ is ˝∼mv₍th₎⁽2⁾˝</li>
 <li>∴ the coeffcient of viscosity increases with temperature via ˝ν ∝ T⁽1/2⁾˝</li>
 </ul>

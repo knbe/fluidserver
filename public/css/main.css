@@ -1,12 +1,12 @@
-@import url("/fonts/cmun/sans/cmun-sans.css"); 
-@import url("/fonts/cmun/serif/cmun-serif.css");
-@import url("/fonts/cmun/serif-slanted/cmun-serif-slanted.css");
-@import url("/fonts/cmun/classical-serif-italic/cmun-classical-serif-italic.css"); 
-@import url("/fonts/cmun/upright-italic/cmun-upright-italic.css"); 
-@import url("/fonts/cmun/typewriter/cmun-typewriter.css"); 
-@import url("/fonts/cmun/typewriter-variable/cmun-typewriter-variable.css"); 
-@import url("/fonts/cmun/typewriter-light/cmun-typewriter-light.css"); 
-@import url("/fonts/cmun/bright-semibold/cmun-bright-semibold.css"); 
+#@import url("/fonts/cmun/sans/cmun-sans.css"); 
+#@import url("/fonts/cmun/serif/cmun-serif.css");
+#@import url("/fonts/cmun/serif-slanted/cmun-serif-slanted.css");
+#@import url("/fonts/cmun/classical-serif-italic/cmun-classical-serif-italic.css"); 
+#@import url("/fonts/cmun/upright-italic/cmun-upright-italic.css"); 
+##@import url("/fonts/cmun/typewriter/cmun-typewriter.css"); 
+#@import url("/fonts/cmun/typewriter-variable/cmun-typewriter-variable.css"); 
+#@import url("/fonts/cmun/typewriter-light/cmun-typewriter-light.css"); 
+#@import url("/fonts/cmun/bright-semibold/cmun-bright-semibold.css"); 
 
 @font-face { 
 	font-family: 'concrete'; 
@@ -28,6 +28,14 @@
 	font-weight: normal; 
 	src: url('/fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff') format('woff');
 }
+
+@font-face { 
+	font-family: 'cmtypewriter'; 
+	font-style: normal; 
+	font-weight: normal; 
+	src: url('/fonts/cmun/typewriter/cmuntt.woff') format('woff');
+}
+
 
 :root {
 	--c-bg: #ffffff; 

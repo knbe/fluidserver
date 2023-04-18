@@ -1,0 +1,155 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../../css/example2.css'>
+
+
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../../fluids/">fluids</a>
+	> <a href="../../../fluids/examples/">examples</a>&nbsp;> <a href="">Flow past a Cylinder</a>
+</div>
+
+<h1 class="title">Flow past a Cylinder.</h1>
+
+
+
+<p>Consider a cylinder placed perpendicular to a flow. Assume ˝⬀v˝ is small
+compared to the speed of sound, so you can ignore compressibility. Assume
+gravity is negligible.</p>
+<p>Parameters:</p>
+<ul>
+<li>˝d˝, the diameter of the flow (and ∴ characteristic length scale of the
+problem)</li>
+<li>˝V˝, the velocity of the flow far before it reaches the cylinder (&ldquo;upstream
+velocity&rdquo;).</li>
+<li>˝ρ˝, density</li>
+<li>˝ν˝, kinematic viscosity</li>
+</ul>
+<p>Reynolds number:</p>
+<pre tabindex="0"><code>  Re = ÷1ν Vd
+</code></pre><p>Note: if you had a flow where the sound speed ˝c₍s₎˝ is sufficiently high to to
+invalidateincompressibility, then you can define the mach number (another
+dimensionless number)</p>
+<pre tabindex="0"><code>  M = ÷V{c₍s₎}
+</code></pre><p>Initially the flow is stationary. The equations that describe the flow:</p>
+<pre tabindex="0"><code>  ∇⦁⬀v = 0
+</code></pre><p>(incompressibility)</p>
+<pre tabindex="0"><code>  (⬀v⦁∇)·⬀v = -÷1ρ ∇P + ν·∇⁽2⁾·⬀v 
+</code></pre><p>(time indep. NS, since the flow is stationary and ˝𝝏₍t₎⬀v = 0˝).</p>
+<p>There are four equations in total (3 components of NS + incompressibility). You
+can solve them for pressure ˝p˝ and velocity ˝⬀v˝ subject to the condition that
+˝⬀v = 0˝ on the surface and is uniform upstream.</p>
+<p>The only dimensionless number is ˝Re˝, so the solution to the flow equations
+will have the form</p>
+<pre tabindex="0"><code>  ÷1V ⬀v = ⬀U(÷1d ⬀x, Re)
+</code></pre><ul>
+<li>˝÷1d ⬀x˝ is dimensionless and Re is dimensionless, so ˝⬀U˝ is a
+dimensionless function</li>
+<li>this is a scaling relation. you can use it to determine similar solutions.<br>
+e.g. if you scale ˝V˝ and ˝d˝ by (˝×2˝), then to get a similar flow (same Re number,
+˝Re = ÷1ν Vd˝) you need to scale ˝ν˝ by (˝×4˝) to get a similar solution.</li>
+</ul>
+
+
+</body>
+
+</html>

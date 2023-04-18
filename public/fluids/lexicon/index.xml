@@ -23,7 +23,8 @@
       <guid>/fluids/lexicon/barotropic-fluid/</guid>
       <description>a fluid where ρ is a function of p only.
 barotropic fluids also allow hydrostatic equilibrium (also is in, in addition to perfect fluids). hang on a minute&amp;hellip;
-so what&amp;rsquo;s the difference between a barotropic fluid and a perfect fluid?</description>
+so what&amp;rsquo;s the difference between a barotropic fluid and a perfect fluid?
+ </description>
     </item>
     
     <item>
@@ -54,7 +55,7 @@ in earlier models that didn&amp;rsquo;t have a cosmological constant, critical d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/fluids/lexicon/equation-of-hydrostatics/</guid>
-      <description> ££ \begin{equation} -∇p - ρ∇φ = 0 \end{equation} ££ </description>
+      <description> -∇p - ρ∇φ = 0 </description>
     </item>
     
     <item>
@@ -84,7 +85,7 @@ in a barotropic fluid, ρ is a function of p.</description>
       
       <guid>/fluids/lexicon/hydrodynamic-continuity-equation/</guid>
       <description>is essentially a statement of mass conservation:
-££ \begin{equation} 𝝏₍t₎ρ = -∇⦁(ρ⬀v) \end{equation} ££ </description>
+ 𝝏₍t₎ρ = -∇⦁(ρ⬀v) </description>
     </item>
     
     <item>
@@ -114,7 +115,7 @@ in a barotropic fluid, ρ is a function of p.</description>
       <description>¶ if you assume density is constant, you&amp;rsquo;re saying the fluid is incompressible (pq to compress the fluid, you have to induce some kind of density variation)
 ¶ incompressible fluid: you&amp;rsquo;re assuming variations of pressure are so small that changes in density are negligible
 ¶ to be clear, this is an approximation. approximating constant ˝ρ˝ is only valid when:
-the velocities of the flow are much less than the speed of sound in the fluid, then you don&amp;rsquo;t have to worry about density variations ¶ incompressible fluids obey</description>
+ the velocities of the flow are much less than the speed of sound in the fluid, then you don&amp;rsquo;t have to worry about density variations  ¶ incompressible fluids obey</description>
     </item>
     
     <item>
@@ -127,6 +128,17 @@ the velocities of the flow are much less than the speed of sound in the fluid, t
     </item>
     
     <item>
+      <title>mach number</title>
+      <link>/fluids/lexicon/mach-number/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/lexicon/mach-number/</guid>
+      <description>mach number
+ M = ÷V{c₍s₎} where ˝c₍s₎˝ is the sound speed.
+the mach number is dimensionless. this is a useful quantity in flows where ˝c₍s₎˝ is high enough that the incompressibility approximation is invalid.</description>
+    </item>
+    
+    <item>
       <title>perfect fluid</title>
       <link>/fluids/lexicon/ideal-fluid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -135,7 +147,7 @@ the velocities of the flow are much less than the speed of sound in the fluid, t
       <description>¶ a fluid that you can describe using only the density ρ and pressure p.
 ¶ or: a fluid that doesn&amp;rsquo;t have viscosity or shear stresses.
 ¶ you can decompose the stress tensor into:
-an isotropic pressure term a viscous term linear in the rate of shear (velocity gradient) if the viscous stress is negligible (in many cases it is) and heat conductivity is negligible, then the fluid is ideal.</description>
+ an isotropic pressure term a viscous term linear in the rate of shear (velocity gradient)  if the viscous stress is negligible (in many cases it is) and heat conductivity is negligible, then the fluid is ideal.</description>
     </item>
     
     <item>
@@ -153,8 +165,8 @@ an isotropic pressure term a viscous term linear in the rate of shear (velocity 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/fluids/lexicon/reynolds-number/</guid>
-      <description>¶ is basically a metric for quantifying/comparing viscosities. you ompare the [viscosity] ˝ν˝ with the product of the flow&amp;rsquo;s characteristic velocity ˝V˝ and its characteristic length scale ˝L˝.
-££ \begin{equation} Re = ÷{LV}{ν} \end{equation} ££ this is the reynolds number it&amp;rsquo;s dimensionless flows with ˝Re &amp;lt; 1˝ are dominated by viscosity flows with ˝Re &amp;gt; 1˝ can be influenced by viscosity, especially when it acts near boundaries, BUT the viscous stresses are negligible over most of the flow&amp;rsquo;s volume </description>
+      <description>¶ is basically a metric for quantifying/comparing viscosities. you compare the [viscosity] ˝ν˝ with the product of the flow&amp;rsquo;s characteristic velocity ˝V˝ and its characteristic length scale ˝L˝.
+ Re = ÷{LV}{ν}  this is the reynolds number it&amp;rsquo;s dimensionless flows with ˝Re &amp;lt; 1˝ are dominated by viscosity flows with ˝Re &amp;gt; 1˝ can be influenced by viscosity, especially when it acts near boundaries, BUT the viscous stresses are negligible over most of the flow&amp;rsquo;s volume  </description>
     </item>
     
     <item>
@@ -163,9 +175,9 @@ an isotropic pressure term a viscous term linear in the rate of shear (velocity 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/fluids/lexicon/shear-stress/</guid>
-      <description>SHEAR FORCES forces that acts on one part of a body in a certain direction, and another part in the opposite direction ¶ if the forces are aligned (collinear), then they are just tension or compression forces
+      <description>SHEAR FORCES forces that acts on one part of a body in a certain direction, and another part in the opposite direction   ¶ if the forces are aligned (collinear), then they are just tension or compression forces
 SHEAR STRESS τ the component of stress that&amp;rsquo;s coplanar with the body&amp;rsquo;s cross section
-££ \begin{equation} τ = ÷FA \end{equation} ££ ˝A˝ is the cross sectional area of the material that&amp;rsquo;s parallel to the applied force points are coplanar if there&amp;rsquo;s a plane that contains them all ¶ &amp;ldquo;ordinary&amp;rdquo; stress comes from the force vector component perpendicular to the material cross section.</description>
+ τ = ÷FA  ˝A˝ is the cross sectional area of the material that&amp;rsquo;s parallel to the applied force points are coplanar if there&amp;rsquo;s a plane that contains them all     ¶ &amp;ldquo;ordinary&amp;rdquo; stress comes from the force vector component perpendicular to the material cross section.</description>
     </item>
     
     <item>
@@ -176,7 +188,7 @@ SHEAR STRESS τ the component of stress that&amp;rsquo;s coplanar with the body&
       <guid>/fluids/lexicon/strain/</guid>
       <description>¶ strain is a measure of deformation of an object. it describes the displacement between particles relative to a reference length
 ¶ functional form of deformation:
-££ \begin{equation} ↗x = F(↗x&amp;#39;) \end{equation} ££ ↗x&amp;rsquo; is an array of reference positions for points of the body deformations have units of length ¶ strains are usually dimensionless
+ ↗x = F(↗x&#39;)  ↗x&#39; is an array of reference positions for points of the body deformations have units of length  ¶ strains are usually dimensionless
 ¶ whenever a solid material undergoas a strain (deformation), there is an internal elastic stress that causes the object to restore to its original non-deformed state (like the spring force)</description>
     </item>
     
@@ -189,7 +201,7 @@ SHEAR STRESS τ the component of stress that&amp;rsquo;s coplanar with the body&
       <description>¶ is a quantity that describes the forces in an object that cause deformation (strain). describes the internal forces that neighbouring particles exert on each other, in a continuous material.
 ¶ defined as force per unit area.
 ¶ compressive stress: is when forces (like tension or compression) cause an object to become compressed.
-the bigger these forces and the smaller the cross sectional area, the greater the stress. is why stress is defined as force per unit area ¶ dimensions: ˝[σ] = L⁽-1⁾ M T⁽-2⁾˝</description>
+ the bigger these forces and the smaller the cross sectional area, the greater the stress. is why stress is defined as force per unit area  ¶ dimensions: ˝[σ] = L⁽-1⁾ M T⁽-2⁾˝</description>
     </item>
     
     <item>
@@ -199,7 +211,7 @@ the bigger these forces and the smaller the cross sectional area, the greater th
       
       <guid>/fluids/lexicon/stress-tensor/</guid>
       <description>GOAL: describe the internal forces in a material/body in terms of a tensor.
-STRESSES &amp;amp; INTERNAL FORCES ¶ the STRESSES in a material are the various internal forces that maintain its form.
+STRESSES &amp;amp; INTERNAL FORCES  ¶ the STRESSES in a material are the various internal forces that maintain its form.
 suppose you dissect a 3d object with a plane. take a small area element of the plane. the material on the left of the area element will exert a force ΔF to the right, and v.v.
 ¶ PRESSURE in a static liquid is one kind of stress.</description>
     </item>
@@ -230,7 +242,7 @@ von neumann called it &amp;ldquo;dry water&amp;rdquo; since this approximation i
       
       <guid>/fluids/lexicon/viscosity/</guid>
       <description>¶ physically: viscosity is a measure of how easily a fluid yields to a shear stress.
-any time you apply a shear to a fluid, the fluid will move. fluids that more more easily are less viscous, and v.v. ¶ think about the fluid as a series of parallel plates. if there is a shear force, the plates move at different rates.
+ any time you apply a shear to a fluid, the fluid will move. fluids that more more easily are less viscous, and v.v.  ¶ think about the fluid as a series of parallel plates. if there is a shear force, the plates move at different rates.
 ¶ pick two plates, let d be the distance between them, and let ˝v₍0₎˝ be the speed of the slower one.</description>
     </item>
     
@@ -241,7 +253,7 @@ any time you apply a shear to a fluid, the fluid will move. fluids that more mor
       
       <guid>/fluids/lexicon/vorticity/</guid>
       <description>the curl of the velocity field
-££ \begin{equation} ⬀Ω = ∇×⬀v \end{equation} ££ </description>
+ ⬀Ω = ∇×⬀v </description>
     </item>
     
   </channel>

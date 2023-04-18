@@ -14,8 +14,8 @@
       <guid>/fluids/examples/barotropic-model-of-dark-energy/</guid>
       <description>Barotropic fluid: a fluid where density is a function of pressure only (although a &amp;ldquo;perfect fluid&amp;rdquo; has a suspiciously similar definition&amp;hellip;) The key thing is, the relation between pressure and density is given by ˝w = P/ρ˝, where ˝w˝ is an equation of state parameter.
 Define
-££ \begin{equation} w&amp;#39; = ÷{dw}{dͺln(a)} \end{equation} ££ Insert ˝w = P₍X₎/ρ₍X₎˝ and use the product rule:
-££ \begin{align} w&amp;#39; &amp; = ÷{d}{dͺln(a)} (P₍X₎⋄÷1{ρ₍X₎}) \n &amp; = ÷{dͺP₍X₎}{dͺln(a)} ÷1{ρ₍X₎} &amp;#43; P₍X₎ ÷{dͺρ₍X₎⁽-1⁾}{dͺln(a)} \n &amp; = ÷{dͺP₍X₎}{dͺρ₍X₎} ÷{dͺρ₍X₎}{dͺln(a)} ÷1{ρ₍X₎} - w ρ₍X₎ ÷1{ρ₍X₎⁽2⁾} ÷{dͺρ₍X₎}{dͺln(a)} \end{align} ££ (in the last step: use the chain rule to expand ˝d₍ln(a)₎P₍X₎˝, and likewise for ˝d₍ln(a)₎ρ₍X₎⁽-1⁾˝, and substitute ˝P₍X₎ = wρ₍X₎˝)</description>
+ w&#39; = ÷{dw}{dͺln(a)} Insert ˝w = P₍X₎/ρ₍X₎˝ and use the product rule:
+w&#39; &amp;amp;= ÷{d}{dͺln(a)} (P₍X₎⋄÷1{ρ₍X₎}) &amp;amp;= ÷{dͺP₍X₎}{dͺln(a)} ÷1{ρ₍X₎} + P₍X₎ ÷{dͺρ₍X₎⁽-1⁾}{dͺln(a)} &amp;amp;= ÷{dͺP₍X₎}{dͺρ₍X₎} ÷{dͺρ₍X₎}{dͺln(a)} ÷1{ρ₍X₎} - w ρ₍X₎ ÷1{ρ₍X₎⁽2⁾} ÷{dͺρ₍X₎}{dͺln(a)} (in the last step: use the chain rule to expand ˝d₍ln(a)₎P₍X₎˝, and likewise for ˝d₍ln(a)₎ρ₍X₎⁽-1⁾˝, and substitute ˝P₍X₎ = wρ₍X₎˝)</description>
     </item>
     
     <item>
@@ -26,10 +26,11 @@ Define
       <guid>/fluids/examples/bucket/</guid>
       <description>how long does it take for a bucket with a small hole in the side to empty?
 you can start with the continuity equation:
-££ \begin{equation} A₍1₎ v₍1₎ = A₍2₎ v₍2₎ \end{equation} ££ the flux out:
-££ \begin{equation} A₍2₎ √{2gh} \end{equation} ££ convert to volumetric flux:
-££ \begin{equation} V = A₍2₎v₍2₎t \end{equation} ££ so time taken is:
-££ \begin{equation} t = V / A₍2₎√{2gh} \end{equation} ££ [attach table of results]</description>
+ A₍1₎ v₍1₎ = A₍2₎ v₍2₎ the flux out:
+ A₍2₎ √{2gh} convert to volumetric flux:
+ V = A₍2₎v₍2₎t so time taken is:
+ t = V / A₍2₎√{2gh}   [attach table of results]
+not entirely sure this is correct. experimentally, I find it empties slower.</description>
     </item>
     
     <item>
@@ -39,8 +40,8 @@ you can start with the continuity equation:
       
       <guid>/fluids/examples/constructing-the-mechanical-stress-tensor/</guid>
       <description>¶ consider a small area element, d↗A. momentum flows through this area in the +ve direction. the MASS FLOW RATE thru the surface is
-££ \begin{equation} ρ↗v ⦁ d↗A = dot(momentumͺdensity, vectorͺareaͺelement) \end{equation} ££ multiply by velocity to get the MOMENTUM FLOW RATE:
-££ \begin{equation} ḍ₍t₎⬀p = (ρ⬀v)·(⬀v⦁d⬀A) \end{equation} ££ this is just the force ˝⬀F = ḍ⬀p˝ across the area element ˝d↗A˝. from the definition of the stress tensor, you can compute the force by inserting ˝d↗A˝ into the 2nd arg of a stress tensor,</description>
+ ρ↗v ⦁ d↗A = dot(momentumͺdensity, vectorͺareaͺelement) multiply by velocity to get the MOMENTUM FLOW RATE:
+ ḍ₍t₎⬀p = (ρ⬀v)·(⬀v⦁d⬀A) this is just the force ˝⬀F = ḍ⬀p˝ across the area element ˝d↗A˝. from the definition of the stress tensor, you can compute the force by inserting ˝d↗A˝ into the 2nd arg of a stress tensor,</description>
     </item>
     
     <item>
@@ -50,8 +51,20 @@ you can start with the continuity equation:
       
       <guid>/fluids/examples/asmp61a-vorticity-equation-from-ns-2d/</guid>
       <description>Start with the incompressible Navier-Stokes equation
-££ \begin{equation} 𝝏₍t₎↗v &amp;#43; (↗v⦁∇)↗v = ν∇⁽2⁾↗v - ÷1ρ·∇p 𝓮𝓺{611} \end{equation} ££ where
-˝↗v = ↗v(↗r,t)˝ is the flow velocity (vector field) ˝p = p(↗r,t)˝ is the pressure (scalar field) ˝ρ˝ is the density ˝ν˝ is the kinematic viscosity, ˝ν = μ/ρ˝ Some context: the NSE is an equation for the time evolution of the fluid&amp;rsquo;s velocity field. The specific form of the equation derives from momentum conservation (and whatever assumptions you deign to make about the fluid, e.</description>
+ 𝝏₍t₎↗v + (↗v⦁∇)↗v = ν∇⁽2⁾↗v - ÷1ρ·∇p 𝓮𝓺{611} where
+ ˝↗v = ↗v(↗r,t)˝ is the flow velocity (vector field) ˝p = p(↗r,t)˝ is the pressure (scalar field) ˝ρ˝ is the density ˝ν˝ is the kinematic viscosity, ˝ν = μ/ρ˝  Some context: the NSE is an equation for the time evolution of the fluid&amp;rsquo;s velocity field. The specific form of the equation derives from momentum conservation (and whatever assumptions you deign to make about the fluid, e.</description>
+    </item>
+    
+    <item>
+      <title>Flow past a Cylinder</title>
+      <link>/fluids/examples/flow-past-a-cylinder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/examples/flow-past-a-cylinder/</guid>
+      <description>Consider a cylinder placed perpendicular to a flow. Assume ˝⬀v˝ is small compared to the speed of sound, so you can ignore compressibility. Assume gravity is negligible.
+Parameters:
+ ˝d˝, the diameter of the flow (and ∴ characteristic length scale of the problem) ˝V˝, the velocity of the flow far before it reaches the cylinder (&amp;ldquo;upstream velocity&amp;rdquo;). ˝ρ˝, density ˝ν˝, kinematic viscosity  Reynolds number:
+ Re = ÷1ν Vd Note: if you had a flow where the sound speed ˝c₍s₎˝ is sufficiently high to to invalidateincompressibility, then you can define the mach number (another dimensionless number)</description>
     </item>
     
     <item>
@@ -61,9 +74,9 @@ you can start with the continuity equation:
       
       <guid>/fluids/examples/power-spectrum-of-a-cube/</guid>
       <description>A cosmological cube:
-The contrast in the image shows (somewhat) the local variations in the (over)density field. The power spectrum is essentially a measure of the density contrast in space.
+ The contrast in the image shows (somewhat) the local variations in the (over)density field. The power spectrum is essentially a measure of the density contrast in space.
 Some theory: the fractional overdensity ˝δ(⬀x)˝ describes the deviation of the density field, ˝ρ(⬀x)˝, from the average density, ˝⟨ρ⟩˝
-££ \begin{equation} δ(⬀x) = ÷{ ρ(⬀x) - ⟨ρ⟩ }{ ⟨ρ⟩ } \end{equation} ££ where ˝ρ(⬀x)˝ is the density at point ˝⬀x˝ and ˝⟨ρ⟩˝ is the average density over (all) space.</description>
+ δ(⬀x) = ÷{ ρ(⬀x) - ⟨ρ⟩ }{ ⟨ρ⟩ } where ˝ρ(⬀x)˝ is the density at point ˝⬀x˝ and ˝⟨ρ⟩˝ is the average density over (all) space.</description>
     </item>
     
     <item>
@@ -72,7 +85,7 @@ Some theory: the fractional overdensity ˝δ(⬀x)˝ describes the deviation of 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/fluids/examples/pressure-on-an-infinitesimal-cube-of-liquid/</guid>
-      <description> </description>
+      <description>  </description>
     </item>
     
     <item>
@@ -82,7 +95,7 @@ Some theory: the fractional overdensity ˝δ(⬀x)˝ describes the deviation of 
       
       <guid>/fluids/examples/asmp62-vorticity-with-coriolis/</guid>
       <description>The NSE:
-££ \begin{equation} Ɗ₍t₎↗v = ν∇⁽2⁾↗v - ÷1ρ∇p 𝓮𝓺{621} \end{equation} ££ where ˝Ɗ₍t₎˝ is the advective derivative, ˝Ɗ₍t₎ = 𝝏₍t₎ + (↗v⦁∇)˝. Suppose we&amp;rsquo;re now in a rotating reference frame RF that&amp;rsquo;s rotating at angular velocity ˝↗Ω˝ w.r.t. the inertial frame IF. Since all the vector quantities are now fixed in the rotating frame, you have to transform them to a form that&amp;rsquo;s valid in the inertial frame. Let ˝↗r˝ be the position vector, ˝↗r = ∑₍i₎r₍i₎↑e₍i₎˝.</description>
+ Ɗ₍t₎↗v = ν∇⁽2⁾↗v - ÷1ρ∇p 𝓮𝓺{621} where ˝Ɗ₍t₎˝ is the advective derivative, ˝Ɗ₍t₎ = 𝝏₍t₎ + (↗v⦁∇)˝. Suppose we&amp;rsquo;re now in a rotating reference frame RF that&amp;rsquo;s rotating at angular velocity ˝↗Ω˝ w.r.t. the inertial frame IF. Since all the vector quantities are now fixed in the rotating frame, you have to transform them to a form that&amp;rsquo;s valid in the inertial frame. Let ˝↗r˝ be the position vector, ˝↗r = ∑₍i₎r₍i₎↑e₍i₎˝.</description>
     </item>
     
   </channel>

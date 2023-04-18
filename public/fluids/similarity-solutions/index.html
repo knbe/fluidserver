@@ -185,82 +185,32 @@ are many), to calculate the ADs</li>
 <h1 id="the-diffusion-equation">THE DIFFUSION EQUATION</h1>
 <hr>
 <p>¶ the 1d diffusion equation starting from a localised initial condition:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{u(x,t)} = ÷12·κ·𝝏n{2}{x}{u(x,t)}       for: -∞ &lt; x &lt; ∞ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  𝝏{t}{u(x,t)} = ÷12·κ·𝝏n{2}{x}{u(x,t)}       for: -∞ &lt; x &lt; ∞
+</code></pre><ul>
 <li>where ˝κ˝ is the diffusion coefficient</li>
 <li>the initial condition is</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  u(x,t=0) = ÷{A₍0₎}{√{2πl⁽2⁾}}·exp(-x⁽2⁾/2l⁽2⁾) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  u(x,t=0) = ÷{A₍0₎}{√{2πl⁽2⁾}}·exp(-x⁽2⁾/2l⁽2⁾)
+</code></pre><ul>
 <li>˝l˝ is the width of the initial distribution</li>
 <li>˝A₍0₎˝ is the area under the initial distribution, aka the mass ˝m˝ of the
 distribution</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  m = ∫{-∞}{∞} ɗx u(x,t)
-  = A₍0₎    for: t ≥ 0 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  m = ∫{-∞}{∞} ɗx u(x,t)
+  = A₍0₎    for: t ≥ 0
+</code></pre><ul>
 <li>?? is ˝u(x,t)˝ the density of the material at position ˝x˝ and time ˝t˝</li>
 </ul>
 <p>¶ we&rsquo;re assuming the area under the initial distribution is fixed.</p>
 <p>¶ in 3d:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{u(↗r,t)} = ∇⦁(D(u,↗r)·∇u(↗r,t)) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  𝝏{t}{u(↗r,t)} = ∇⦁(D(u,↗r)·∇u(↗r,t))
+</code></pre><ul>
 <li>˝D(u,↗r)˝ is the collective diffusion coefficient for density ˝u˝ at
 position ˝↗r˝</li>
 <li>if ˝D˝ is constant, you get the linear differential equation</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{u(↗r,t)} = D·∇⁽2⁾u(↗r,t) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  𝝏{t}{u(↗r,t)} = D·∇⁽2⁾u(↗r,t)
+</code></pre><ul>
 <li>this form is the same as the heat equation</li>
 </ul>
 <h1 id="lt-behaviour-of-the-diffusion-equation">LT BEHAVIOUR OF THE DIFFUSION EQUATION</h1>
@@ -268,18 +218,8 @@ position ˝↗r˝</li>
 <p>¶ for the solution to be physically relevant/plausible, the solution should
 vanish &ldquo;sufficiently&rdquo; fast at spatial infinity so that ˝m˝ is well defined,
 and it should also have continuous spatial derivatives up to 2nd order so</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  u(x,t) → 0    as    |x| → ∞ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  u(x,t) → 0    as    |x| → ∞
+</code></pre><ul>
 <li>all we&rsquo;re really saying here is the diffusion should be over some finite
 range, we&rsquo;re not considering diffusion over the entirety of space. at a
 certain point, when you go far enough away, you can assume the density is
@@ -288,64 +228,24 @@ just zero.</li>
 <p>¶ the mass ˝m˝ is conserved. the diffusion eqation comes from a conservation
 law.</p>
 <p>¶ after time ˝t˝ the solution is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  u(x,t) = ÷{A₍0₎}{√{2π(κt&#43;l⁽2⁾)}}·exp(-x⁽2⁾ / 2(κt&#43;l⁽2⁾)) \tag{1} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  u(x,t) = ÷{A₍0₎}{√{2π(κt+l⁽2⁾)}}·exp(-x⁽2⁾ / 2(κt+l⁽2⁾)) \tag{1}
+</code></pre><ul>
 <li>after a long time, when ˝t » l⁽2⁾/κ˝, this reduces to</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  u(x,t) ∼ ÷{A₍0₎}{√{2πκt}}·exp(-x⁽2⁾/2κt)    as    t → ∞   \tag{2} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  u(x,t) ∼ ÷{A₍0₎}{√{2πκt}}·exp(-x⁽2⁾/2κt)    as    t → ∞   \tag{2}
+</code></pre><ul>
 <li>note, you can also get this by keeping ˝t˝ fixed but making ˝l˝ small, ie
 ˝l⁽2⁾ « κt˝</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  u(x,t) ∼ ÷{A₍0₎}{√{2πκt}}·exp(-x⁽2⁾/2κt)    as    l → ∞   \tag{3} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  u(x,t) ∼ ÷{A₍0₎}{√{2πκt}}·exp(-x⁽2⁾/2κt)    as    l → ∞   \tag{3}
+</code></pre><ul>
 <li>wtf? ok ok, look, we&rsquo;re just looking at the form of 𝓮𝓻{1}. to make it look
 like 𝓮𝓻{2}, just take ˝l → 0˝. that&rsquo;s all.</li>
 </ul>
 <p>¶ now look at the initial condition. in the limit ˝l → 0˝ the initial condition
 becomes</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  u(x,t=0) = A₍0₎·δ(x) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  u(x,t=0) = A₍0₎·δ(x)
+</code></pre><ul>
 <li>all this is saying is, if the initial width ˝l˝ is infinitesimally small,
 then the density at time ˝t = 0˝ is just a delta function equal to the mass
 of the distribution</li>
@@ -402,52 +302,22 @@ dimensional analysis.</p>
 </ul>
 <p>¶ dimensions of quantities, in the system of units ˝ULT˝, where ˝U = [u]˝, and
 ˝U˝ is independent of ˝LT˝</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  [u] = U
+<pre tabindex="0"><code>  [u] = U
   [x] = L
   [l] = L
   [t] = T
   [A₍0₎] = UL
-  [κ] = L⁽2⁾T⁽-1⁾ 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ dimensionless groups:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Π = ÷{u}{A₍0₎}·√{κt} 
+  [κ] = L⁽2⁾T⁽-1⁾
+</code></pre><p>¶ dimensionless groups:</p>
+<pre tabindex="0"><code>  Π = ÷{u}{A₍0₎}·√{κt} 
   Π₍1₎ = ÷{x}{√{κt}}
-  Π₍2₎ = ÷{l}{√{κt}} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+  Π₍2₎ = ÷{l}{√{κt}}
+</code></pre><ul>
 <li>all other dimless groups of parameter can be constructed from these</li>
 </ul>
 <p>¶ since the ˝Π˝s are dimless, then</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Π = f(Π₍1₎, Π₍2₎) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Π = f(Π₍1₎, Π₍2₎)
+</code></pre><ul>
 <li>˝f˝ is an unknown function, tbd. ˝f˝ &ldquo;represents&rdquo; the solution to the
 problem</li>
 <li>˝f˝ is a scaling function. it&rsquo;s the scaling function for the original
@@ -459,18 +329,8 @@ problem.
 </ul>
 <p>¶ for the similarity solution, ˝l˝ doesn&rsquo;t appear in the parameters (for the
 degenerate problem), so</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Π = f₍s₎(Π₍1₎) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Π = f₍s₎(Π₍1₎)
+</code></pre><ul>
 <li>˝f₍s₎˝ is the scaling function for the similarity solution.</li>
 </ul>
 <p>¶ to determine ˝f₍s₎˝:</p>
@@ -478,129 +338,49 @@ degenerate problem), so</p>
 <li>let ˝ξ = x / √{κt}˝</li>
 <li>from DA, the solution has to be of form</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  u(x,t) = ÷{A₍0₎}{√{κt}}·f₍s₎(ξ) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  u(x,t) = ÷{A₍0₎}{√{κt}}·f₍s₎(ξ)
+</code></pre><ul>
 <li>the LHS dims are ˝U˝, the RHS dims are ˝U˝ times a dimless function</li>
 </ul>
 <p>¶ now sub this assumed form into the diffusion equation. you get an ODE for the
 unknown function ˝f₍s₎˝:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  f₍s₎&#39;&#39; &#43; ξf₍s₎&#39; &#43; f₍s₎ = 0    \tag{4} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  f₍s₎'' + ξf₍s₎' + f₍s₎ = 0    \tag{4}
+</code></pre><ul>
 <li>although, more specifically,</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗn{2}{ξ}{f₍s₎(ξ)} &#43; ξ·Ɗ{ξ}{f₍s₎(ξ)} &#43; f₍s₎(ξ) = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Ɗn{2}{ξ}{f₍s₎(ξ)} + ξ·Ɗ{ξ}{f₍s₎(ξ)} + f₍s₎(ξ) = 0
+</code></pre><ul>
 <li>or</li>
 </ul>
+<pre tabindex="0"><code>  ÷{d⁽2⁾ f₍s₎(ξ)}{dξ⁽2⁾} + ξ·÷{df₍s₎(ξ)}{dξ} + f₍s₎(ξ) = 0
+</code></pre>
 
 
-	<div class="eq">
-	££
-	\begin{equation}
-	  ÷{d⁽2⁾ f₍s₎(ξ)}{dξ⁽2⁾} &#43; ξ·÷{df₍s₎(ξ)}{dξ} &#43; f₍s₎(ξ) = 0 
-	\end{equation}
-	££
-	</div>
-
-
-
-  
-  
-  <div class="fig">
-  <img src="../../figs/ssoldiffusion.jpg" width="420">
-  </div>
+<div class="fig">
+<img src="../figs/ssoldiffusion.jpg" width="420">
+</div>
 
 <p>¶ the ODE must satisfy:</p>
 <ol>
 <li>since ˝u(x,t) → 0˝ as ˝|x| → ∞˝,</li>
 </ol>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  f₍s₎(x) → 0   as    |x| → ∞ 
-	\end{equation}
-	££
-	</div>
-
-
-<ol start="2">
+<pre tabindex="0"><code>  f₍s₎(x) → 0   as    |x| → ∞
+</code></pre><ol start="2">
 <li>from the conservation law,</li>
 </ol>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∫{-∞}{∞} ɗξ f₍s₎(ξ) = 1 
-	\end{equation}
-	££
-	</div>
-
-
-<ol start="3">
+<pre tabindex="0"><code>  ∫{-∞}{∞} ɗξ f₍s₎(ξ) = 1
+</code></pre><ol start="3">
 <li>˝f₍s₎˝ must be an even function of ˝ξ˝ (this is because of the form of
 𝓮𝓻{4}, and the fact that the IC is an even function), so</li>
 </ol>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  f₍s₎&#39;(ξ = 0) = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ solve the ODE:</p>
+<pre tabindex="0"><code>  f₍s₎'(ξ = 0) = 0
+</code></pre><p>¶ solve the ODE:</p>
 <ul>
 <li>note that 𝓮𝓻{4} is an exact differential equation. ∴ you can integrate it,
 to give</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  f₍s₎&#39; &#43; ξf₍s₎ = C   \tag{5} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  f₍s₎' + ξf₍s₎ = C   \tag{5}
+</code></pre><ul>
 <li>?? I bet if you actually put an integration sign in front of all the terms
 in 𝓮𝓻{4} and do the integration by parts for the middle term, there&rsquo;ll be
 some term that cancels with the third term, and presto, etc</li>
@@ -608,104 +388,34 @@ some term that cancels with the third term, and presto, etc</li>
 must be zero (since ˝f₍s₎˝ is even)</li>
 <li>integrate 𝓮𝓻{5}, you get</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  f₍s₎(ξ) = B·exp{-ξ⁽2⁾/2} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  f₍s₎(ξ) = B·exp{-ξ⁽2⁾/2}
+</code></pre><ul>
 <li>the normalisation condition (ODE condition 2) gives ˝B˝</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  B = 1 / √{2π} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  B = 1 / √{2π}
+</code></pre><ul>
 <li>∴ the (similarity) scaling function (is that what it&rsquo;s called? wtf is
 ˝f₍s₎˝?) is</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  f₍s₎(ξ) = ÷{1}{√{2π}}·exp{-ξ⁽2⁾/2} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  f₍s₎(ξ) = ÷{1}{√{2π}}·exp{-ξ⁽2⁾/2}
+</code></pre><ul>
 <li>so the similarity solution is</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  u(x,t) = ÷{A₍0₎}{√{κt}}·÷{1}{√{2π}}·exp{-x⁽2⁾/2κt}   
-	\end{equation}
-	££
-	</div>
-
-
-<h1 id="intermediate-asymptotics-of-the-first-kind">INTERMEDIATE ASYMPTOTICS OF THE FIRST KIND</h1>
+<pre tabindex="0"><code>  u(x,t) = ÷{A₍0₎}{√{κt}}·÷{1}{√{2π}}·exp{-x⁽2⁾/2κt}  
+</code></pre><h1 id="intermediate-asymptotics-of-the-first-kind">INTERMEDIATE ASYMPTOTICS OF THE FIRST KIND</h1>
 <hr>
 <p>¶ for the similarity solution,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Π = f₍s₎(Π₍1₎) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Π = f₍s₎(Π₍1₎)
+</code></pre><ul>
 <li>˝f₍s₎˝ is the scaling function for the similarity solution.</li>
 </ul>
 <p>¶ for any version of the problem where the IC is ˝l ≠ 0˝, the solution must be
 of form</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Π = f(Π₍1₎, Π₍2₎) 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ for long times, ˝Π₍2₎ → 0˝. ∴ according to common sense, at long times you can
+<pre tabindex="0"><code>  Π = f(Π₍1₎, Π₍2₎)
+</code></pre><p>¶ for long times, ˝Π₍2₎ → 0˝. ∴ according to common sense, at long times you can
 assume ˝Π₍2₎˝ is small enough to be able to ignore (set to zero), ie</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  f₍s₎(Π₍1₎) = f(Π₍1₎, [Π₍2₎ = 0])    \tag{6} 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ basically, this common sense intuition is just the statement that a diffusion
+<pre tabindex="0"><code>  f₍s₎(Π₍1₎) = f(Π₍1₎, [Π₍2₎ = 0])    \tag{6}
+</code></pre><p>¶ basically, this common sense intuition is just the statement that a diffusion
 process <strong>loses memory of the initial distribution</strong> once ˝⟨x⁽2⁾⟩ » l⁽2⁾˝</p>
 <ul>
 <li>turns out this assumption is NOT right for some problems</li>
@@ -723,18 +433,8 @@ similarity solution, starting from the IC with ˝l ≠ 0˝.</p>
 </ul>
 <p>¶ when you make the IA1K assumption, you can express the asymptotic behaviour of
 the diffusion equation for long times by</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  u(x,t) ∼ t⁽-1/2⁾·g(x / √{κt}) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  u(x,t) ∼ t⁽-1/2⁾·g(x / √{κt})
+</code></pre><ul>
 <li>˝g(x)˝ is a function that satisfies ˝g(x) → const˝ as ˝x → 0˝</li>
 </ul>
 <p>¶ the most common, unconscious assumption, is that asymptotics are of the first
@@ -743,34 +443,14 @@ kind.</p>
 <li>given a physical problem expressed in dimless variables ˝Π, Π₍1₎, Π₍2₎&hellip;˝,
 the solution has the form</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Π = f(Π₍1₎, Π₍2₎,...) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Π = f(Π₍1₎, Π₍2₎,...)
+</code></pre><ul>
 <li>where ˝f˝ is a function that can ONLY be determined from a detailed analysis
 of the problem.</li>
 <li>if the limiting behaviour as ˝Π₍2₎ → 0˝ has form</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Π ∼ f(Π₍1₎, 0, ...) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Π ∼ f(Π₍1₎, 0, ...)
+</code></pre><ul>
 <li>then asymptotics are of the first kind.</li>
 </ul>
 <p>¶ the importance of similarity solutions:</p>

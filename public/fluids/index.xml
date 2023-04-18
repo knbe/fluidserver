@@ -13,9 +13,9 @@
       
       <guid>/fluids/barenblatt-equation/</guid>
       <description>BARENBLATT&amp;rsquo;S EQUATION ¶ recall, the modified porous medium equation
-££ \begin{equation} 𝝏{t}{u(r,t)} = D·Δ₍d₎·u(r,t)⁽1&amp;#43;n⁾ \end{equation} ££ the case ˝n = 0˝ is the barenblatt equation. this is a fluid that can expand and contract irreversibly in response to a fluid flow through it.
-?? what does it mean, to expand and contract irreversibly? DIMENSIONAL ANALYSIS OF BARENBLATT&amp;rsquo;S EQUATION ¶ barenblatt&amp;rsquo;s equation in 1d:
-££ \begin{equation} 𝝏{t}{u(x,t)} = Dκ·𝝏n{2}{x}{u(x,t)} \end{equation} ££ where ££ \begin{equation} D == ÷12 𝝏{t}{u} &amp;gt; 0 == ÷{1&amp;#43;ε}{2} 𝝏{t}{u} &amp;lt; 0 \end{equation} ££ ˝κ˝ and ˝ε˝ are constants.</description>
+ 𝝏{t}{u(r,t)} = D·Δ₍d₎·u(r,t)⁽1+n⁾ the case ˝n = 0˝ is the barenblatt equation. this is a fluid that can expand and contract irreversibly in response to a fluid flow through it.
+ ?? what does it mean, to expand and contract irreversibly?  DIMENSIONAL ANALYSIS OF BARENBLATT&amp;rsquo;S EQUATION  ¶ barenblatt&amp;rsquo;s equation in 1d:
+ 𝝏{t}{u(x,t)} = Dκ·𝝏n{2}{x}{u(x,t)}  where   D == ÷12 𝝏{t}{u} &amp;gt; 0 == ÷{1+ε}{2} 𝝏{t}{u} &amp;lt; 0 ˝κ˝ and ˝ε˝ are constants.</description>
     </item>
     
     <item>
@@ -25,10 +25,29 @@
       
       <guid>/fluids/bernoullis-theorem/</guid>
       <description>what is the entropy of a fluid? what does it mean? &amp;laquo;
-¶ bernoulli&amp;rsquo;s principle: comes from conservation of energy.
+    ¶ bernoulli&amp;rsquo;s principle: comes from conservation of energy.
 in a steady flow, the sum of all forms of energy is the same at all points (free of viscous forces). KE + PE + internal energy = constant.
-means that an increase in speed of fluid occurs simultaneously with decrease in static pressure.
-¶ can derive bernoulli&amp;rsquo;s principle from euler&amp;rsquo;s equation (restatement of newton&amp;rsquo;s second law).</description>
+means that an increase in speed of fluid occurs simultaneously with decrease in static pressure.</description>
+    </item>
+    
+    <item>
+      <title>boundary</title>
+      <link>/fluids/boundary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/boundary/</guid>
+      <description>in nature you find fluids that rotate nearly rigidly. this means fluids with a uniform distribution of vorticity.
+ how can you have fluids that rotate regularly, and yet maintain a uniform velocity distribution?  it&amp;rsquo;s best to analyse these &amp;ldquo;rotating&amp;rdquo; fluids in a rotating reference frame, where the unperturbed fluid is at rest, and ALL perturbations are influenced by coriolis force(s) [WHYtf is this plural]. this results in &amp;ldquo;surprising&amp;rdquo; phenomena.</description>
+    </item>
+    
+    <item>
+      <title>boundary layers</title>
+      <link>/fluids/boundary-layers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/boundary-layers/</guid>
+      <description>when a fluid meets a solid surface, e.g. the edge of an airplane wing or a spoon stirring tea. ilya intermolecular forces that decelerate the fluid rapidly in a thin boundary layer along the surface. this deceleration gives rise to circulation and vorticity into the flow. the vorticity diffuses into the bulk flow, thickening the boundary layer.
+I don&amp;rsquo;t understand p745. if the fluid is nonbarotropic due to spatially variable chemical composition or spatiallly variable T, then pressure gradients can also create vorticity, as described by the first term on the RHS of the vorticity evolution law, ˝-δivp × ¥divρ/ρ⁽2⁾˝.</description>
     </item>
     
     <item>
@@ -37,7 +56,7 @@ means that an increase in speed of fluid occurs simultaneously with decrease in 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/fluids/conservation-laws/</guid>
-      <description>conservation of mass, eulerian ¶ in the eulerian approach to mass conservation, you monitor the change in density at a given point in space, rather than moving with the flow [thorne p692].
+      <description>conservation of mass, eulerian  ¶ in the eulerian approach to mass conservation, you monitor the change in density at a given point in space, rather than moving with the flow [thorne p692].
 ¶ when dealing with continua, all conservation of mass laws tend to have the form ˝𝝏₍t₎˝(density of something) = ˝∇⦁˝(flux of that thing). ie, rate of change of density wrt time = rate of change of flux wrt space</description>
     </item>
     
@@ -47,8 +66,8 @@ means that an increase in speed of fluid occurs simultaneously with decrease in 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/fluids/similarity-solutions/</guid>
-      <description>RECAP: ANOMALOUS DIMENSIONS ¶ when anomalous dimensions arise, it means there&amp;rsquo;s a microscopic length at work.
-this microscopic length scale affects the thermo functions and the correlation function asymptotically near the critical point mmly this means you can&amp;rsquo;t approximate a function ˝f(x)˝ with ˝f(x = 0)˝ when ˝x → 0˝. that kind of limit approximation is not valid. ¶ so basically, whenever there&amp;rsquo;s a function ˝f(x)˝ that you can&amp;rsquo;t replace with ˝f(0)˝ when ˝x˝ is small, it means there&amp;rsquo;s an anomalous dimension.</description>
+      <description>RECAP: ANOMALOUS DIMENSIONS  ¶ when anomalous dimensions arise, it means there&amp;rsquo;s a microscopic length at work.
+ this microscopic length scale affects the thermo functions and the correlation function asymptotically near the critical point mmly this means you can&amp;rsquo;t approximate a function ˝f(x)˝ with ˝f(x = 0)˝ when ˝x → 0˝. that kind of limit approximation is not valid.  ¶ so basically, whenever there&amp;rsquo;s a function ˝f(x)˝ that you can&amp;rsquo;t replace with ˝f(0)˝ when ˝x˝ is small, it means there&amp;rsquo;s an anomalous dimension.</description>
     </item>
     
     <item>
@@ -58,9 +77,9 @@ this microscopic length scale affects the thermo functions and the correlation f
       
       <guid>/fluids/euler-equation/</guid>
       <description>¶ take the momentum conservation law for a fluid,
-££ \begin{equation} 𝝏₍t₎(ρ↗v) &amp;#43; ∇⦁T = ρ↗g \end{equation} ££ differentiate then invoke the mass conservation law,
-££ \begin{equation} 𝝏₍t₎ρ &amp;#43; ∇⦁(ρ↗v) = 0 \end{equation} ££ you get the euler equation:
-££ \begin{equation} Ɗ₍t₎↗v = 𝝏₍t₎↗v &amp;#43; (↗v⦁∇)↗v = -÷1ρ·∇p &amp;#43; ↗g \end{equation} ££ ¶ the LHS is the advective derivative of ↗v, ie the acceleration of the fluid. from the RHS, you can see there are two terms that cause the acceleration: gravity, and the pressure gradient.</description>
+ 𝝏₍t₎(ρ↗v) + ∇⦁T = ρ↗g differentiate then invoke the mass conservation law,
+ 𝝏₍t₎ρ + ∇⦁(ρ↗v) = 0 you get the euler equation:
+ Ɗ₍t₎↗v = 𝝏₍t₎↗v + (↗v⦁∇)↗v = -÷1ρ·∇p + ↗g ¶ the LHS is the advective derivative of ↗v, ie the acceleration of the fluid. from the RHS, you can see there are two terms that cause the acceleration: gravity, and the pressure gradient.</description>
     </item>
     
     <item>
@@ -69,8 +88,8 @@ this microscopic length scale affects the thermo functions and the correlation f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/fluids/hydrodynamics/</guid>
-      <description>HYDRODYNAMICS ¶ hydrodynamics is when the fluid velocity ˝↗v(↗x,t)˝ is nonzero (as opposed to hydrostatics).
-CONSERVATION conservation of mass, eulerian ¶ in the eulerian approach to mass conservation, you monitor the change in density at a given point in space, rather than moving with the flow [thorne p692].
+      <description>HYDRODYNAMICS  ¶ hydrodynamics is when the fluid velocity ˝↗v(↗x,t)˝ is nonzero (as opposed to hydrostatics).
+CONSERVATION  conservation of mass, eulerian  ¶ in the eulerian approach to mass conservation, you monitor the change in density at a given point in space, rather than moving with the flow [thorne p692].
 ¶ when dealing with continua, all conservation of mass laws tend to have the form ˝𝝏₍t₎˝(density of something) = ˝∇⦁˝(flux of that thing).</description>
     </item>
     
@@ -80,10 +99,10 @@ CONSERVATION conservation of mass, eulerian ¶ in the eulerian approach to mass 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/fluids/hydrostatics/</guid>
-      <description>STRESS, σ ¶ is a quantity that describes the forces in an object that cause deformation (strain). describes the internal forces that neighbouring particles exert on each other, in a continuous material.
+      <description>STRESS, σ  ¶ is a quantity that describes the forces in an object that cause deformation (strain). describes the internal forces that neighbouring particles exert on each other, in a continuous material.
 ¶ defined as force per unit area.
 ¶ compressive stress: is when forces (like tension or compression) cause an object to become compressed.
-the bigger these forces and the smaller the cross sectional area, the greater the stress. is why stress is defined as force per unit area ¶ dimensions: ˝[σ] = L⁽-1⁾ M T⁽-2⁾˝</description>
+ the bigger these forces and the smaller the cross sectional area, the greater the stress.</description>
     </item>
     
     <item>
@@ -93,9 +112,9 @@ the bigger these forces and the smaller the cross sectional area, the greater th
       
       <guid>/fluids/incompressible-flows/</guid>
       <description>¶ define [INCOMPRESSIBLE FLOW] : a flow where the density is constant in a parcel of fluid. incompressible flows obey:
-££ \begin{equation} ∇⦁↗v = 0 \end{equation} ££ ˝↗v˝ is the flow velocity (a vector field since it&amp;rsquo;s a flow).
+ ∇⦁↗v = 0 ˝↗v˝ is the flow velocity (a vector field since it&amp;rsquo;s a flow).
 note this equation has the same form as the equation for a solenoidal field. indeed, for incompressible flows the velocity field is solenoidal.
-¶ when can you assume the fluid density is constant?</description>
+¶ when can you assume the fluid density is constant? well, if the flow velocity is much smaller than the speed of sound (&amp;ldquo;highly subsonic flow&amp;rdquo;) &amp;amp;&amp;amp; gravity isn&amp;rsquo;t strong enough to compress the fluid significantly, then changes in fluid density are negligible.</description>
     </item>
     
     <item>
@@ -104,9 +123,9 @@ note this equation has the same form as the equation for a solenoidal field. ind
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/fluids/modified-porous-medium-equation/</guid>
-      <description>INTRO ¶ you can&amp;rsquo;t always get similarity solutions using dimensional analysis, because ADs can occur.
+      <description>INTRO  ¶ you can&amp;rsquo;t always get similarity solutions using dimensional analysis, because ADs can occur.
 ¶ goal:
-show an example of this (how you can&amp;rsquo;t always get SSs using DA) by looking at the LT bhvr of a slight modification to the diffusion equation will show that a naive application of DA fails to get the correct LT bhvr, BUT a modded similarity solution with an AD does get the correct LT bhvr ¶ order:</description>
+ show an example of this (how you can&amp;rsquo;t always get SSs using DA) by looking at the LT bhvr of a slight modification to the diffusion equation will show that a naive application of DA fails to get the correct LT bhvr, BUT a modded similarity solution with an AD does get the correct LT bhvr  ¶ order:</description>
     </item>
     
     <item>
@@ -116,8 +135,8 @@ show an example of this (how you can&amp;rsquo;t always get SSs using DA) by loo
       
       <guid>/fluids/navier-stokes/</guid>
       <description>¶ the navier stokes equations
-££ \begin{equation} ∇⦁↗v = 0 ρ·𝝏{t}{↗v} = -∇p &amp;#43; μ∇⁽2⁾↗v &amp;#43; ρF \end{equation} ££ ¶ the conservation of mass equation
-££ \begin{equation} ∇⦁↗v = 0 \end{equation} ££ aka the incompressibility equation expanded: ££ \begin{equation} (𝝏{x}{}↑x &amp;#43; 𝝏{y}{}↑y &amp;#43; 𝝏{z}{}↑z)⦁(v₍x₎↑x &amp;#43; v₍y₎↑y &amp;#43; v₍z₎↑z) = 0 𝝏{x}{v₍x₎} &amp;#43; 𝝏{y}{v₍y₎} &amp;#43; 𝝏{z}{v₍z₎} = 0 \end{equation} ££ all this equation says is, mass is conserved ¶ newton&amp;rsquo;s 2nd law, mass × acceleration = force</description>
+ ∇⦁↗v = 0 ρ·𝝏{t}{↗v} = -∇p + μ∇⁽2⁾↗v + ρF ¶ the conservation of mass equation
+ ∇⦁↗v = 0  aka the incompressibility equation expanded:  (𝝏{x}{}↑x + 𝝏{y}{}↑y + 𝝏{z}{}↑z)⦁(v₍x₎↑x + v₍y₎↑y + v₍z₎↑z) = 0 𝝏{x}{v₍x₎} + 𝝏{y}{v₍y₎} + 𝝏{z}{v₍z₎} = 0  all this equation says is, mass is conserved  ¶ newton&amp;rsquo;s 2nd law, mass × acceleration = force</description>
     </item>
     
     <item>
@@ -127,9 +146,21 @@ show an example of this (how you can&amp;rsquo;t always get SSs using DA) by loo
       
       <guid>/fluids/stress-tensor/</guid>
       <description>GOAL: describe the internal forces in a material/body in terms of a tensor.
-STRESSES &amp;amp; INTERNAL FORCES ¶ the STRESSES in a material are the various internal forces that maintain its form.
+STRESSES &amp;amp; INTERNAL FORCES  ¶ the STRESSES in a material are the various internal forces that maintain its form.
 suppose you dissect a 3d object with a plane. take a small area element of the plane. the material on the left of the area element will exert a force ΔF to the right, and v.v.
 ¶ PRESSURE in a static liquid is one kind of stress.</description>
+    </item>
+    
+    <item>
+      <title>turbulence</title>
+      <link>/fluids/turbulence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fluids/turbulence/</guid>
+      <description>RECAP: LAMINAR PIPE FLOW  ¶ the flow velocity profile is parabolic (across the cylindrical cross section). you can achieve this form by balancing the stress across the surface.
+¶ the rate of flow is proportional to the 4th power of pipe diameter:
+ flowͺrateͺ(volumetricͺflux) ∝ d⁽4⁾ ¶ reynolds number:
+ Re₍pipe₎ = ÷1ν ⟨v⟩d ¶ experimentally pipe flow is only laminar up to a critical Re number, ˝∼10⁽3⁾-10⁽5⁾˝. the exact value depends on smoothness of the walls and the pipe entrance.</description>
     </item>
     
     <item>
@@ -138,10 +169,10 @@ suppose you dissect a 3d object with a plane. take a small area element of the p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/fluids/viscous-flows/</guid>
-      <description>FLUID MOTION RECAP ¶ the laws of motion for a fluid are contained in the equation
-££ \begin{equation} 𝝏{t}{↗v} &amp;#43; (↗v⦁∇)↗v = -÷1ρ·∇p - ∇φ &amp;#43; ÷1ρ·↗f₍visc₎ \end{equation} ££ ¶ in the dry water approximation you leave out the last term, ie neglect viscous effects
+      <description>FLUID MOTION RECAP  ¶ the laws of motion for a fluid are contained in the equation
+ 𝝏{t}{↗v} + (↗v⦁∇)↗v = -÷1ρ·∇p - ∇φ + ÷1ρ·↗f₍visc₎ ¶ in the dry water approximation you leave out the last term, ie neglect viscous effects
 ¶ another (additional) approximation is assuming the fluid is incompressible, so
-££ \begin{equation} ∇⦁↗v = 0 \end{equation} ££ ¶ the incompressible approximation is good when flow speeds are much slower than the speed of sound.</description>
+ ∇⦁↗v = 0 ¶ the incompressible approximation is good when flow speeds are much slower than the speed of sound.</description>
     </item>
     
     <item>
@@ -150,9 +181,9 @@ suppose you dissect a 3d object with a plane. take a small area element of the p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/fluids/vorticity/</guid>
-      <description>VORTICITY ¶ define vorticity, ˝↗Ω˝, the curl of the velocity field ˝↗v˝
-££ \begin{equation} ↗Ω = ∇×↗v \end{equation} ££ this is also a vector field ¶ what vorticity actually is:
-take a small fluid element. consider how this fluid element moves over a short period of time ˝dt˝ each &amp;ldquo;bit&amp;rdquo; of fluid in the fluid element has a small displacement in this interval. let the displacement of this bit be ˝↗ε = ↗vdt˝ the gradient of the displacement ˝↗ε˝ will be comprised of an expansion, rotation, and shear.</description>
+      <description>VORTICITY  ¶ define vorticity, ˝↗Ω˝, the curl of the velocity field ˝↗v˝
+ ↗Ω = ∇×↗v  this is also a vector field  ¶ what vorticity actually is:
+ take a small fluid element. consider how this fluid element moves over a short period of time ˝dt˝ each &amp;ldquo;bit&amp;rdquo; of fluid in the fluid element has a small displacement in this interval. let the displacement of this bit be ˝↗ε = ↗vdt˝ the gradient of the displacement ˝↗ε˝ will be comprised of an expansion, rotation, and shear.</description>
     </item>
     
   </channel>

@@ -132,18 +132,8 @@ in static pressure.</p>
 <p>¶ can derive bernoulli&rsquo;s principle from euler&rsquo;s equation (restatement of
 newton&rsquo;s second law).</p>
 <p>momentum conservation law of an ideal fluid:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎(ρ↗v) &#43; ∇⦁T = ρ↗g 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  𝝏₍t₎(ρ↗v) + ∇⦁T = ρ↗g
+</code></pre><ul>
 <li>note: &ldquo;ideal fluid&rdquo; is a fluid where there&rsquo;s no dissipation.</li>
 <li>
 <blockquote>
@@ -154,31 +144,11 @@ newton&rsquo;s second law).</p>
 </li>
 </ul>
 <p>conservation of mass, differential form:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎ρ &#43; ∇⦁(ρ↗v) = 0     𝓮𝓺{221} 
-	\end{equation}
-	££
-	</div>
-
-
-<p>differentiate the momentum conservation law, substitute the mass law, you get
+<pre tabindex="0"><code>  𝝏₍t₎ρ + ∇⦁(ρ↗v) = 0     𝓮𝓺{221}
+</code></pre><p>differentiate the momentum conservation law, substitute the mass law, you get
 EULER&rsquo;s EQUATION</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎↗v = 𝝏₍t₎↗v &#43; (↗v⦁∇)↗v = -÷1ρ·∇p &#43; ↗g 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Ɗ₍t₎↗v = 𝝏₍t₎↗v + (↗v⦁∇)↗v = -÷1ρ·∇p + ↗g
+</code></pre><ul>
 <li>advective derivative on te LHS</li>
 </ul>
 <p>use 
@@ -190,57 +160,17 @@ EULER&rsquo;s EQUATION</p>
 
 [<a class="lex" href="fluids/lexicon/vorticity/">VORTICITY</a>]
  : ˝↗ω  = ∇ × ↗v˝. write</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ↗v × ↗ω = ↗v × (∇ × ↗v) = ÷12 ∇ v⁽2⁾ - (↗v⦁∇)↗v 
-	\end{equation}
-	££
-	</div>
-
-
-<p>∴</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  (↗v⦁∇)↗v = ÷12∇v⁽2⁾ - ↗v × ↗ω 
-	\end{equation}
-	££
-	</div>
-
-
-<p>substitute this into the euler equation:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎↗v &#43; ∇(÷12v⁽2⁾ &#43; φ) &#43; ÷1ρ∇p - ↗v×↗ω = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<p>(general form of bernoulli&rsquo;s law). [TB p698]
+<pre tabindex="0"><code>  ↗v × ↗ω = ↗v × (∇ × ↗v) = ÷12 ∇ v⁽2⁾ - (↗v⦁∇)↗v
+</code></pre><p>∴</p>
+<pre tabindex="0"><code>  (↗v⦁∇)↗v = ÷12∇v⁽2⁾ - ↗v × ↗ω
+</code></pre><p>substitute this into the euler equation:</p>
+<pre tabindex="0"><code>  𝝏₍t₎↗v + ∇(÷12v⁽2⁾ + φ) + ÷1ρ∇p - ↗v×↗ω = 0
+</code></pre><p>(general form of bernoulli&rsquo;s law). [TB p698]
 </p>
 <p>¶ the fluid is ideal, so you ignore dissipation. thorne says p698 that this
 means the entropy is constant along the flow,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎s = (↗v⦁∇)↗s = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Ɗ₍t₎s = (↗v⦁∇)↗s = 0
+</code></pre><ul>
 <li>
 <blockquote>
 <blockquote>
@@ -251,54 +181,14 @@ means the entropy is constant along the flow,</p>
 </ul>
 <p>since the flow is steady, ˝𝝏₍t₎(all  variables) = 0˝, you can use the enthalpy
 thermodynamic identity</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  dh = Tds &#43; ÷1ρ dp 
-	\end{equation}
-	££
-	</div>
-
-
-<p>since ˝Ɗ₍t₎s = 0˝, this means</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  (↗v⦁∇)p = ρ(↗v⦁∇)h 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ dot ˝↗v˝ into the general B. equation, you get</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  (↗v⦁∇) (÷12 v⁽2⁾ &#43; φ) &#43; ÷1ρ (↗v⦁∇p) - ↗v⦁(↗v×↗ω) = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<p>use eq (9),</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  (↗v⦁∇) (÷12 v⁽2⁾ &#43; φ) &#43; ρ(↗v⦁∇)h - (↗v⦁∇)(↗v⦁∇) &#43; (↗v⦁∇)(÷12∇v⁽2⁾) = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ <em>define</em> 
+<pre tabindex="0"><code>  dh = Tds + ÷1ρ dp
+</code></pre><p>since ˝Ɗ₍t₎s = 0˝, this means</p>
+<pre tabindex="0"><code>  (↗v⦁∇)p = ρ(↗v⦁∇)h
+</code></pre><p>¶ dot ˝↗v˝ into the general B. equation, you get</p>
+<pre tabindex="0"><code>  (↗v⦁∇) (÷12 v⁽2⁾ + φ) + ÷1ρ (↗v⦁∇p) - ↗v⦁(↗v×↗ω) = 0
+</code></pre><p>use eq (9),</p>
+<pre tabindex="0"><code>  (↗v⦁∇) (÷12 v⁽2⁾ + φ) + ρ(↗v⦁∇)h - (↗v⦁∇)(↗v⦁∇) + (↗v⦁∇)(÷12∇v⁽2⁾) = 0
+</code></pre><p>¶ <em>define</em> 
 
 
 
@@ -307,46 +197,16 @@ thermodynamic identity</p>
 
 [<a class="lex" href="fluids/lexicon/bernoulli-function/">BERNOULLI FUNCTION</a>]
 </p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  B = ÷12 v⁽2⁾ &#43; h &#43; Φ 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ then you can write</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎B = (↗v⦁∇)B = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  B = ÷12 v⁽2⁾ + h + Φ
+</code></pre><p>¶ then you can write</p>
+<pre tabindex="0"><code>  Ɗ₍t₎B = (↗v⦁∇)B = 0
+</code></pre><ul>
 <li>so: for an ideal fluid, in a steady flow, the bernoulli function is
 conserved.</li>
 </ul>
 <p>note</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  B = ÷12 v⁽2⁾ &#43; h &#43; Φ = ÷12 v⁽2⁾ &#43; u &#43; ÷Pρ &#43; Φ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  B = ÷12 v⁽2⁾ + h + Φ = ÷12 v⁽2⁾ + u + ÷Pρ + Φ
+</code></pre><ul>
 <li>the fluid&rsquo;s total energy density (KE + PE + internal) per unit mass PLUS the
 work P(1/ρ) needed to inject a mass of fluid, volume 1/ρ, into a surrounding
 fluid with pressure P.</li>
@@ -355,57 +215,17 @@ KE and PE.</li>
 </ul>
 <p>¶ in an isentropic+irrotational flow (vorticity vanishes), ˝↗ω = ∇×↗v = 0˝ , so
 you introduce a velocity potential ˝ψ(↗x,t)˝, where</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ↗v = ∇ψ   (irrotational  flow) 
-	\end{equation}
-	££
-	</div>
-
-
-<p>1st law of thermo: ˝∇h = T∇s + ÷1ρ∇p˝. in an isentropic flow this reduces to</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇p = ρ∇h 
-	\end{equation}
-	££
-	</div>
-
-
-<p>and you end up getting</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇(𝝏₍t₎ψ &#43; B) = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ↗v = ∇ψ   (irrotational  flow)
+</code></pre><p>1st law of thermo: ˝∇h = T∇s + ÷1ρ∇p˝. in an isentropic flow this reduces to</p>
+<pre tabindex="0"><code>  ∇p = ρ∇h
+</code></pre><p>and you end up getting</p>
+<pre tabindex="0"><code>  ∇(𝝏₍t₎ψ + B) = 0
+</code></pre><ul>
 <li>the qty in the brackets is constant everywhere.</li>
 </ul>
 <p>expanding</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇(𝝏₍t₎ψ &#43; ÷12v⁽2⁾ &#43; h &#43; φ) = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<p>replace ˝∇h = ÷1ρ∇p˝</p>
+<pre tabindex="0"><code>  ∇(𝝏₍t₎ψ + ÷12v⁽2⁾ + h + φ) = 0
+</code></pre><p>replace ˝∇h = ÷1ρ∇p˝</p>
 
 
 </body>

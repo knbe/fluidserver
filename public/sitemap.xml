@@ -14,6 +14,10 @@
   </url><url>
     <loc>/fluids/bernoullis-theorem/</loc>
   </url><url>
+    <loc>/fluids/boundary/</loc>
+  </url><url>
+    <loc>/fluids/boundary-layers/</loc>
+  </url><url>
     <loc>/fluids/examples/bucket/</loc>
   </url><url>
     <loc>/categories/</loc>
@@ -42,6 +46,8 @@
   </url><url>
     <loc>/fluids/figs/</loc>
   </url><url>
+    <loc>/fluids/examples/flow-past-a-cylinder/</loc>
+  </url><url>
     <loc>/fluids/lexicon/flow-speed/</loc>
   </url><url>
     <loc>/fluids/</loc>
@@ -67,6 +73,10 @@
     <loc>/fluids/lexicon/ionisation-energy/</loc>
   </url><url>
     <loc>/fluids/lexicon/</loc>
+  </url><url>
+    <loc>/fluids/lexicon/mach-number/</loc>
+  </url><url>
+    <loc>/fluids/hallway/notes-from-tong/</loc>
   </url><url>
     <loc>/fluids/modified-porous-medium-equation/</loc>
   </url><url>
@@ -105,6 +115,8 @@
     <loc>/fluids/examples/asmp62-vorticity-with-coriolis/</loc>
   </url><url>
     <loc>/fluids/lexicon/thin-liquid/</loc>
+  </url><url>
+    <loc>/fluids/turbulence/</loc>
   </url><url>
     <loc>/fluids/lexicon/velocity-profile/</loc>
   </url><url>

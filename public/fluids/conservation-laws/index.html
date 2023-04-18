@@ -130,20 +130,10 @@ p692].</p>
 form ˝𝝏₍t₎˝(density of something) = ˝∇⦁˝(flux of that thing). ie, rate of
 change of density wrt time = rate of change of flux wrt space</p>
 <p>¶ conservation of mass, differential form:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎ρ &#43; ∇⦁(ρ↗v) = 0     𝓮𝓺{221} 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ any &ldquo;newtonian&rdquo; conservation law in differential form has a corresponding
+<pre tabindex="0"><code>  𝝏₍t₎ρ + ∇⦁(ρ↗v) = 0     𝓮𝓺{221}
+</code></pre><p>¶ any &ldquo;newtonian&rdquo; conservation law in differential form has a corresponding
 <em>integral</em> form [thorne p692]. you have to integrate the differential law over
-some arbitrary volume, call it ˝V&rsquo;˝
+some arbitrary volume, call it ˝V'˝
 
 
 <div class="eq">
@@ -165,10 +155,10 @@ some arbitrary volume, call it ˝V&rsquo;˝
 </div>
 </p>
 <ul>
-<li>this is an application of gauss&rsquo; law</li>
-<li>S is the closed surface that bounds ˝V&rsquo;˝</li>
-<li>LHS: the rate of change of mass in volume ˝V&rsquo;˝</li>
-<li>RHS: the rate at which mass flows into ˝V&rsquo;˝ through surface ˝𝝏S˝</li>
+<li>this is an application of gauss' law</li>
+<li>S is the closed surface that bounds ˝V'˝</li>
+<li>LHS: the rate of change of mass in volume ˝V'˝</li>
+<li>RHS: the rate at which mass flows into ˝V'˝ through surface ˝𝝏S˝</li>
 <li>˝ρ↗v˝ is the mass flux</li>
 <li>˝-d↗S˝ is the inward facing surface element</li>
 </ul>
@@ -177,32 +167,12 @@ some arbitrary volume, call it ˝V&rsquo;˝
 <p>¶ in the lagrangian approach to mass conservation, you look at the change in
 density as an observer who moves with the flow ˝↗v˝ [thorne p692]</p>
 <p>¶ mass conservation, differential form, lagrangian:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎ρ = -ρ ∇⦁↗v 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Ɗ₍t₎ρ = -ρ ∇⦁↗v
+</code></pre><ul>
 <li>˝Ɗ₍t₎˝ is the advective time derivative, ˝Ɗ₍t₎ = 𝝏₍t₎ + ↗v⦁∇˝</li>
 <li>derivation: expand the second term in \eqref{221},
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇⦁(ρ↗v) = (∇ρ)⦁↗v &#43; ρ∇⦁↗v 
-	\end{equation}
-	££
-	</div>
-
-
-∴
+<pre tabindex="0"><code>  ∇⦁(ρ↗v) = (∇ρ)⦁↗v + ρ∇⦁↗v
+</code></pre>∴
 
 
 <div class="eq">
@@ -225,32 +195,12 @@ density as an observer who moves with the flow ˝↗v˝ [thorne p692]</p>
 </div>
 
 the first and last terms cancel, so
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎ρ = -ρ∇⦁↗v    𝓮𝓺{222} 
-	\end{equation}
-	££
-	</div>
-
-
-</li>
+<pre tabindex="0"><code>  Ɗ₍t₎ρ = -ρ∇⦁↗v    𝓮𝓺{222}
+</code></pre></li>
 </ul>
 <p>¶ ˝Ɗ₍t₎˝, the <strong>advective time derivative</strong>,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎ = 𝝏₍t₎ &#43; ↗v⦁∇ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Ɗ₍t₎ = 𝝏₍t₎ + ↗v⦁∇
+</code></pre><ul>
 <li>physical interpretation?</li>
 <li>note, the partial derivative ˝𝝏₍t₎˝ is the rate of change of something
 (XXX), wrt time, at a fixed point in space, ie you could express it more
@@ -267,78 +217,28 @@ different times, at the <em>same point in the material</em></li>
 <li>consider an block of fluid, volume ˝V˝</li>
 <li>the mass in the block of fluid is ˝m = ρV˝</li>
 <li>as the fluid flows, the mass must be conserved, so
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎m = (Ɗ₍t₎ρ)·V &#43; ρ·(Ɗ₍t₎V) = 0 
-	\end{equation}
-	££
-	</div>
-
-
-or
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎ρ = -÷ρV·Ɗ₍t₎V 
-	\end{equation}
-	££
-	</div>
-
-
-</li>
+<pre tabindex="0"><code>  Ɗ₍t₎m = (Ɗ₍t₎ρ)·V + ρ·(Ɗ₍t₎V) = 0
+</code></pre>or
+<pre tabindex="0"><code>  Ɗ₍t₎ρ = -÷ρV·Ɗ₍t₎V
+</code></pre></li>
 <li>now compare this with \eqref{222}, since ˝Ɗ₍t₎ρ = -ρ∇⦁↗v˝,
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇⦁↗v = ÷1V Ɗ₍t₎V 
-	\end{equation}
-	££
-	</div>
-
-
-</li>
+<pre tabindex="0"><code>  ∇⦁↗v = ÷1V Ɗ₍t₎V
+</code></pre></li>
 <li>so the divergence of the flow velocity ˝↗v˝ is the rate of change of the
 fluid block&rsquo;s volume divided by ˝V˝ (thorne calls this the &ldquo;fractional rate
 of increase of the fluid block&rsquo;s volume)</li>
 </ul>
 <p>¶ define a fluid&rsquo;s <strong>rate of expansion</strong>, ˝θ˝,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  θ = ∇⦁↗v = Ɗ₍t₎Θ 
-	\end{equation}
-	££
-	</div>
-
-
-<h1 id="conservation-of-momentum">conservation of momentum</h1>
+<pre tabindex="0"><code>  θ = ∇⦁↗v = Ɗ₍t₎Θ
+</code></pre><h1 id="conservation-of-momentum">conservation of momentum</h1>
 <hr>
 <p>¶ for momentum conservation, the equation should be of form ˝𝝏₍t₎˝(momentum
 density)+ ˝∇⦁˝(momentum flux) = 0</p>
 <p>¶ for fluids the momentum density is ˝ρv˝.</p>
 <p>¶ the momentum flux is (generally) the stress tensor ˝T˝</p>
 <p>¶ momentum conservation, eulerian</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎(ρ↗v) &#43; ∇⦁T = 0 
-	\end{equation}
-	££
-	</div>
-
-
-
+<pre tabindex="0"><code>  𝝏₍t₎(ρ↗v) + ∇⦁T = 0
+</code></pre>
 
 </body>
 

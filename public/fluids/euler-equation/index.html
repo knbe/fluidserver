@@ -116,58 +116,18 @@
 
 
 <p>¶ take the momentum conservation law for a fluid,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎(ρ↗v) &#43; ∇⦁T = ρ↗g 
-	\end{equation}
-	££
-	</div>
-
-
-<p>differentiate then invoke the mass conservation law,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎ρ &#43; ∇⦁(ρ↗v) = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<p>you get the euler equation:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎↗v = 𝝏₍t₎↗v &#43; (↗v⦁∇)↗v = -÷1ρ·∇p &#43; ↗g 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ the LHS is the advective derivative of ↗v, ie the acceleration of the fluid.
+<pre tabindex="0"><code>  𝝏₍t₎(ρ↗v) + ∇⦁T = ρ↗g
+</code></pre><p>differentiate then invoke the mass conservation law,</p>
+<pre tabindex="0"><code>  𝝏₍t₎ρ + ∇⦁(ρ↗v) = 0
+</code></pre><p>you get the euler equation:</p>
+<pre tabindex="0"><code>  Ɗ₍t₎↗v = 𝝏₍t₎↗v + (↗v⦁∇)↗v = -÷1ρ·∇p + ↗g
+</code></pre><p>¶ the LHS is the advective derivative of ↗v, ie the acceleration of the fluid.
 from the RHS, you can see there are two terms that cause the acceleration:
 gravity, and the pressure gradient.</p>
 <p>¶ in hydrostatics, ↗v = 0, and the euler equation reduces to the equation of
 hydrostatic equilibrium:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇p = ρ↗g 
-	\end{equation}
-	££
-	</div>
-
-
-<p>or, a more general form is to replace ˝↗g˝ with ˝-∇φ˝</p>
+<pre tabindex="0"><code>  ∇p = ρ↗g
+</code></pre><p>or, a more general form is to replace ˝↗g˝ with ˝-∇φ˝</p>
 
 
 </body>

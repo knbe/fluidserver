@@ -148,20 +148,10 @@ p692].</p>
 form ˝𝝏₍t₎˝(density of something) = ˝∇⦁˝(flux of that thing). ie, rate of
 change of density wrt time = rate of change of flux wrt space</p>
 <p>¶ conservation of mass, differential form:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎ρ &#43; ∇⦁(ρ↗v) = 0     𝓮𝓺{221} 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ any &ldquo;newtonian&rdquo; conservation law in differential form has a corresponding
+<pre tabindex="0"><code>  𝝏₍t₎ρ + ∇⦁(ρ↗v) = 0     𝓮𝓺{221}
+</code></pre><p>¶ any &ldquo;newtonian&rdquo; conservation law in differential form has a corresponding
 <em>integral</em> form [thorne p692]. you have to integrate the differential law over
-some arbitrary volume, call it ˝V&rsquo;˝
+some arbitrary volume, call it ˝V'˝
 
 
 <div class="eq">
@@ -184,10 +174,10 @@ some arbitrary volume, call it ˝V&rsquo;˝
 </div>
 </p>
 <ul>
-<li>this is an application of gauss&rsquo; law</li>
-<li>S is the closed surface that bounds ˝V&rsquo;˝</li>
-<li>LHS: the rate of change of mass in volume ˝V&rsquo;˝</li>
-<li>RHS: the rate at which mass flows into ˝V&rsquo;˝ through surface ˝𝝏S˝</li>
+<li>this is an application of gauss' law</li>
+<li>S is the closed surface that bounds ˝V'˝</li>
+<li>LHS: the rate of change of mass in volume ˝V'˝</li>
+<li>RHS: the rate at which mass flows into ˝V'˝ through surface ˝𝝏S˝</li>
 <li>˝ρ↗v˝ is the mass flux</li>
 <li>˝-d↗S˝ is the inward facing surface element</li>
 </ul>
@@ -196,32 +186,12 @@ some arbitrary volume, call it ˝V&rsquo;˝
 <p>¶ in the lagrangian approach to mass conservation, you look at the change in
 density as an observer who moves with the flow ˝↗v˝ [thorne p692]</p>
 <p>¶ mass conservation, differential form, lagrangian:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎ρ = -ρ ∇⦁↗v 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Ɗ₍t₎ρ = -ρ ∇⦁↗v
+</code></pre><ul>
 <li>˝Ɗ₍t₎˝ is the advective time derivative, ˝Ɗ₍t₎ = 𝝏₍t₎ + ↗v⦁∇˝</li>
 <li>derivation: expand the second term in \eqref{221},
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇⦁(ρ↗v) = (∇ρ)⦁↗v &#43; ρ∇⦁↗v 
-	\end{equation}
-	££
-	</div>
-
-
-∴
+<pre tabindex="0"><code>  ∇⦁(ρ↗v) = (∇ρ)⦁↗v + ρ∇⦁↗v
+</code></pre>∴
 
 
 <div class="eq">
@@ -244,32 +214,12 @@ density as an observer who moves with the flow ˝↗v˝ [thorne p692]</p>
 </div>
 
 the first and last terms cancel, so
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎ρ = -ρ∇⦁↗v    𝓮𝓺{222} 
-	\end{equation}
-	££
-	</div>
-
-
-</li>
+<pre tabindex="0"><code>  Ɗ₍t₎ρ = -ρ∇⦁↗v    𝓮𝓺{222}
+</code></pre></li>
 </ul>
 <p>¶ ˝Ɗ₍t₎˝, the <strong>advective time derivative</strong>,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎ = 𝝏₍t₎ &#43; ↗v⦁∇ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  Ɗ₍t₎ = 𝝏₍t₎ + ↗v⦁∇
+</code></pre><ul>
 <li>
 <blockquote>
 <blockquote>
@@ -293,43 +243,13 @@ different times, at the <em>same point in the material</em></li>
 <li>consider an block of fluid, volume ˝V˝</li>
 <li>the mass in the block of fluid is ˝m = ρV˝</li>
 <li>as the fluid flows, the mass must be conserved, so
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎m = (Ɗ₍t₎ρ)·V &#43; ρ·(Ɗ₍t₎V) = 0 
-	\end{equation}
-	££
-	</div>
-
-
-or
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎ρ = -÷ρV·Ɗ₍t₎V 
-	\end{equation}
-	££
-	</div>
-
-
-</li>
+<pre tabindex="0"><code>  Ɗ₍t₎m = (Ɗ₍t₎ρ)·V + ρ·(Ɗ₍t₎V) = 0
+</code></pre>or
+<pre tabindex="0"><code>  Ɗ₍t₎ρ = -÷ρV·Ɗ₍t₎V
+</code></pre></li>
 <li>now compare this with \eqref{222}, since ˝Ɗ₍t₎ρ = -ρ∇⦁↗v˝,
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇⦁↗v = ÷1V Ɗ₍t₎V 
-	\end{equation}
-	££
-	</div>
-
-
-</li>
+<pre tabindex="0"><code>  ∇⦁↗v = ÷1V Ɗ₍t₎V
+</code></pre></li>
 <li>so the divergence of the flow velocity ˝↗v˝ is the rate of change of the
 fluid block&rsquo;s volume divided by ˝V˝ (thorne calls this the &ldquo;fractional rate
 of increase of the fluid block&rsquo;s volume)</li>
@@ -342,36 +262,16 @@ of increase of the fluid block&rsquo;s volume)</li>
 </li>
 </ul>
 <p>¶ define a fluid&rsquo;s <strong>rate of expansion</strong>, ˝θ˝,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  θ = ∇⦁↗v = Ɗ₍t₎Θ 
-	\end{equation}
-	££
-	</div>
-
-
-<h2 id="conservation-of-momentum">conservation of momentum</h2>
+<pre tabindex="0"><code>  θ = ∇⦁↗v = Ɗ₍t₎Θ
+</code></pre><h2 id="conservation-of-momentum">conservation of momentum</h2>
 <hr>
 <p>¶ for momentum conservation, the equation should be of form ˝𝝏₍t₎˝(momentum
 density)+ ˝∇⦁˝(momentum flux) = 0</p>
 <p>¶ for fluids the momentum density is ˝ρv˝.</p>
 <p>¶ the momentum flux is (generally) the stress tensor ˝T˝</p>
 <p>¶ momentum conservation, eulerian (differential conservation law)</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎(ρ↗v) &#43; ∇⦁T = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<h1 id="mechanical-stress-tensor">MECHANICAL STRESS TENSOR</h1>
+<pre tabindex="0"><code>  𝝏₍t₎(ρ↗v) + ∇⦁T = 0
+</code></pre><h1 id="mechanical-stress-tensor">MECHANICAL STRESS TENSOR</h1>
 <hr>
 <p>¶ building the mechanical 
 
@@ -396,34 +296,14 @@ thermal conductivity.</p>
 <p>¶ in an ideal fluid, the mass conservation law becomes ˝∇⦁↗v = 0˝, aka the
 incompressible approximation.</p>
 <p>¶ the momentum conservation law is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎(ρ↗v) &#43; ∇⦁T = ρ↗g 
-	\end{equation}
-	££
-	</div>
-
-
-<p>[thorne p696]</p>
+<pre tabindex="0"><code>  𝝏₍t₎(ρ↗v) + ∇⦁T = ρ↗g
+</code></pre><p>[thorne p696]</p>
 <h1 id="lagrangian-momentum-conservation">LAGRANGIAN MOMENTUM CONSERVATION</h1>
 <hr>
 <p>¶ ˝↗f˝ is the netforce per unit volume on the fluid. then you can write momentum
 conservation as</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎(ρ↗v) &#43; ∇⦁T₍m₎ = ↗f 
-	\end{equation}
-	££
-	</div>
-
-
-<p>insert ˝T = ρ↗v⊗↗v˝, you get the 
+<pre tabindex="0"><code>  𝝏₍t₎(ρ↗v) + ∇⦁T₍m₎ = ↗f
+</code></pre><p>insert ˝T = ρ↗v⊗↗v˝, you get the 
 
 
 
@@ -432,73 +312,23 @@ conservation as</p>
 
 [<a class="lex" href="fluids/lexicon/lagrangian-law-of-mass-conservation/">LAGRANGIAN LAW OF MASS CONSERVATION</a>]
 </p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ρ·d₍t₎↗v = ↗f 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ρ·d₍t₎↗v = ↗f
+</code></pre><ul>
 <li>d is the advective derivative, ˝d₍t₎ = 𝝏₍t₎ + ↗v⦁∇˝</li>
 <li>this is F = ma per volume</li>
 </ul>
 <p>we want to make this equivalent to the eulerian conservation law,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎(ρ↗v) &#43; ∇⦁T = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<p>there must be a stress tensor ˝T₍f₎˝ s.t.</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ↗f = -∇⦁T₍f₎
-  T = T₍m₎ &#43; T₍f₎ 
-	\end{equation}
-	££
-	</div>
-
-
-<h1 id="mass-conservation">MASS CONSERVATION</h1>
+<pre tabindex="0"><code>  𝝏₍t₎(ρ↗v) + ∇⦁T = 0
+</code></pre><p>there must be a stress tensor ˝T₍f₎˝ s.t.</p>
+<pre tabindex="0"><code>  ↗f = -∇⦁T₍f₎
+  T = T₍m₎ + T₍f₎
+</code></pre><h1 id="mass-conservation">MASS CONSERVATION</h1>
 <hr>
 <p>¶ mass conservation can take the eulerian form</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎ρ &#43; ∇⦁(ρ↗v) = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<p>or the lagrangian form</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  d₍t₎ρ = -ρ∇⦁↗v 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ so you need knowledge of a stress tensor ˝T₍f₎˝ for some material. if you know
+<pre tabindex="0"><code>  𝝏₍t₎ρ + ∇⦁(ρ↗v) = 0
+</code></pre><p>or the lagrangian form</p>
+<pre tabindex="0"><code>  d₍t₎ρ = -ρ∇⦁↗v
+</code></pre><p>¶ so you need knowledge of a stress tensor ˝T₍f₎˝ for some material. if you know
 the stress tensor ˝T₍f₎˝ for some material, then you know the force density
 ˝↗f˝ that acts on the material.</p>
 <p>it&rsquo;s easier to determine the form of the stress tensor than the form of the
@@ -507,42 +337,12 @@ force.</p>
 <hr>
 <p>¶ in an ideal fluid, the only forces are gravity and the isotropic pressure P.</p>
 <p>¶ momentum conservation:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎(ρ↗v) &#43; ∇⦁T = ρ↗g 
-	\end{equation}
-	££
-	</div>
-
-
-<p>or</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏₍t₎(ρ↗v) &#43; ∇⦁(ρ↗v⊗↗v &#43; P↗g) = ρ↗g 
-	\end{equation}
-	££
-	</div>
-
-
-<p>where</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  T = ρ↗v⊗↗v &#43; P↗g      (ideal) 
-	\end{equation}
-	££
-	</div>
-
-
-<h1 id="the-incompressible-approximation">THE INCOMPRESSIBLE APPROXIMATION</h1>
+<pre tabindex="0"><code>  𝝏₍t₎(ρ↗v) + ∇⦁T = ρ↗g
+</code></pre><p>or</p>
+<pre tabindex="0"><code>  𝝏₍t₎(ρ↗v) + ∇⦁(ρ↗v⊗↗v + P↗g) = ρ↗g
+</code></pre><p>where</p>
+<pre tabindex="0"><code>  T = ρ↗v⊗↗v + P↗g      (ideal)
+</code></pre><h1 id="the-incompressible-approximation">THE INCOMPRESSIBLE APPROXIMATION</h1>
 <hr>
 <p>¶ if you assume density is constant, you&rsquo;re saying the fluid is incompressible
 (pq to compress the fluid, you have to induce some kind of density variation)</p>
@@ -566,18 +366,8 @@ fluid, you don&rsquo;t have to worry about density variations</li>
 <p>¶ need to establish the relations between variables.</p>
 <p>¶ the theory of fluids starts with an equation of state. this eos relates the
 pressure to the density. in the incompressible approximation,</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ρ = const 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ next relation: the conservation of matter. if matter flows away from a point,
+<pre tabindex="0"><code>  ρ = const
+</code></pre><p>¶ next relation: the conservation of matter. if matter flows away from a point,
 then the amount of matter remaining must decrease.</p>
 <ul>
 <li>if the fluid velocity is ˝v˝, the mass that flows in a unit time across a
@@ -586,53 +376,23 @@ unit area is ˝ρv˝ (normal to the surface). this is a kind of mass flux.</li>
 unit time.</li>
 <li>here,</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇⦁(ρv) = -𝝏{t}{ρ} 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ∇⦁(ρv) = -𝝏{t}{ρ}
+</code></pre><ul>
 <li>this is the <strong>hydrodynamic continuity equation</strong>. it expresses conservation
 of mass for a fluid.</li>
 <li>in the incompressible fluid approximation, the continuity equation reduces
 to</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇⦁v = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ∇⦁v = 0
+</code></pre><ul>
 <li>ie the fluid velocity, ˝v˝, has zero divergence. like the magnetic field.</li>
 </ul>
 <p>¶ relation from newton&rsquo;s law:</p>
 <ul>
 <li>define ˝f˝, force per unit volume, aka <strong>force density</strong>, a vector qty</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ρ×(acceleration) = f 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ρ×(acceleration) = f
+</code></pre><ul>
 <li>force density is a sum of three terms:
 <ul>
 <li>pressure force per unit volume, ˝-∇p˝</li>
@@ -646,18 +406,8 @@ can also be a shearing stress. this is called the viscous force, ˝f₍visc₎˝
 </ul>
 </li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ρ×(acceleration) = -∇p - ρ∇φ &#43; f₍visc₎ 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ what happens when you drop the viscosity term</p>
+<pre tabindex="0"><code>  ρ×(acceleration) = -∇p - ρ∇φ + f₍visc₎
+</code></pre><p>¶ what happens when you drop the viscosity term</p>
 <ul>
 <li>when you omit ˝f₍visc₎˝, it&rsquo;s like modelling a &ldquo;thin&rdquo; liquid</li>
 <li>this is very much an approximation. in fact, this is a highly idealised model
@@ -675,32 +425,12 @@ nothing to do with real fluids.
 </ul>
 <p>¶ so anyway, when you resolve all the forces and do a bunch of vectoring shiz,
 the equation you end up getting is</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{↗v} &#43; (↗v⦁∇)↗v = -÷{∇p}{ρ} - ∇φ 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  𝝏{t}{↗v} + (↗v⦁∇)↗v = -÷{∇p}{ρ} - ∇φ
+</code></pre><ul>
 <li>or (our form)</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{↗v} &#43; (↗v⦁∇)↗v = -∇p &#43; μ∇⁽2⁾↗v 
-	\end{equation}
-	££
-	</div>
-
-
-
+<pre tabindex="0"><code>  𝝏{t}{↗v} + (↗v⦁∇)↗v = -∇p + μ∇⁽2⁾↗v
+</code></pre>
 
 </body>
 

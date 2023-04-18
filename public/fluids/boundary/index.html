@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' name='Content-Type'>
+<meta name='viewport' content='width=device-width'>
+<link rel='stylesheet' href='../../css/main.css'>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({ 
+		extensions: [
+			"tex2jax.js",
+			"phizzy.js",
+		],
+		jax: [
+			"input/TeX",
+			"output/HTML-CSS",
+		],
+		"HTML-CSS": { 
+			scale: 95,
+			availableFonts: [],
+			preferredFont: null,
+			webFont: "Neo-Euler", 
+			EqnChunk: 20, 
+			EqnChunkFactor: 4,
+			extensions: ["handle-floats.js"],
+			EqnChunkDelay: 1,
+			matchFontHeight: true, 
+			linebreaks: {
+				automatic: true, 
+				width: "100% container",
+			},
+		},
+		displayAlign: "left",
+		displayIndent: "1.5em",
+		tex2jax: {
+			inlineMath: [
+				['£','£'],
+				['˝','˝'],
+			],
+			displayMath: [ 
+				['££','££'],
+			],
+			processEscapes: true,
+			processEnvironments: true,
+			processRefs: true, 
+			skipTags: ['style', 'pre'],
+		},
+		TeX: {
+			TagSide: "right",
+			extensions: [
+				"AMSmath.js",
+				"AMSsymbols.js",
+				"noUndefined.js",
+				"newcommand.js"
+			],
+			equationNumbers: {
+				autoNumber: "AMS",
+				useLabelIDs: false,
+				formatNumber: function (n) {return n.toString()},
+				formatTag: function (n) {return '('+n+')'},
+			},
+		},
+		loader: {
+			load: ['ui/lazy']
+		},
+	});
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+			Macros: {
+				 f: ["\\frac{#1}{#2}", 2],
+				 n: ["\\nonumber \\\\[0.5em]", 0],
+				 no: ["\\nonumber", 0],
+				 nl: ["\\\\[0.5em]", 0],
+				 cntd: ["\\n &\\hspace{5mm}", 0],
+				 bgnmaths: ["\\begin{align}", 0],
+				 endmaths: ["\\end{align}", 0],
+				 bgnmathsn: ["\\begin{align*}", 0],
+				 endmathsn: ["\\end{align*}", 0],
+			}
+		}
+	});
+</script>
+
+<script type="text/javascript" src="../../mathjax/MathJax/MathJax.js"></script>
+
+
+</head>
+
+<head>
+<link rel='stylesheet' href='../../css/long.css'>
+
+
+<title>boundary</title>
+</head>
+
+<body>
+
+<div class="map">
+
+
+
+
+<a href=>physics</a>
+
+
+	> <a href="../../fluids/">fluids</a>&nbsp;> <a href="">boundary</a>
+
+</div>
+
+<h1 class="title">boundary</h1>
+
+<nav id="TableOfContents"></nav>
+
+202304111310
+
+<p>in nature you find fluids that rotate nearly rigidly. this means fluids with a
+uniform distribution of vorticity.</p>
+<ul>
+<li>how can you have fluids that rotate regularly, and yet maintain a uniform
+velocity distribution?</li>
+</ul>
+<p>it&rsquo;s best to analyse these &ldquo;rotating&rdquo; fluids in a rotating reference frame,
+where the unperturbed fluid is at rest, and ALL perturbations are influenced by
+coriolis force(s) [WHYtf is this plural]. this results in &ldquo;surprising&rdquo;
+phenomena. in this section, we explore some of these phenomena.</p>
+<p>foundation: we transform the NS equation from the inertial frame (the frame that
+we derived it in) to a UNIFORMLY ROTATING FRAME: the mean frame of the flows we
+study.</p>
+<p>note that the NS eq has the same form as newton&rsquo;s 2nd law for particle motion:
+big fucking deal?? why? isn&rsquo;t this confirmation bias?</p>
+<p>force per unit mass:</p>
+<pre tabindex="0"><code>  ⬀f = -∇p / ρ - ∇φ + ν ∇⁽2⁾v
+</code></pre>
+
+</body>
+
+</html>

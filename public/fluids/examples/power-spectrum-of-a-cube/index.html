@@ -117,7 +117,7 @@
 
 
 <div class="fig">
-<img src="../../../figs/cube.png" width="720">
+<img src="../figs/cube.png" width="720">
 </div>
 
 <p>The contrast in the image shows (somewhat) the local variations in the
@@ -125,85 +125,35 @@
 contrast</em> in space.</p>
 <p>Some theory: the <em>fractional overdensity</em> ˝δ(⬀x)˝ describes the deviation of the
 density field, ˝ρ(⬀x)˝, from the average density, ˝⟨ρ⟩˝</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  δ(⬀x) = ÷{ ρ(⬀x) - ⟨ρ⟩ }{ ⟨ρ⟩ } 
-	\end{equation}
-	££
-	</div>
-
-
-<p>where ˝ρ(⬀x)˝ is the density at point ˝⬀x˝ and ˝⟨ρ⟩˝ is the average density over
+<pre tabindex="0"><code>  δ(⬀x) = ÷{ ρ(⬀x) - ⟨ρ⟩ }{ ⟨ρ⟩ }
+</code></pre><p>where ˝ρ(⬀x)˝ is the density at point ˝⬀x˝ and ˝⟨ρ⟩˝ is the average density over
 (all) space. So ˝δ(⬀x)˝ is a dimensionless scalar field.</p>
 <p>The <em>two-point correlation function</em> ˝ξ˝ can be defined in terms of the
 fractional overdensity as</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ξ(⬀x₍1₎, ⬀x₍2₎) = ⟨δ(⬀x₍1₎)δ(⬀x₍2₎)⟩ = ÷1V ∫ d⁽3⁾⬀xͺδ(⬀x₍1₎) δ(⬀x₍1₎-⬀x₍2₎) 
-	\end{equation}
-	££
-	</div>
-
-
-<p>And the <em>power spectrum</em> ˝P(k)˝ can be defined in terms of ˝ξ˝ via the relation</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ξ(⬀x₍1₎,⬀x₍2₎) = ∫ d⁽3⁾kͺ÷1{(2π)⁽3⁾} P(k) e⁽i⬀k⦁(⬀x₍1₎-⬀x₍2₎)⁾ 
-	\end{equation}
-	££
-	</div>
-
-
-<p>So the power spectrum is basically the fourier transform of the correlation
+<pre tabindex="0"><code>  ξ(⬀x₍1₎, ⬀x₍2₎) = ⟨δ(⬀x₍1₎)δ(⬀x₍2₎)⟩ = ÷1V ∫ d⁽3⁾⬀xͺδ(⬀x₍1₎) δ(⬀x₍1₎-⬀x₍2₎)
+</code></pre><p>And the <em>power spectrum</em> ˝P(k)˝ can be defined in terms of ˝ξ˝ via the relation</p>
+<pre tabindex="0"><code>  ξ(⬀x₍1₎,⬀x₍2₎) = ∫ d⁽3⁾kͺ÷1{(2π)⁽3⁾} P(k) e⁽i⬀k⦁(⬀x₍1₎-⬀x₍2₎)⁾
+</code></pre><p>So the power spectrum is basically the fourier transform of the correlation
 function. If you let ˝δ(⬀k)˝ be the fourier transform of the fractional
 overdensity ˝δ(⬀x)˝, then</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ⟨δ(⬀k₍1₎)δ⁽❄⁾(⬀k₍2₎)⟩ = (2π)⁽3⁾ͺδ⁽3⁾(⬀k₍1₎-⬀k₍2₎) P(k) 
-	\end{equation}
-	££
-	</div>
-
-
-<p>˝P(k)˝ has dimensions of length˝⁽3⁾˝, so you can also define the <em>dimensionless
+<pre tabindex="0"><code>  ⟨δ(⬀k₍1₎)δ⁽❄⁾(⬀k₍2₎)⟩ = (2π)⁽3⁾ͺδ⁽3⁾(⬀k₍1₎-⬀k₍2₎) P(k)
+</code></pre><p>˝P(k)˝ has dimensions of length˝⁽3⁾˝, so you can also define the <em>dimensionless
 power spectrum,</em></p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Δ⁽2⁾(k) = ÷{k⁽3⁾}{2π⁽2⁾} P(k) 
-	\end{equation}
-	££
-	</div>
-
-
-<p>To compute ˝P(k)˝, take the fourier transform of the overdensity field, then
+<pre tabindex="0"><code>  Δ⁽2⁾(k) = ÷{k⁽3⁾}{2π⁽2⁾} P(k)
+</code></pre><p>To compute ˝P(k)˝, take the fourier transform of the overdensity field, then
 compute the correlation function and normalise</p>
 <p>
 
 
 <div class="fig">
-<img src="../../../figs/spherical.png" width="600">
+<img src="../figs/spherical.png" width="600">
 </div>
 
 
 
 
 <div class="fig">
-<img src="../../../figs/dimless.png" width="600">
+<img src="../figs/dimless.png" width="600">
 </div>
 </p>
 

@@ -122,18 +122,8 @@
 <h1 id="vorticity">VORTICITY</h1>
 <hr>
 <p>¶ define vorticity, ˝↗Ω˝, the curl of the velocity field ˝↗v˝</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ↗Ω = ∇×↗v 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  ↗Ω = ∇×↗v
+</code></pre><ul>
 <li>this is also a vector field</li>
 </ul>
 <p>¶ what vorticity actually is:</p>
@@ -146,50 +136,27 @@ interval. let the displacement of this bit be ˝↗ε = ↗vdt˝</li>
 rotation, and shear.</li>
 <li>the &ldquo;vectorial&rdquo; angle of rotation is ˝↗φ = ÷12·∇×↗ε˝</li>
 <li>the time derivative of the vectorial angle of rotation is
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  Ɗ₍t₎↗φ = ÷12·Ɗ₍t₎↗ε = ÷12·∇×↗v 
-	\end{equation}
-	££
-	</div>
-
-
-</li>
+<pre tabindex="0"><code>  Ɗ₍t₎↗φ = ÷12·Ɗ₍t₎↗ε = ÷12·∇×↗v
+</code></pre></li>
 <li>this is just the fluid element&rsquo;s rotational angular velocity</li>
 <li>thus, the vortivity is just twice the angular velocity of rotation of a
 fluid element.</li>
 </ul>
 <p>¶ the equation of motion becomes</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  𝝏{t}{↗v} &#43; ↗Ω×↗v &#43; ÷12 ∇v⁽2⁾ = -÷1ρ ∇p - ∇φ 
-	\end{equation}
-	££
-	</div>
-
-
-<p>¶ if vorticity is zero everywhere, the flow is <strong>irrotational</strong></p>
+<pre tabindex="0"><code>  𝝏{t}{↗v} + ↗Ω×↗v + ÷12 ∇v⁽2⁾ = -÷1ρ ∇p - ∇φ
+</code></pre><p>¶ if vorticity is zero everywhere, the flow is <strong>irrotational</strong></p>
 <ul>
 <li>recall: the circulation of a vector field around any closed loop</li>
 <li>the circulation around a closed loop in a fluid is the line integral of the
 fluid velocity at a particular instant of time around that loop</li>
 </ul>
+<pre tabindex="0"><code>  (circulation) = ∮ ↗v⦁d↗s
+</code></pre>
 
 
-	<div class="eq">
-	££
-	\begin{equation}
-	  (circulation) = ∮ ↗v⦁d↗s 
-	\end{equation}
-	££
-	</div>
-
+<div class="fig">
+<img src="../figs/A7S-ekman-rossby.JPG" width="600">
+</div>
 
 
 

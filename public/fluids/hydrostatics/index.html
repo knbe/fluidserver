@@ -157,19 +157,9 @@ greater the stress.</li>
 <p>¶ strain is a measure of deformation of an object. it describes the displacement
 between particles relative to a reference length</p>
 <p>¶ functional form of deformation:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ↗x = F(↗x&#39;) 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
-<li>↗x&rsquo; is an array of reference positions for points of the body</li>
+<pre tabindex="0"><code>  ↗x = F(↗x')
+</code></pre><ul>
+<li>↗x' is an array of reference positions for points of the body</li>
 <li>deformations have units of length</li>
 </ul>
 <p>¶ strains are usually dimensionless</p>
@@ -210,18 +200,8 @@ compression forces</p>
 
 <div class="defn-entry">
 <p>the component of stress that&rsquo;s coplanar with the body&rsquo;s cross section</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  τ = ÷FA 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  τ = ÷FA
+</code></pre><ul>
 <li>˝A˝ is the cross sectional area of the material that&rsquo;s parallel to the
 applied force</li>
 <li>points are coplanar if there&rsquo;s a plane that contains them all</li>
@@ -284,18 +264,8 @@ of the weight of the fluid.</p>
 <li>assume density ˝ρ˝ is constant</li>
 <li>let the pressure at some arbitrary reference level be ˝p₍0₎˝</li>
 <li>the pressure at height ˝h˝ above the reference point is:
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  p = p₍0₎ - ρgh 
-	\end{equation}
-	££
-	</div>
-
-
-</li>
+<pre tabindex="0"><code>  p = p₍0₎ - ρgh
+</code></pre></li>
 </ul>
 <p>¶ the quantity ˝p + ρgh˝ is a constant in a static fluid.</p>
 <h1 id="pressure-on-a-small-cube-of-water">PRESSURE ON A SMALL CUBE OF WATER</h1>
@@ -312,18 +282,8 @@ of the weight of the fluid.</p>
 <h1 id="equation-of-hydrostatic-equilibrium">EQUATION OF HYDROSTATIC EQUILIBRIUM</h1>
 <hr>
 <p>¶ here:</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  -∇p - ρ∇φ = 0 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  -∇p - ρ∇φ = 0
+</code></pre><ul>
 <li>in general it has no solution</li>
 <li>if the density varies arbitrarily, there&rsquo;s no way for the forces to balance,
 and the fluid can&rsquo;t be in static equilibrium. convection currents will
@@ -333,48 +293,18 @@ start.</li>
 <li>only when ˝ρ˝ is constant will the second term be a pure gradient.</li>
 <li>then the equation has a solution</li>
 </ul>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  p &#43; ρφ = const 
-	\end{equation}
-	££
-	</div>
-
-
-<ul>
+<pre tabindex="0"><code>  p + ρφ = const
+</code></pre><ul>
 <li>alternatively, ˝ρ˝ could also be a function of ˝p˝. this scenario also gives
 hydrostatic equilibrium, and the equation will have a solution.</li>
 </ul>
 <p>¶ another (thorne&rsquo;s) formulation of this: for a fluid at rest in a gravitational
 field ˝↗g˝, the equation of hydrostatic equilibrium is the same as that for
 (elastostatic) equilibrium with a vanishing shear stress, so</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  T = P↗g 
-	\end{equation}
-	££
-	</div>
-
-
-<p>and</p>
-
-
-	<div class="eq">
-	££
-	\begin{equation}
-	  ∇⦁T = ∇P = ρ↗g 
-	\end{equation}
-	££
-	</div>
-
-
-<p>you can express ˝↗g˝ as a potential: ˝↗g = -∇φ˝. and then you get feynman&rsquo;s
+<pre tabindex="0"><code>  T = P↗g
+</code></pre><p>and</p>
+<pre tabindex="0"><code>  ∇⦁T = ∇P = ρ↗g
+</code></pre><p>you can express ˝↗g˝ as a potential: ˝↗g = -∇φ˝. and then you get feynman&rsquo;s
 form.</p>
 
 
